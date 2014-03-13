@@ -1,3 +1,7 @@
+#exclude licenses and readme
+#!*.md
+#!LICENSE.TXT
+
 #unnecessary object files
 *.o
 *.tmp
@@ -14,4 +18,4 @@ test/takarakuji/
 test/CLangTest/CLangTest.xcodeproj/xcuserdata/
 build/
 !build/scripts
-
+!build/Release+Asserts/bin/
