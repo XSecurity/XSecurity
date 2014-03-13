@@ -12,98 +12,98 @@ the readme file under the main folder.
 PREPARATION
 _____________________________
 
->  Get the required tools.
->    - See Getting Started with the LLVM System - Requirements.
->    - Note also that Python is needed for running the test suite. Get it at: http://www.python.org/download
-> 
->  Checkout LLVM:
->    - Change directory to where you want the llvm directory placed.
->    - svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm 
->      (Currently we are using the revision 200605. You should check it out with 
->      -r option like svn co -r 200605 http://xxxx.)
-> 
->  Checkout Clang:
->    - cd llvm/tools
->    - svn co http://llvm.org/svn/llvm-project/cfe/trunk clang 
->      (Use same option mentioned above)
->    - cd ../..
-> 
->  Checkout extra Clang Tools: (optional)
->    - cd llvm/tools/clang/tools
->    - svn co http://llvm.org/svn/llvm-project/clang-tools-extra/trunk extra 
->      (Use same option mentioned above)
->    - cd ../../../..
-> 
->  Checkout Compiler-RT:
->    - cd llvm/projects
->    - svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt 
->      (Use same option mentioned above)
->    - cd ../..
-> 
->  Build LLVM and Clang:
->    - mkdir build  
->      (for building without polluting the source dir)
->    - cd build
->    - ../llvm/configure 
->      (configure build folder which is outside the source dir)
->      Note: At this point if you are able to successfully execute the above mentioned 
->            command then you might want to have a coffee break after executing the
->            following make, since it will take a little while to complete.
->    - make
-> 
->  By now you may have the following folder structure:
-> 
->    ____XSecurity
->     |____checker (checker folder)
->     | |____build
->     | | |____Release+Asserts
->     | | | |____bin
->     | | |____scripts
->     | |
->     | |____llvm
->     | | |____tools
->     | | | |____clang
->     | | | | |____lib
->     | | | | | |____StaticAnalyzer
->     | | | | | | |____Checkers
->     | | | | |
->     | | | | |____tools
->     | | | | | |____scan-build
->     | |  
->     | |____test
->     | 
->     |____plugin
->     | |____XSecurity
->     | | |____XSecurity
-> 
-> 
-> 
->    ____some_folder (llvm working folder)
->     |____build
->     | |____Release+Asserts
->     | | |____bin
->     | |____scripts
->     |
->     |____llvm
->     | |____tools
->     | | |____clang
->     | | | |____lib
->     | | | | |____StaticAnalyzer
->     | | | | | |____Checkers
->     | | | |
->     | | | |____tools
->     | | | | |____scan-build
-> 
->  Before moving the files, please take note of Checkers.td in llvm/tools/clang/lib/StaticAnalyzer/Checkers,
->  be careful not to directly overwrite it, you may have the latest llvm source code and
->  they may have addded more checkers compared to the checkers we have when we created our checkers.
-> 
->  - Move the the files under checker folder to the root folder of your llvm working folder.
->  - Build clang (make) in build folder (some_folder/build)
->  - To confirm if the iOSAppSec checkers were built successfully execute the following under the same build folder.
->    ./scripts/confirm_checker.sh iOS
-> 
->    It will show you the list of the iOSAppSec checkers (there are 10 at the time of this writing)
+    Get the required tools.
+      - See Getting Started with the LLVM System - Requirements.
+      - Note also that Python is needed for running the test suite. Get it at: http://www.python.org/download
+   
+    Checkout LLVM:
+      - Change directory to where you want the llvm directory placed.
+      - svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm 
+        (Currently we are using the revision 200605. You should check it out with 
+        -r option like svn co -r 200605 http://xxxx.)
+   
+    Checkout Clang:
+      - cd llvm/tools
+      - svn co http://llvm.org/svn/llvm-project/cfe/trunk clang 
+        (Use same option mentioned above)
+      - cd ../..
+   
+    Checkout extra Clang Tools: (optional)
+      - cd llvm/tools/clang/tools
+      - svn co http://llvm.org/svn/llvm-project/clang-tools-extra/trunk extra 
+        (Use same option mentioned above)
+      - cd ../../../..
+   
+    Checkout Compiler-RT:
+      - cd llvm/projects
+      - svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt 
+        (Use same option mentioned above)
+      - cd ../..
+   
+    Build LLVM and Clang:
+      - mkdir build  
+        (for building without polluting the source dir)
+      - cd build
+      - ../llvm/configure 
+        (configure build folder which is outside the source dir)
+        Note: At this point if you are able to successfully execute the above mentioned 
+              command then you might want to have a coffee break after executing the
+              following make, since it will take a little while to complete.
+      - make
+   
+    By now you may have the following folder structure:
+   
+      ____XSecurity
+       |____checker (checker folder)
+       | |____build
+       | | |____Release+Asserts
+       | | | |____bin
+       | | |____scripts
+       | |
+       | |____llvm
+       | | |____tools
+       | | | |____clang
+       | | | | |____lib
+       | | | | | |____StaticAnalyzer
+       | | | | | | |____Checkers
+       | | | | |
+       | | | | |____tools
+       | | | | | |____scan-build
+       | |  
+       | |____test
+       | 
+       |____plugin
+       | |____XSecurity
+       | | |____XSecurity
+   
+   
+   
+      ____some_folder (llvm working folder)
+       |____build
+       | |____Release+Asserts
+       | | |____bin
+       | |____scripts
+       |
+       |____llvm
+       | |____tools
+       | | |____clang
+       | | | |____lib
+       | | | | |____StaticAnalyzer
+       | | | | | |____Checkers
+       | | | |
+       | | | |____tools
+       | | | | |____scan-build
+   
+    Before moving the files, please take note of Checkers.td in llvm/tools/clang/lib/StaticAnalyzer/Checkers,
+    be careful not to directly overwrite it, you may have the latest llvm source code and
+    they may have addded more checkers compared to the checkers we have when we created our checkers.
+   
+    - Move the the files under checker folder to the root folder of your llvm working folder.
+    - Build clang (make) in build folder (some_folder/build)
+    - To confirm if the iOSAppSec checkers were built successfully execute the following under the same build folder.
+      ./scripts/confirm_checker.sh iOS
+   
+      It will show you the list of the iOSAppSec checkers (there are 10 at the time of this writing)
 
   
 INSTALLATION
