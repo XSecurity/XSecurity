@@ -1,6 +1,4 @@
-
-XSecurity
-_____________________________
+### XSecurity
 
 A security plugin in Xcode with clang analyzer's checkers for iOS application development. 
 This plugin aims to reduce the vulnerability made during development by detecting the vulnerability 
@@ -12,8 +10,7 @@ the readme file under checker folder.
 Support Xcode Versions
 Xcode 5.0.2
 
-
-INSTALLATION
+##### INSTALLATION
 _____________________________
 
 Download source code(See also "BRANCHES/RELEASES" section) and open XSecurity.xcodeproj on Xcode.
@@ -25,14 +22,14 @@ Quit Xcode and start it again. (Make it sure that Xcode proccess is fully termin
 This time XSecurity will be loaded, you will mostlikely find a menu item: XSecurity in the main menu. 
 
 
-HOW TO UNINSTALL
+##### HOW TO UNINSTALL
 _____________________________
 
 Delete the following directory:
 $HOME/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/XSecurity.xcplugin
 
 
-FEATURE LIST
+##### FEATURE LIST
 _____________________________
 
 - Centralize developer-friendly security features on Xcode IDE
@@ -42,7 +39,8 @@ _____________________________
 - Real-time Vulnerability Notifications
 - Static Analysis with Clang Static Analyzer
 
-RELEASES
+
+##### RELEASES
 _____________________________
 
 In XSecurity, as typical with other projects we use git tags to make our releases and aptly named as 
@@ -50,7 +48,7 @@ Realeaes Tags. Typically one would download one of these Release Tags to build (
 apply XSecurity) and work on it. 
 
 
-BRANCHES
+##### BRANCHES
 _____________________________
 
 This explains the branches and some conventions used in this project.
@@ -71,7 +69,7 @@ feature or bug fix branch:
   respective of their types.
 
 
-BUG REPORTING
+##### BUG REPORTING
 _____________________________
 
 It is possible that Xcode may crash while XSecurity is loaded inside Xcode. It is our hope to deal with all 
@@ -80,12 +78,13 @@ reports the following information:
 
 - Crash information (Xcode shows threads stack trace when it crashes. Please include them.)
 - The operations you did before the crash (series of key strokes, mouse operations or combination of both)
-- The source code snippet you were manipulating (a portion of code will not really mean to us, we promise not to distribute it)
--  Xcode version
--  XSecurity version (Version number of the revision you built)
+- The source code snippet you were manipulating (a portion of code will not really mean to us, we promise not 
+  to distribute it)
+- Xcode version
+- XSecurity version (Version number of the revision you built)
 
 
-HOW DO WE HANDLE THE ISSUED BUGS
+##### HOW DO WE HANDLE THE ISSUED BUGS
 _____________________________
 
 Reported bugs will be handled using the following steps.
@@ -101,21 +100,22 @@ Reported bugs will be handled using the following steps.
 We greatly appreciate your pull request if you can make one.  See some section (TBD) for more details. 
 
 
-LICENSE
+##### LICENSE
 _____________________________
 
 XSecurity is available under 2 licenses described as below.
-The Xcode plug-in is made available under the Apache 2.0 license.
-Clang and our custom security checkers for clang static analyzer
-are available under the University of Illinois/NCSA Open Source License.
+The Xcode plug-in is made available under the Apache 2.0 license. In line with this if you want to contribute 
+in this project we encourage you to sign the Individual License Agreement (ICLA.TXT)
 
-It contains code written by third parties. Such software will
-have its own individual LICENSE.TXT file in the directory 
-in which it appears. This file will describe the copyrights, 
-license, and restrictions which apply to that code.
+Clang and the custom security checkers for clang static analyzer are available under the University of 
+Illinois/NCSA Open Source License.
+
+It contains code written by third parties. Such software will have its own individual LICENSE.TXT file in the
+directory in which it appears. This file will describe the copyrights, license, and restrictions which apply 
+to that code.
 
 
-OTHER CONVENTIONS AND VALUES
+##### OTHER CONVENTIONS AND VALUES
 _____________________________
 
 As much as we value personal coding styles and personal conventions in creating code, as it reflects
