@@ -1,0 +1,180 @@
+ ------- ID: 1
+ Vuln  : <CKeywordCallerVuln: 0x10d97e610>
+ Expr  : (?:\b)(initWithUser\s*:\s*.*?\s*password\s*:\s*.*?\s*persistence\s*:((\s*\(\s*)+|\s*)NSURLCredentialPersistencePermanent((\s*\)\s*)+|\s*))
+ Match : initWithUser: (NSString *) someUser password: [someClass getPassword] persistence:NSURLCredentialPersistencePermanent
+ Range : 1073, 117
+ ------- ID: 2
+ Vuln  : <CKeywordCallerVuln: 0x10d97e610>
+ Expr  : (?:\b)(initWithIdentity\s*:\s*.*?\s*certificates\s*:\s*.*?\s*persistence\s*:((\s*\(\s*)+|\s*)NSURLCredentialPersistencePermanent((\s*\)\s*)+|\s*))
+ Match : initWithIdentity: (SecIdentityRef)identity certificates: (NSArray *) someCertificates persistence:NSURLCredentialPersistencePermanent
+ Range : 911, 133
+ ------- ID: 3
+ Vuln  : <CKeywordCallerVuln: 0x10d97e610>
+ Expr  : (?:\b)(credentialWithUser\s*:\s*.*?\s*password\s*:\s*.*?\s*persistence\s*:((\s*\(\s*)+|\s*)NSURLCredentialPersistencePermanent((\s*\)\s*)+|\s*))
+ Match : credentialWithUser: someUser password: [someClass getPassword] persistence:NSURLCredentialPersistencePermanent
+ Range : 770, 110
+ ------- ID: 4
+ Vuln  : <CKeywordCallerVuln: 0x10d97e610>
+ Expr  : (?:\b)(credentialWithIdentity\s*:\s*.*?\s*certificates\s*:\s*.*?\s*persistence\s*:((\s*\(\s*)+|\s*)NSURLCredentialPersistencePermanent((\s*\)\s*)+|\s*))
+ Match : credentialWithIdentity:identity certificates:(NSArray*)certArray persistence:NSURLCredentialPersistencePermanent
+ Range : 58, 112
+ ------- ID: 5
+ Vuln  : <CKeywordCallerVuln: 0x10d97e610>
+ Expr  : (=(\s*|\s*\(.*?\)\s*)NSURLCredentialPersistencePermanent)
+ Match : = NSURLCredentialPersistencePermanent
+ Range : 1248, 37
+ ------- ID: 6
+ Vuln  : <CKeywordCallerVuln: 0x10d97e610>
+ Expr  : (=(\s*|\s*\(.*?\)\s*)NSURLCredentialPersistencePermanent)
+ Match : = (int) (float *) NSURLCredentialPersistencePermanent
+ Range : 1375, 53
+ ------- ID: 7
+ Vuln  : <CKeywordCallerVuln: 0x10d97e610>
+ Expr  : (=(\s*|\s*\(.*?\)\s*)NSURLCredentialPersistencePermanent)
+ Match : = (int) (float *)  NSURLCredentialPersistencePermanent
+ Range : 1536, 54
+ ------- ID: 8
+ Vuln  : <CKeywordCallerVuln: 0x10d97e610>
+ Expr  : (#define\s+.*?\s*NSURLCredentialPersistencePermanent)
+ Match : #define someDef NSURLCredentialPersistencePermanent
+ Range : 1301, 51
+ ------- ID: 9
+ Vuln  : <CKeywordCallerVuln: 0x10d975c20>
+ Expr  : (?:\b)(continueWithoutCredentialForAuthenticationChallenge\s*:((\s*\(\s*)+|\s*)[^]\s]*((\s*\)\s*)+|\s*))
+ Match : continueWithoutCredentialForAuthenticationChallenge:challenge
+ Range : 1703, 61
+ ------- ID: 10
+ Vuln  : <CKeywordCallerVuln: 0x10d975c20>
+ Expr  : (?:\b)(continueWithoutCredentialForAuthenticationChallenge\s*:((\s*\(\s*)+|\s*)[^]\s]*((\s*\)\s*)+|\s*))
+ Match : continueWithoutCredentialForAuthenticationChallenge:challenge
+ Range : 1807, 61
+ ------- ID: 11
+ Vuln  : <CKeywordCallerVuln: 0x10d975c20>
+ Expr  : (?:\b)(setAllowsAnyHTTPSCertificate\s*:((\s*\(\s*)+|\s*)(YES|TRUE|true)((\s*\)\s*)+|\s*)forHost\s*:\s*.*?\s*)
+ Match : setAllowsAnyHTTPSCertificate:YES forHost:
+ Range : 1617, 41
+ ------- ID: 12
+ Vuln  : <CKeywordCallerVuln: 0x10d975c20>
+ Expr  : (?:\b)(setAllowsAnyHTTPSCertificate\s*:((\s*\(\s*)+|\s*)(YES|TRUE|true)((\s*\)\s*)+|\s*)forHost\s*:\s*.*?\s*)
+ Match : setAllowsAnyHTTPSCertificate:(YES)forHost:
+ Range : 1896, 42
+ ------- ID: 13
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*forKey\s*:\s*.*?\s*)
+ Match : setObject:(id)kSecClassGenericPassword forKey:
+ Range : 4342, 46
+ ------- ID: 14
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*forKey\s*:\s*.*?\s*)
+ Match : setObject:account forKey:
+ Range : 4412, 25
+ ------- ID: 15
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*forKey\s*:\s*.*?\s*)
+ Match : setObject:(id)kSecAttrAccessibleAlways forKey:
+ Range : 4467, 46
+ ------- ID: 16
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*forKey\s*:\s*.*?\s*)
+ Match : setObject:[inputString dataUsingEncoding:NSUTF8StringEncoding] forKey:
+ Range : 4546, 70
+ ------- ID: 17
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*forKey\s*:\s*.*?\s*)
+ Match : setObject:self.username.text forKey:
+ Range : 5224, 36
+ ------- ID: 18
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*forKey\s*:\s*.*?\s*)
+ Match : setObject:self.password.text forKey:
+ Range : 5287, 36
+ ------- ID: 19
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*:\s*.*?\s*forKey\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*)
+ Match : setObject:(id)kSecClassGenericPassword forKey:
+ Range : 4342, 46
+ ------- ID: 20
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*:\s*.*?\s*forKey\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*)
+ Match : setObject:account forKey:
+ Range : 4412, 25
+ ------- ID: 21
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*:\s*.*?\s*forKey\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*)
+ Match : setObject:(id)kSecAttrAccessibleAlways forKey:
+ Range : 4467, 46
+ ------- ID: 22
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*:\s*.*?\s*forKey\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*)
+ Match : setObject:[inputString dataUsingEncoding:NSUTF8StringEncoding] forKey:
+ Range : 4546, 70
+ ------- ID: 23
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*:\s*.*?\s*forKey\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*)
+ Match : setObject:self.username.text forKey:
+ Range : 5224, 36
+ ------- ID: 24
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(setObject\s*:\s*.*?\s*forKey\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*)
+ Match : setObject:self.password.text forKey:
+ Range : 5287, 36
+ ------- ID: 25
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d97d9b0>
+ Expr  : (?:\b)(stringForKey\s*\s*:\s*.*?\s*\s*.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\s*)
+ Match : stringForKey: USERNAME
+ Range : 5434, 22
+ ------- ID: 26
+ Vuln  : <CKeywordSensitiveInfoVuln: 0x10d9792d0>
+ Expr  : NSLog\(.*?(((confidential|name|developer|programmer|token|(trade\s*|)secret))|(pass((w(or|)d)|))|(us(e|)r((name|id)|))|(credit(\s*?card(\s*?n(o(\.|)|um(ber|))|)|))|(((dev(ice|)member|student|employee|biometric)\s*?|)id(entification|))|((expir(y|ation)|birth)\s*(day|date|))|((ip|internet\s*(protocol|)|)(e(lectronic|\-|)\s*mail|)\s*?(addr(ess|)|))).*?\)\s*?;
+ Match : 
+ Range : 4230, 0
+ ------- ID: 27
+ Vuln  : <CKeywordCalleeVuln: 0x10d975480>
+ Expr  : @\s*?implementation\s*?NSURLRequest\s*?.*?\+\s*?.*?\(\s*?BOOL\s*?\)\s*?allowsAnyHTTPSCertificateForHost\s*?:.*?\{.*?(return\s*?(YES|TRUE|true|1)\s*?;).*?\}\s*?@\s*?end
+ Match : return YES;
+ Range : 4009, 11
+ ------- ID: 28
+ Vuln  : <CKeywordCalleeVuln: 0x10d975480>
+ Expr  : @\s*?implementation\s*?NSURLRequest\s*?.*?\+\s*?.*?\(\s*?BOOL\s*?\)\s*?allowsAnyHTTPSCertificateForHost\s*?:.*?\{.*?(return\s*?(YES|TRUE|true|1)\s*?;).*?\}\s*?@\s*?end
+ Match : return YES;
+ Range : 4961, 11
+ ------- ID: 29
+ Vuln  : <CKeywordCalleeVuln: 0x10d975480>
+ Expr  : @\s*?implementation\s*?NSURLRequest\s*?.*?\+\s*?.*?\(\s*?BOOL\s*?\)\s*?allowsAnyHTTPSCertificateForHost\s*?:.*?\{.*?((\S*)\s*?=\s*?(YES|TRUE|true|1)\s*?;.*return\s*?(\2)+\s*?;).*?\}\s*?@\s*?end
+ Match : bRet = TRUE ;
+    
+if ( this ) 
+{
+   return bRet;
+ Range : 4143, 49
+ ------- ID: 30
+ Vuln  : <CKeywordCalleeVuln: 0x10d9766e0>
+ Expr  : @\s*?implementation\s*?\S*?\s\s*?.*?\-\s*?.*?\(\s*?BOOL\s*?\)\s*?application\s*?:.*?\s*?openURL\s*?:.*?\s*?sourceApplication\s*?:.*?\s*?annotation\s*?:.*?\{.*?(return\s*?(YES|TRUE|true|1)\s*?;).*?\}\s*?@\s*?end
+ Match : return YES;
+ Range : 4961, 11
+ ------- ID: 31
+ Vuln  : <CKeywordCalleeVuln: 0x10d9766e0>
+ Expr  : @\s*?implementation\s*?\S*?\s\s*?.*?\-\s*?.*?\(\s*?BOOL\s*?\)\s*?application\s*?:.*?\s*?handleOpenURL\s*?:.*?\{.*?(return\s*?(YES|TRUE|true|1)\s*?;).*?\}\s*?@\s*?end
+ Match : return YES ;
+ Range : 5106, 12
+ ------- ID: 32
+ Vuln  : <CPureKeywordVuln: 0x10d975960>
+ Expr  : (?:\b)(kSecAttrAccessibleAlways)
+ Match : kSecAttrAccessibleAlways
+ Range : 4481, 24
+ ------- ID: 33
+ Vuln  : <CPureKeywordVuln: 0x10d97d100>
+ Expr  : (?:\b)(kCFStreamSSLAllowsExpiredCertificates)
+ Match : kCFStreamSSLAllowsExpiredCertificates
+ Range : 2398, 37
+ ------- ID: 34
+ Vuln  : <CPureKeywordVuln: 0x10d97d100>
+ Expr  : (?:\b)(kCFStreamSSLAllowsAnyRoot)
+ Match : kCFStreamSSLAllowsAnyRoot
+ Range : 2470, 25
+ ------- ID: 35
+ Vuln  : <CPureKeywordVuln: 0x10d97d100>
+ Expr  : (?:\b)(kCFStreamSSLValidatesCertificateChain)
+ Match : kCFStreamSSLValidatesCertificateChain
+ Range : 2527, 37
+

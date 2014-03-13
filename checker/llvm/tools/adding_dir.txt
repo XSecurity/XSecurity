@@ -1,1 +1,0 @@
-This file is created just to add the folder and to create the folder structure of this project.

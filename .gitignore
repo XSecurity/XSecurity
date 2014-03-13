@@ -19,3 +19,10 @@ DerivedData
 
 #CocoaPods
 Pods
+
+#vim
+*.swp
+*.swo
+
+#etc
+*.o

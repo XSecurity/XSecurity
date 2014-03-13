@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Vulnerability Categories</key>
+	<dict>
+		<key>Insecure Data Storage</key>
+		<dict>
+			<key>References</key>
+			<dict>
+				<key>CWE</key>
+				<array>
+					<string></string>
+				</array>
+				<key>OWASP</key>
+				<array>
+					<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M2</string>
+				</array>
+			</dict>
+			<key>Severity</key>
+			<integer>0</integer>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<key>Insufficient Transport Layer Security</key>
+		<dict>
+			<key>References</key>
+			<dict>
+				<key>CWE</key>
+				<array>
+					<string></string>
+				</array>
+				<key>OWASP</key>
+				<array>
+					<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M3</string>
+				</array>
+			</dict>
+			<key>Severity</key>
+			<integer>0</integer>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<key>Unintended Data Leakage</key>
+		<dict>
+			<key>References</key>
+			<dict>
+				<key>CWE</key>
+				<array>
+					<string></string>
+				</array>
+				<key>OWASP</key>
+				<array>
+					<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M4</string>
+				</array>
+			</dict>
+			<key>Severity</key>
+			<integer>0</integer>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<key>Poor Authorization and Authentication</key>
+		<dict>
+			<key>References</key>
+			<dict>
+				<key>CWE</key>
+				<array>
+					<string></string>
+				</array>
+				<key>OWASP</key>
+				<array>
+					<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M5</string>
+				</array>
+			</dict>
+			<key>Severity</key>
+			<integer>0</integer>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<key>Broken Cryptography</key>
+		<dict>
+			<key>References</key>
+			<dict>
+				<key>CWE</key>
+				<array>
+					<string></string>
+				</array>
+				<key>OWASP</key>
+				<array>
+					<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M6</string>
+				</array>
+			</dict>
+			<key>Severity</key>
+			<integer>0</integer>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<key>Client Side Injection</key>
+		<dict>
+			<key>References</key>
+			<dict>
+				<key>CWE</key>
+				<array>
+					<string></string>
+				</array>
+				<key>OWASP</key>
+				<array>
+					<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M7</string>
+				</array>
+			</dict>
+			<key>Severity</key>
+			<integer>0</integer>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<key>Security Decisions Via Untrusted Inputs</key>
+		<dict>
+			<key>References</key>
+			<dict>
+				<key>CWE</key>
+				<array>
+					<string></string>
+				</array>
+				<key>OWASP</key>
+				<array>
+					<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M8</string>
+				</array>
+			</dict>
+			<key>Severity</key>
+			<integer>0</integer>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<key>Improper Session Handling</key>
+		<dict>
+			<key>References</key>
+			<dict>
+				<key>CWE</key>
+				<array>
+					<string></string>
+				</array>
+				<key>OWASP</key>
+				<array>
+					<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M9</string>
+				</array>
+			</dict>
+			<key>Severity</key>
+			<integer>0</integer>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<key>Lack of Binary Protections</key>
+		<dict>
+			<key>References</key>
+			<dict>
+				<key>CWE</key>
+				<array>
+					<string></string>
+				</array>
+				<key>OWASP</key>
+				<array>
+					<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M10</string>
+				</array>
+			</dict>
+			<key>Severity</key>
+			<integer>0</integer>
+			<key>Description</key>
+			<string></string>
+		</dict>
+	</dict>
+	<key>SensitiveInfoKeywords</key>
+	<array>
+		<string>confidential|name|developer|programmer|token|(trade\s*)*secret</string>
+		<string>pass((w(or)*d))*</string>
+		<string>us(e)*r((name|id))*</string>
+		<string>credit(\s*?card(\s*?n(o(\.)*|um(ber)*))*)*</string>
+		<string>((dev(ice)*member|student|employee|biometric)\s*?)*[^\(]\s*?id(entification)*</string>
+		<string>(expir(y|ation)|birth)\s*(day|date)*</string>
+		<string>(ip|internet\s*(protocol)*)|(e(lectronic|\-)\s*mail)|(\s*?addr(ess)*)</string>
+		<string>contact\s*(info(rmation)*)*</string>
+		<string>(b(a)*nk|rec(ord)*|bal(ance)*|rat(e|ing))</string>
+		<string>(ACH|acc(ou)*nt|serial|fax|pp|pas*po*rt)(\s*?n(o(\.)*|um(ber)*))*</string>
+		<string>(visa\s*)(code)*|(code)</string>
+		<string>(grade|pay|salary|financ(e|ial))\s*(info(rmation)*)*</string>
+		<string>(ss|soc(ial)*\s*sec(urity)*)(\s*?n(o(\.)*|um(ber)*))*</string>
+		<string>(arc|alien|resident)\s*(card(\s*?n(o(\.)*|um(ber)*))*)*</string>
+		<string>(driver\&apos;s\s*license|asset|liability|intellectual\s*property)</string>
+		<string>(firewall\s*)(conf(iguration)*)|(conf(iguration)*)</string>
+	</array>
+	<key>Rules</key>
+	<dict>
+		<key>CKeywordSensitiveInfoVuln</key>
+		<dict>
+			<key>Insecure NSUserDefaults Usage</key>
+			<dict>
+				<key>Severity</key>
+				<integer>0</integer>
+				<key>StripComment</key>
+				<true/>
+				<key>Description</key>
+				<string>The application stores sensitive data in NSUserDefaults without encrypting it.</string>
+				<key>References</key>
+				<array/>
+				<key>VulnCategory</key>
+				<string>Insecure Data Storage</string>
+				<key>Instances</key>
+				<dict>
+					<key>NSUserDefaults</key>
+					<dict>
+						<key>Methods</key>
+						<array>
+							<string>NSUserDefaults\s*?\**\s*?(\S*\b).*\2\s*?setObject:forKey:</string>
+							<string>NSUserDefaults\s*?\**\s*?(\S*\b).*\2\s*?stringForKey:</string>
+						</array>
+						<key>Args</key>
+						<array>
+							<string>setObject:.*?%@.*?</string>
+							<string>forKey:.*?%@.*?</string>
+							<string>stringForKey:.*?%@.*?</string>
+						</array>
+						<key>Functions</key>
+						<array/>
+					</dict>
+				</dict>
+			</dict>
+			<key>Leaking Logs</key>
+			<dict>
+				<key>Severity</key>
+				<integer>0</integer>
+				<key>StripComment</key>
+				<true/>
+				<key>Description</key>
+				<string>Sensitive information is leaked via Logs.</string>
+				<key>References</key>
+				<array/>
+				<key>VulnCategory</key>
+				<string>Unintended Data Leakage</string>
+				<key>Instances</key>
+				<dict>
+					<key>NSLog</key>
+					<dict>
+						<key>Methods</key>
+						<array/>
+						<key>Args</key>
+						<array/>
+						<key>Functions</key>
+						<array>
+							<string>NSLog\(.*?(%@)\s*?,*.*?\s*?\)\s*?;</string>
+						</array>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<key>CKeywordCallerVuln</key>
+		<dict>
+			<key>Insecure Permanent Credential Storage</key>
+			<dict>
+				<key>Severity</key>
+				<integer>0</integer>
+				<key>StripComment</key>
+				<true/>
+				<key>Description</key>
+				<string>The credential is stored in the keychain permanently</string>
+				<key>References</key>
+				<array/>
+				<key>VulnCategory</key>
+				<string>Insecure Data Storage</string>
+				<key>Instances</key>
+				<dict>
+					<key>NSURLCredential</key>
+					<dict>
+						<key>Methods</key>
+						<array>
+							<string>initWithUser:password:persistence:</string>
+							<string>initWithIdentity:certificates:persistence:</string>
+							<string>credentialWithUser:password:persistence:</string>
+							<string>credentialWithIdentity:certificates:persistence:</string>
+						</array>
+						<key>Args</key>
+						<array>
+							<string>persistence:NSURLCredentialPersistencePermanent</string>
+						</array>
+					</dict>
+				</dict>
+			</dict>
+			<key>Ignores Certificate Validation Errors</key>
+			<dict>
+				<key>Severity</key>
+				<integer>0</integer>
+				<key>StripComment</key>
+				<true/>
+				<key>Description</key>
+				<string>Disabling the certificate checks is a serious mistake. If the server&apos;s trust rating is invalid it entirely cancels one of the important security assurances provided by HTTP(TLS protocol).</string>
+				<key>References</key>
+				<array/>
+				<key>VulnCategory</key>
+				<string>Insufficient Transport Layer Security</string>
+				<key>Instances</key>
+				<dict>
+					<key>NSURLRequest</key>
+					<dict>
+						<key>Methods</key>
+						<array>
+							<string>setAllowsAnyHTTPSCertificate:forHost:</string>
+						</array>
+						<key>Args</key>
+						<array>
+							<string>setAllowsAnyHTTPSCertificate:(YES|TRUE|true)</string>
+						</array>
+					</dict>
+					<key>NSURLAuthenticationChallengeSender</key>
+					<dict>
+						<key>Methods</key>
+						<array>
+							<string>continueWithoutCredentialForAuthenticationChallenge:</string>
+						</array>
+						<key>Args</key>
+						<array>
+							<string>continueWithoutCredentialForAuthenticationChallenge:[^]\s]*</string>
+						</array>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<key>CPureKeywordVuln</key>
+		<dict>
+			<key>Ignore Certificate Validation Errors</key>
+			<dict>
+				<key>Severity</key>
+				<integer>0</integer>
+				<key>StripComment</key>
+				<true/>
+				<key>Description</key>
+				<string>Disabling the certificate checks is a serious mistake. If the server&apos;s trust rating is invalid it entirely cancels one of the important security assurances provided by HTTP(TLS protocol).</string>
+				<key>References</key>
+				<array/>
+				<key>VulnCategory</key>
+				<string>Insufficient Transport Layer Security</string>
+				<key>Instances</key>
+				<dict>
+					<key>NSURLRequest</key>
+					<dict>
+						<key>Methods</key>
+						<array/>
+						<key>Args</key>
+						<array/>
+						<key>Keywords</key>
+						<array>
+							<string>kCFStreamSSLAllowsExpiredCertificates</string>
+							<string>kCFStreamSSLAllowsExpiredRoots</string>
+							<string>kCFStreamSSLAllowsAnyRoot</string>
+							<string>kCFStreamSSLValidatesCertificateChain</string>
+						</array>
+					</dict>
+				</dict>
+			</dict>
+			<key>Insecure Keychain Storage</key>
+			<dict>
+				<key>Severity</key>
+				<integer>0</integer>
+				<key>StripComment</key>
+				<true/>
+				<key>Description</key>
+				<string>The information is stored in the Keychain with weak accessibility options.</string>
+				<key>References</key>
+				<array/>
+				<key>VulnCategory</key>
+				<string>Insecure Data Storage</string>
+				<key>Instances</key>
+				<dict>
+					<key>SecItemAdd</key>
+					<dict>
+						<key>Methods</key>
+						<array/>
+						<key>Args</key>
+						<array/>
+						<key>Keywords</key>
+						<array>
+							<string>kSecAttrAccessibleAlways</string>
+							<string>kSecAttrAccessibleAlwaysThisDeviceOnly</string>
+							<string>kSecAttrAccessibleAfterFirstUnlock</string>
+							<string>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</string>
+						</array>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<key>CKeywordCalleeVuln</key>
+		<dict>
+			<key>Abusing URL Schemes</key>
+			<dict>
+				<key>Severity</key>
+				<integer>0</integer>
+				<key>StripComment</key>
+				<true/>
+				<key>Description</key>
+				<string>Malicious activities be performed due to insecure implementation of URL Schemes.</string>
+				<key>References</key>
+				<array/>
+				<key>VulnCategory</key>
+				<string>Security Decisions Via Untrusted Inputs</string>
+				<key>Instances</key>
+				<dict>
+					<key>\S*?\s</key>
+					<dict>
+						<key>Methods</key>
+						<dict>
+							<key>-(BOOL)application:openURL:sourceApplication:annotation:</key>
+							<dict>
+								<key>Keywords</key>
+								<array>
+									<string>return\s*?(YES|TRUE|true|1)\s*?;</string>
+									<string>(\S*)\s*?=\s*?(YES|TRUE|true|1)\s*?;.*return\s*?(\2)+\s*?;</string>
+								</array>
+							</dict>
+							<key>-(BOOL)application:handleOpenURL:</key>
+							<dict>
+								<key>Keywords</key>
+								<array>
+									<string>return\s*?(YES|TRUE|true|1)\s*?;</string>
+									<string>(\S*)\s*?=\s*?(YES|TRUE|true|1)\s*?;.*return\s*?(\2)+\s*?;</string>
+								</array>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+			<key>Ignores Certificate Validation Errors</key>
+			<dict>
+				<key>Severity</key>
+				<integer>0</integer>
+				<key>StripComment</key>
+				<true/>
+				<key>Description</key>
+				<string>Disabling the certificate checks is a serious mistake. If the server&apos;s trust rating is invalid it entirely cancels one of the important security assurances provided by HTTP(TLS protocol).</string>
+				<key>References</key>
+				<array/>
+				<key>VulnCategory</key>
+				<string>Insufficient Transport Layer Security</string>
+				<key>Instances</key>
+				<dict>
+					<key>NSURLRequest</key>
+					<dict>
+						<key>Methods</key>
+						<dict>
+							<key>+(BOOL)allowsAnyHTTPSCertificateForHost:</key>
+							<dict>
+								<key>Keywords</key>
+								<array>
+									<string>return\s*?(YES|TRUE|true|1)\s*?;</string>
+									<string>(\S*)\s*?=\s*?(YES|TRUE|true|1)\s*?;.*return\s*?(\2)+\s*?;</string>
+								</array>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>Version</key>
+	<string>0.01</string>
+	<key>Security Guides</key>
+	<dict>
+		<key>NSUserDefaults</key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>NSUserDefaults</string>
+			</array>
+			<key>Category</key>
+			<string>Insecure Data Storage</string>
+			<key>Description</key>
+			<string>Avoid using NSUserDefaults to store sensitive information as it stores data in plist files.</string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M2</string>
+		</dict>
+		<key>KeyChain</key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>kSecAttrAccessibleAlways</string>
+				<string>kSecAttrAccessibleAlwaysThisDeviceOnly</string>
+				<string>kSecAttrAccessibleAfterFirstUnlock</string>
+				<string>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</string>
+			</array>
+			<key>Category</key>
+			<string>Insecure Data Storage</string>
+			<key>Description</key>
+			<string>This accessibility option to the Keychain is weak. Use stronger accessibility options.</string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M2</string>
+		</dict>
+		<key>Permanent Credential</key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>NSURLCredentialPersistencePermanent</string>
+			</array>
+			<key>Category</key>
+			<string>Insecure Data Storage</string>
+			<key>Description</key>
+			<string>If it is used, the credential is stored in the Keychain permanently. Don&apos;t use this persistence value to store any sensitive information.</string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M2</string>
+		</dict>
+		<key>Ignore certificate validation errors</key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>kCFStreamSSLAllowsExpiredCertificates</string>
+				<string>kCFStreamSSLAllowsExpiredRoots</string>
+				<string>kCFStreamSSLAllowsAnyRoot</string>
+				<string>kCFStreamSSLValidatesCertificateChain</string>
+			</array>
+			<key>Category</key>
+			<string>Insufficient Transport Layer Security</string>
+			<key>Description</key>
+			<string>This weakens the transport security. Don&apos;t use such unsecure propery value.</string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M3</string>
+		</dict>
+		<key>Abusing URL Schemes </key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>application:openURL:sourceApplication:annotation:</string>
+			</array>
+			<key>Category</key>
+			<string>Security Decisions Via Untrusted Inputs</string>
+			<key>Description</key>
+			<string>Insecure implementation of URL Schemes may allow an attacker to perform malicous activity. Perform input validation for the URLScheme properly.</string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M8</string>
+		</dict>
+		<key>Web Caches</key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>connection:willCacheResponse:</string>
+			</array>
+			<key>Category</key>
+			<string>Unintended Data Leakage</string>
+			<key>Description</key>
+			<string>Without deleting new cached response using this method, any data transported is cached in web caches. Avoid sensitive data not to be cached in web caches.</string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M4</string>
+		</dict>
+		<key>Keyboard Cache</key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>UITextField</string>
+			</array>
+			<key>Category</key>
+			<string>Unintended Data Leakage</string>
+			<key>Description</key>
+			<string>iOS has auto-correction feature. Sensitive information may be cached because of this feature. In order to avoid such situations, make the value of a property secureTextEntry YES or autocorrectionType UITextAutocorrectionTypeNo.
+ 
+mytextField.secureTextEntry = YES;
+ 
+or
+ 
+mytextField.autocorrectionType as UITextAutocorrectionTypeNo.</string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M4</string>
+		</dict>
+		<key>Screenshots</key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>UITextField</string>
+			</array>
+			<key>Category</key>
+			<string>Unintended Data Leakage</string>
+			<key>Description</key>
+			<string>iOS has auto-correction feature. Sensitive information may be cached because of this feature. In order to avoid such situations, make the value of a property secureTextEntry YES or autocorrectionType UITextAutocorrectionTypeNo.</string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M4</string>
+		</dict>
+		<key>Logs</key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>NSLog</string>
+				<string></string>
+			</array>
+			<key>Category</key>
+			<string>Unintended Data Leakage</string>
+			<key>Description</key>
+			<string>It can potentially cache sensitive information on the device. Such information can be accessed by Xcode Organizer and any apps using the Apple System Log (ASL) . Developers should avoid using NSLog to log sensitive or proprietary information. </string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M4</string>
+		</dict>
+		<key>Pasteboard</key>
+		<dict>
+			<key>Signatures</key>
+			<array>
+				<string>UIPasteboard</string>
+			</array>
+			<key>Category</key>
+			<string>Unintended Data Leakage</string>
+			<key>Description</key>
+			<string>Don&apos;t leak any sensitive information through Pasteboard.</string>
+			<key>Reference</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2014-M4</string>
+		</dict>
+	</dict>
+	<key>References</key>
+	<dict>
+		<key>Insecure Data Storage</key>
+		<dict>
+			<key>CWE</key>
+			<string>http://cwe.mitre.org/data/definitions/312.html</string>
+			<key>OWASP</key>
+			<string>https://www.owasp.org/index.php/Mobile_Top_10_2012-M1_Insecure_Data_Storage</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
