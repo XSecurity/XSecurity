@@ -19,33 +19,33 @@ _____________________________
  Checkout LLVM:
    - Change directory to where you want the llvm directory placed.
    - svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm 
-     * Currently we are using the revision 200605. You should check it out with 
-     * -r option like svn co -r 200605 http://xxxx.
+     (Currently we are using the revision 200605. You should check it out with 
+     -r option like svn co -r 200605 http://xxxx.)
 
  Checkout Clang:
    - cd llvm/tools
    - svn co http://llvm.org/svn/llvm-project/cfe/trunk clang 
-     * Use same option mentioned above
+     (Use same option mentioned above)
    - cd ../..
 
  Checkout extra Clang Tools: (optional)
    - cd llvm/tools/clang/tools
    - svn co http://llvm.org/svn/llvm-project/clang-tools-extra/trunk extra 
-     * Use same option mentioned above
+     (Use same option mentioned above)
    - cd ../../../..
 
  Checkout Compiler-RT:
    - cd llvm/projects
    - svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt 
-     * Use same option mentioned above
+     (Use same option mentioned above)
    - cd ../..
 
  Build LLVM and Clang:
    - mkdir build  
-     * for building without polluting the source dir
+     (for building without polluting the source dir)
    - cd build
    - ../llvm/configure 
-     * configure build folder which is outside the source dir
+     (configure build folder which is outside the source dir)
      Note: At this point if you are able to successfully execute the above mentioned 
            command then you might want to have a coffee break after executing the
            following make, since it will take a little while to complete.
