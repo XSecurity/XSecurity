@@ -1,5 +1,4 @@
-# XSecurity (Checkers)
-_____________________________
+### XSecurity (Checkers)
 
 A security plugin in Xcode with clang analyzer's checkers for iOS application development. 
 This plugin aims to reduce the vulnerability made during development by detecting the vulnerability 
@@ -9,7 +8,7 @@ This readme file is mainly for the Checkers for details about the plugin please 
 the readme file under the main folder.
 
 
-### PREPARATION
+##### PREPARATION
 _____________________________
 
     Get the required tools.
@@ -104,7 +103,7 @@ _____________________________
       It will show you the list of the iOSAppSec checkers (there are 10 at the time of this writing)
 
   
-### INSTALLATION
+##### INSTALLATION
 _____________________________
 
  Quit Xcode if it is running.
@@ -114,7 +113,7 @@ _____________________________
  - execute ./scripts/apply_new_clang.sh 
 
 
-### EXECUTION in Xcode
+##### EXECUTION in Xcode
 _____________________________
 
  Open Xcode and find "XSecurity" in the main menu, typically before the Help item.
@@ -123,13 +122,13 @@ _____________________________
  Under "XSecurity", you can find the last menu item, "Static Security Analyzer". Under it select "Analyze". 
 
 
-### HOW TO UNINSTALL
+##### HOW TO UNINSTALL
 _____________________________
 
 Uninstall the plugin-in see the main readme file.
 
 
-### FEATURE LIST
+##### FEATURE LIST
 _____________________________
 
 These are the supported vulnerabilities as of the moment.
@@ -144,13 +143,13 @@ These are the supported vulnerabilities as of the moment.
 - SQL Injection (SQLite)
 
 
-### RELEASES, BRANCHES & BUG REPORTING
+##### RELEASES, BRANCHES & BUG REPORTING
 _____________________________
 
 See the main readme file for these sections.
 
 
-### HOW DO WE HANDLE THE ISSUED BUGS
+##### HOW DO WE HANDLE THE ISSUED BUGS
 _____________________________
 
 Reported bugs will be handled using the following steps.
@@ -166,7 +165,7 @@ Reported bugs will be handled using the following steps.
 We greatly appreciate your pull request if you can make one.  
 
 
-### LICENSE
+##### LICENSE
 _____________________________
 
 XSecurity is available under 2 licenses described as below.
@@ -180,7 +179,7 @@ in which it appears. This file will describe the copyrights,
 license, and restrictions which apply to that code.
 
 
-### OTHER CONVENTIONS AND VALUES
+##### OTHER CONVENTIONS AND VALUES
 _____________________________
 
 As much as we value personal coding styles and personal conventions in creating code, as it reflects
