@@ -319,7 +319,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Rakuten, Inc.";
+				ORGANIZATIONNAME = "XSecurity Project.";
 			};
 			buildConfigurationList = 518CFEC317C73D1A004B5B2B /* Build configuration list for PBXProject "XSecurity" */;
 			compatibilityVersion = "Xcode 3.2";
