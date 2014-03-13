@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		510BC5F117CA0DFA0068DE5B /* IDEFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510BC5F017CA0DFA0068DE5B /* IDEFoundation.framework */; };
+		5142262817C8FADD002DE09B /* DVTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5142262717C8FADD002DE09B /* DVTKit.framework */; };
+		5142262A17C8FAFF002DE09B /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5142262917C8FAFF002DE09B /* IDEKit.framework */; };
+		5142262C17C8FB33002DE09B /* DVTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5142262B17C8FB33002DE09B /* DVTFoundation.framework */; };
+		515A86E518AA0789004F5499 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 515A86E418AA0789004F5499 /* icon.png */; };
+		516066B517D20F0800366A89 /* SecurityPolicy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 516066B417D20F0800366A89 /* SecurityPolicy.plist */; };
+		51786DE718CB27DB00E8F197 /* CSecurityGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 51786DE618CB27DB00E8F197 /* CSecurityGuide.m */; };
+		517FF60E185F06C000624002 /* SecurityGuideWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 517FF60D185F06C000624002 /* SecurityGuideWindowController.xib */; };
+		517FF619185F06CF00624002 /* CMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FF610185F06CF00624002 /* CMenuController.m */; };
+		517FF61B185F06CF00624002 /* CQuickHelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FF614185F06CF00624002 /* CQuickHelpController.m */; };
+		517FF61C185F06CF00624002 /* CSecurityGuideWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FF616185F06CF00624002 /* CSecurityGuideWindowController.m */; };
+		517FF61D185F06CF00624002 /* CXSecurityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FF618185F06CF00624002 /* CXSecurityController.m */; };
+		517FF620185F06D900624002 /* CLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FF61F185F06D900624002 /* CLog.m */; };
+		518CFECC17C73D1A004B5B2B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CFECB17C73D1A004B5B2B /* Cocoa.framework */; };
+		518CFED617C73D1A004B5B2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 518CFED417C73D1A004B5B2B /* InfoPlist.strings */; };
+		518CFEDF17C73E16004B5B2B /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 518CFEDE17C73E16004B5B2B /* Main.m */; };
+		519C0FEF188E74B40014B028 /* CSecurityScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519C0FEE188E74B40014B028 /* CSecurityScanController.m */; };
+		51CD676C18B369B0008A7CCD /* CStaticAnalyzerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CD676B18B369B0008A7CCD /* CStaticAnalyzerController.m */; };
+		51CD676F18B369CD008A7CCD /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 51CD676E18B369CD008A7CCD /* NSAttributedString+Hyperlink.m */; };
+		CB15138718C415290038BC50 /* CVulnCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CB15138618C415290038BC50 /* CVulnCategory.m */; };
+		CB1DF83518854949001C1DD8 /* CKeywordSensitiveInfoVuln.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DF83418854949001C1DD8 /* CKeywordSensitiveInfoVuln.m */; };
+		CB25CB331861922D00061C67 /* CVulnerability.m in Sources */ = {isa = PBXBuildFile; fileRef = CB25CB321861922D00061C67 /* CVulnerability.m */; };
+		CB49D791189B97E000012FDA /* CSensitiveInfoKeywords.m in Sources */ = {isa = PBXBuildFile; fileRef = CB49D790189B97E000012FDA /* CSensitiveInfoKeywords.m */; };
+		CB6387451862C36A008CDA8F /* CVulnController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6387441862C36A008CDA8F /* CVulnController.m */; };
+		CBB9638B1882D99F002D2D2D /* CKeywordCalleeVuln.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9638A1882D99F002D2D2D /* CKeywordCalleeVuln.m */; };
+		CBE3693418759B3D003C52AC /* CKeywordCallerVuln.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3693318759B3D003C52AC /* CKeywordCallerVuln.m */; };
+		CBE3693718790537003C52AC /* CPureKeywordVuln.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3693618790537003C52AC /* CPureKeywordVuln.m */; };
+		CBE3693A18790B3B003C52AC /* CLogicVuln.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3693918790B3B003C52AC /* CLogicVuln.m */; };
+		CBE3693D1879555D003C52AC /* CKeywordVuln.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3693C1879555D003C52AC /* CKeywordVuln.m */; };
+		CBE3694018796F2E003C52AC /* CTargetCode.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3693F18796F2E003C52AC /* CTargetCode.m */; };
+		CBE3694318797248003C52AC /* CResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3694218797248003C52AC /* CResult.m */; };
+		CBE369461879743C003C52AC /* CInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE369451879743C003C52AC /* CInstance.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		510BC5F017CA0DFA0068DE5B /* IDEFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEFoundation.framework; path = /Applications/Xcode.app/Contents/Frameworks/IDEFoundation.framework; sourceTree = "<absolute>"; };
+		5142262717C8FADD002DE09B /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = /Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework; sourceTree = "<absolute>"; };
+		5142262917C8FAFF002DE09B /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<absolute>"; };
+		5142262B17C8FB33002DE09B /* DVTFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTFoundation.framework; path = /Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework; sourceTree = "<absolute>"; };
+		514CC995189741FB00F5582E /* Xcode3UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xcode3UI.h; sourceTree = "<group>"; };
+		514CC9961897755500F5582E /* DevToolsCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevToolsCore.h; sourceTree = "<group>"; };
+		515A86E418AA0789004F5499 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		516066B417D20F0800366A89 /* SecurityPolicy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SecurityPolicy.plist; sourceTree = "<group>"; };
+		51786DE518CB27DB00E8F197 /* CSecurityGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSecurityGuide.h; path = Model/CSecurityGuide.h; sourceTree = "<group>"; };
+		51786DE618CB27DB00E8F197 /* CSecurityGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSecurityGuide.m; path = Model/CSecurityGuide.m; sourceTree = "<group>"; };
+		517FF60D185F06C000624002 /* SecurityGuideWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SecurityGuideWindowController.xib; path = View/SecurityGuideWindowController.xib; sourceTree = "<group>"; };
+		517FF60F185F06CF00624002 /* CMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CMenuController.h; path = Controller/CMenuController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		517FF610185F06CF00624002 /* CMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CMenuController.m; path = Controller/CMenuController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		517FF613185F06CF00624002 /* CQuickHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CQuickHelpController.h; path = Controller/CQuickHelpController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		517FF614185F06CF00624002 /* CQuickHelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CQuickHelpController.m; path = Controller/CQuickHelpController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		517FF615185F06CF00624002 /* CSecurityGuideWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CSecurityGuideWindowController.h; path = Controller/CSecurityGuideWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		517FF616185F06CF00624002 /* CSecurityGuideWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CSecurityGuideWindowController.m; path = Controller/CSecurityGuideWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		517FF617185F06CF00624002 /* CXSecurityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CXSecurityController.h; path = Controller/CXSecurityController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		517FF618185F06CF00624002 /* CXSecurityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CXSecurityController.m; path = Controller/CXSecurityController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		517FF61E185F06D900624002 /* CLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CLog.h; path = Helper/CLog.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		517FF61F185F06D900624002 /* CLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CLog.m; path = Helper/CLog.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		518CFEC817C73D1A004B5B2B /* XSecurity.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XSecurity.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		518CFECB17C73D1A004B5B2B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		518CFECE17C73D1A004B5B2B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		518CFECF17C73D1A004B5B2B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		518CFED017C73D1A004B5B2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		518CFED317C73D1A004B5B2B /* XSecurity-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XSecurity-Info.plist"; sourceTree = "<group>"; };
+		518CFED517C73D1A004B5B2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		518CFED717C73D1A004B5B2B /* XSecurity-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSecurity-Prefix.pch"; sourceTree = "<group>"; };
+		518CFEDD17C73E16004B5B2B /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Main.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		518CFEDE17C73E16004B5B2B /* Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		519C0FED188E74B40014B028 /* CSecurityScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CSecurityScanController.h; path = Controller/CSecurityScanController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		519C0FEE188E74B40014B028 /* CSecurityScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CSecurityScanController.m; path = Controller/CSecurityScanController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		51B8B0BB18288FB100E1F2DD /* IDEFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
+		51B8B0BD18288FB100E1F2DD /* IDESourceEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDESourceEditor.h; sourceTree = "<group>"; };
+		51CD676A18B369B0008A7CCD /* CStaticAnalyzerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CStaticAnalyzerController.h; path = Controller/CStaticAnalyzerController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		51CD676B18B369B0008A7CCD /* CStaticAnalyzerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CStaticAnalyzerController.m; path = Controller/CStaticAnalyzerController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		51CD676D18B369CD008A7CCD /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "NSAttributedString+Hyperlink.h"; path = "Helper/NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		51CD676E18B369CD008A7CCD /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "NSAttributedString+Hyperlink.m"; path = "Helper/NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		51D66C861829EE95001E8FBC /* DVTFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTFoundation.h; sourceTree = "<group>"; };
+		51D66C871829F061001E8FBC /* IDEKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
+		51D66C88182A0840001E8FBC /* DVTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTKit.h; sourceTree = "<group>"; };
+		CB15138518C415290038BC50 /* CVulnCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CVulnCategory.h; path = Model/CVulnCategory.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CB15138618C415290038BC50 /* CVulnCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CVulnCategory.m; path = Model/CVulnCategory.m; sourceTree = "<group>"; };
+		CB1DF83318854949001C1DD8 /* CKeywordSensitiveInfoVuln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CKeywordSensitiveInfoVuln.h; path = Model/CKeywordSensitiveInfoVuln.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CB1DF83418854949001C1DD8 /* CKeywordSensitiveInfoVuln.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CKeywordSensitiveInfoVuln.m; path = Model/CKeywordSensitiveInfoVuln.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CB25CB311861922D00061C67 /* CVulnerability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CVulnerability.h; path = Model/CVulnerability.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CB25CB321861922D00061C67 /* CVulnerability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CVulnerability.m; path = Model/CVulnerability.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CB49D78F189B97E000012FDA /* CSensitiveInfoKeywords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CSensitiveInfoKeywords.h; path = Model/CSensitiveInfoKeywords.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CB49D790189B97E000012FDA /* CSensitiveInfoKeywords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CSensitiveInfoKeywords.m; path = Model/CSensitiveInfoKeywords.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CB6387431862C36A008CDA8F /* CVulnController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CVulnController.h; path = Controller/CVulnController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CB6387441862C36A008CDA8F /* CVulnController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CVulnController.m; path = Controller/CVulnController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CB6387471862F222008CDA8F /* XSecDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XSecDefs.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CBB963891882D99F002D2D2D /* CKeywordCalleeVuln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CKeywordCalleeVuln.h; path = Model/CKeywordCalleeVuln.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CBB9638A1882D99F002D2D2D /* CKeywordCalleeVuln.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CKeywordCalleeVuln.m; path = Model/CKeywordCalleeVuln.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CBE3693218759B3D003C52AC /* CKeywordCallerVuln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CKeywordCallerVuln.h; path = Model/CKeywordCallerVuln.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CBE3693318759B3D003C52AC /* CKeywordCallerVuln.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CKeywordCallerVuln.m; path = Model/CKeywordCallerVuln.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CBE3693518790537003C52AC /* CPureKeywordVuln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CPureKeywordVuln.h; path = Model/CPureKeywordVuln.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CBE3693618790537003C52AC /* CPureKeywordVuln.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CPureKeywordVuln.m; path = Model/CPureKeywordVuln.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CBE3693818790B3B003C52AC /* CLogicVuln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CLogicVuln.h; path = Model/CLogicVuln.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CBE3693918790B3B003C52AC /* CLogicVuln.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CLogicVuln.m; path = Model/CLogicVuln.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CBE3693B1879555D003C52AC /* CKeywordVuln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CKeywordVuln.h; path = Model/CKeywordVuln.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CBE3693C1879555D003C52AC /* CKeywordVuln.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CKeywordVuln.m; path = Model/CKeywordVuln.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CBE3693E18796F2E003C52AC /* CTargetCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CTargetCode.h; path = Model/CTargetCode.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CBE3693F18796F2E003C52AC /* CTargetCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CTargetCode.m; path = Model/CTargetCode.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CBE3694118797248003C52AC /* CResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CResult.h; path = Model/CResult.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CBE3694218797248003C52AC /* CResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CResult.m; path = Model/CResult.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CBE369441879743C003C52AC /* CInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CInstance.h; path = Model/CInstance.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CBE369451879743C003C52AC /* CInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CInstance.m; path = Model/CInstance.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		518CFEC517C73D1A004B5B2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				518CFECC17C73D1A004B5B2B /* Cocoa.framework in Frameworks */,
+				5142262A17C8FAFF002DE09B /* IDEKit.framework in Frameworks */,
+				510BC5F117CA0DFA0068DE5B /* IDEFoundation.framework in Frameworks */,
+				5142262817C8FADD002DE09B /* DVTKit.framework in Frameworks */,
+				5142262C17C8FB33002DE09B /* DVTFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		510613951856C93700B8F311 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				51CD676D18B369CD008A7CCD /* NSAttributedString+Hyperlink.h */,
+				51CD676E18B369CD008A7CCD /* NSAttributedString+Hyperlink.m */,
+				517FF61E185F06D900624002 /* CLog.h */,
+				517FF61F185F06D900624002 /* CLog.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		510613961856C94000B8F311 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				517FF60D185F06C000624002 /* SecurityGuideWindowController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		513DCFA817C73F420019BA01 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				514518F31856CA1B009F2CE0 /* Model */,
+				510613961856C94000B8F311 /* View */,
+				51D537AB1856C917007FB7F1 /* Controller */,
+				510613951856C93700B8F311 /* Helper */,
+				518CFEDD17C73E16004B5B2B /* Main.h */,
+				518CFEDE17C73E16004B5B2B /* Main.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		514518F31856CA1B009F2CE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB25CB311861922D00061C67 /* CVulnerability.h */,
+				CB25CB321861922D00061C67 /* CVulnerability.m */,
+				CB15138518C415290038BC50 /* CVulnCategory.h */,
+				CB15138618C415290038BC50 /* CVulnCategory.m */,
+				CBE3693B1879555D003C52AC /* CKeywordVuln.h */,
+				CBE3693C1879555D003C52AC /* CKeywordVuln.m */,
+				CBE3693218759B3D003C52AC /* CKeywordCallerVuln.h */,
+				CBE3693318759B3D003C52AC /* CKeywordCallerVuln.m */,
+				CB1DF83318854949001C1DD8 /* CKeywordSensitiveInfoVuln.h */,
+				CB1DF83418854949001C1DD8 /* CKeywordSensitiveInfoVuln.m */,
+				CBB963891882D99F002D2D2D /* CKeywordCalleeVuln.h */,
+				CBB9638A1882D99F002D2D2D /* CKeywordCalleeVuln.m */,
+				CBE3693518790537003C52AC /* CPureKeywordVuln.h */,
+				CBE3693618790537003C52AC /* CPureKeywordVuln.m */,
+				CBE3693818790B3B003C52AC /* CLogicVuln.h */,
+				CBE3693918790B3B003C52AC /* CLogicVuln.m */,
+				CBE3693E18796F2E003C52AC /* CTargetCode.h */,
+				CBE3693F18796F2E003C52AC /* CTargetCode.m */,
+				CBE3694118797248003C52AC /* CResult.h */,
+				CBE3694218797248003C52AC /* CResult.m */,
+				CBE369441879743C003C52AC /* CInstance.h */,
+				CBE369451879743C003C52AC /* CInstance.m */,
+				CB49D78F189B97E000012FDA /* CSensitiveInfoKeywords.h */,
+				CB49D790189B97E000012FDA /* CSensitiveInfoKeywords.m */,
+				51786DE518CB27DB00E8F197 /* CSecurityGuide.h */,
+				51786DE618CB27DB00E8F197 /* CSecurityGuide.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		518CFEBF17C73D1A004B5B2B = {
+			isa = PBXGroup;
+			children = (
+				518CFED117C73D1A004B5B2B /* XSecurity */,
+				518CFECA17C73D1A004B5B2B /* Frameworks */,
+				518CFEC917C73D1A004B5B2B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		518CFEC917C73D1A004B5B2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				518CFEC817C73D1A004B5B2B /* XSecurity.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		518CFECA17C73D1A004B5B2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				510BC5F017CA0DFA0068DE5B /* IDEFoundation.framework */,
+				5142262B17C8FB33002DE09B /* DVTFoundation.framework */,
+				5142262917C8FAFF002DE09B /* IDEKit.framework */,
+				5142262717C8FADD002DE09B /* DVTKit.framework */,
+				518CFECB17C73D1A004B5B2B /* Cocoa.framework */,
+				518CFECD17C73D1A004B5B2B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		518CFECD17C73D1A004B5B2B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				518CFECE17C73D1A004B5B2B /* AppKit.framework */,
+				518CFECF17C73D1A004B5B2B /* CoreData.framework */,
+				518CFED017C73D1A004B5B2B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		518CFED117C73D1A004B5B2B /* XSecurity */ = {
+			isa = PBXGroup;
+			children = (
+				51B8B0B118288DDB00E1F2DD /* Xcode */,
+				513DCFA817C73F420019BA01 /* Classes */,
+				518CFED217C73D1A004B5B2B /* Supporting Files */,
+				CB6387471862F222008CDA8F /* XSecDefs.h */,
+			);
+			path = XSecurity;
+			sourceTree = "<group>";
+		};
+		518CFED217C73D1A004B5B2B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				515A86E418AA0789004F5499 /* icon.png */,
+				518CFED317C73D1A004B5B2B /* XSecurity-Info.plist */,
+				518CFED417C73D1A004B5B2B /* InfoPlist.strings */,
+				518CFED717C73D1A004B5B2B /* XSecurity-Prefix.pch */,
+				516066B417D20F0800366A89 /* SecurityPolicy.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		51B8B0B118288DDB00E1F2DD /* Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				51D66C871829F061001E8FBC /* IDEKit.h */,
+				51B8B0BB18288FB100E1F2DD /* IDEFoundation.h */,
+				51B8B0BD18288FB100E1F2DD /* IDESourceEditor.h */,
+				51D66C88182A0840001E8FBC /* DVTKit.h */,
+				51D66C861829EE95001E8FBC /* DVTFoundation.h */,
+				514CC9961897755500F5582E /* DevToolsCore.h */,
+				514CC995189741FB00F5582E /* Xcode3UI.h */,
+			);
+			name = Xcode;
+			sourceTree = "<group>";
+		};
+		51D537AB1856C917007FB7F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				517FF60F185F06CF00624002 /* CMenuController.h */,
+				517FF610185F06CF00624002 /* CMenuController.m */,
+				517FF615185F06CF00624002 /* CSecurityGuideWindowController.h */,
+				517FF616185F06CF00624002 /* CSecurityGuideWindowController.m */,
+				517FF617185F06CF00624002 /* CXSecurityController.h */,
+				517FF618185F06CF00624002 /* CXSecurityController.m */,
+				CB6387431862C36A008CDA8F /* CVulnController.h */,
+				CB6387441862C36A008CDA8F /* CVulnController.m */,
+				517FF613185F06CF00624002 /* CQuickHelpController.h */,
+				517FF614185F06CF00624002 /* CQuickHelpController.m */,
+				519C0FED188E74B40014B028 /* CSecurityScanController.h */,
+				519C0FEE188E74B40014B028 /* CSecurityScanController.m */,
+				51CD676A18B369B0008A7CCD /* CStaticAnalyzerController.h */,
+				51CD676B18B369B0008A7CCD /* CStaticAnalyzerController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		518CFEC717C73D1A004B5B2B /* XSecurity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 518CFEDA17C73D1A004B5B2B /* Build configuration list for PBXNativeTarget "XSecurity" */;
+			buildPhases = (
+				518CFEC417C73D1A004B5B2B /* Sources */,
+				518CFEC517C73D1A004B5B2B /* Frameworks */,
+				518CFEC617C73D1A004B5B2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XSecurity;
+			productName = XSecurity;
+			productReference = 518CFEC817C73D1A004B5B2B /* XSecurity.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		518CFEC017C73D1A004B5B2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "XSecurity Project.";
+			};
+			buildConfigurationList = 518CFEC317C73D1A004B5B2B /* Build configuration list for PBXProject "XSecurity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 518CFEBF17C73D1A004B5B2B;
+			productRefGroup = 518CFEC917C73D1A004B5B2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				518CFEC717C73D1A004B5B2B /* XSecurity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		518CFEC617C73D1A004B5B2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				518CFED617C73D1A004B5B2B /* InfoPlist.strings in Resources */,
+				515A86E518AA0789004F5499 /* icon.png in Resources */,
+				516066B517D20F0800366A89 /* SecurityPolicy.plist in Resources */,
+				517FF60E185F06C000624002 /* SecurityGuideWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		518CFEC417C73D1A004B5B2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				518CFEDF17C73E16004B5B2B /* Main.m in Sources */,
+				51CD676C18B369B0008A7CCD /* CStaticAnalyzerController.m in Sources */,
+				519C0FEF188E74B40014B028 /* CSecurityScanController.m in Sources */,
+				517FF620185F06D900624002 /* CLog.m in Sources */,
+				CBE3693418759B3D003C52AC /* CKeywordCallerVuln.m in Sources */,
+				CB1DF83518854949001C1DD8 /* CKeywordSensitiveInfoVuln.m in Sources */,
+				CBE3694018796F2E003C52AC /* CTargetCode.m in Sources */,
+				CBB9638B1882D99F002D2D2D /* CKeywordCalleeVuln.m in Sources */,
+				CBE369461879743C003C52AC /* CInstance.m in Sources */,
+				CBE3693D1879555D003C52AC /* CKeywordVuln.m in Sources */,
+				CB15138718C415290038BC50 /* CVulnCategory.m in Sources */,
+				CB49D791189B97E000012FDA /* CSensitiveInfoKeywords.m in Sources */,
+				CBE3694318797248003C52AC /* CResult.m in Sources */,
+				517FF619185F06CF00624002 /* CMenuController.m in Sources */,
+				CB25CB331861922D00061C67 /* CVulnerability.m in Sources */,
+				CBE3693718790537003C52AC /* CPureKeywordVuln.m in Sources */,
+				CB6387451862C36A008CDA8F /* CVulnController.m in Sources */,
+				51CD676F18B369CD008A7CCD /* NSAttributedString+Hyperlink.m in Sources */,
+				517FF61C185F06CF00624002 /* CSecurityGuideWindowController.m in Sources */,
+				51786DE718CB27DB00E8F197 /* CSecurityGuide.m in Sources */,
+				517FF61B185F06CF00624002 /* CQuickHelpController.m in Sources */,
+				517FF61D185F06CF00624002 /* CXSecurityController.m in Sources */,
+				CBE3693A18790B3B003C52AC /* CLogicVuln.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		518CFED417C73D1A004B5B2B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				518CFED517C73D1A004B5B2B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		518CFED817C73D1A004B5B2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = "";
+			};
+			name = Debug;
+		};
+		518CFED917C73D1A004B5B2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		518CFEDB17C73D1A004B5B2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/SharedFrameworks\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XSecurity/XSecurity-Prefix.pch";
+				INFOPLIST_FILE = "XSecurity/XSecurity-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/PlugIns/IDESourceEditor.ideplugin/Contents/MacOS\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		518CFEDC17C73D1A004B5B2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/SharedFrameworks\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XSecurity/XSecurity-Prefix.pch";
+				INFOPLIST_FILE = "XSecurity/XSecurity-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/PlugIns/IDESourceEditor.ideplugin/Contents/MacOS\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		518CFEC317C73D1A004B5B2B /* Build configuration list for PBXProject "XSecurity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				518CFED817C73D1A004B5B2B /* Debug */,
+				518CFED917C73D1A004B5B2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		518CFEDA17C73D1A004B5B2B /* Build configuration list for PBXNativeTarget "XSecurity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				518CFEDB17C73D1A004B5B2B /* Debug */,
+				518CFEDC17C73D1A004B5B2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 518CFEC017C73D1A004B5B2B /* Project object */;
+}

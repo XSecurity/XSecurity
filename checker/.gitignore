@@ -1,0 +1,21 @@
+#exclude licenses and readme
+#!*.md
+#!LICENSE.TXT
+
+#unnecessary object files
+*.o
+*.tmp
+
+#uncessary test files
+test/owasp-igoat-2.0/
+test/takarakuji/
+
+# some user data in xcode
+*.xcuserstate
+*.xccheckout
+
+# special paths
+test/CLangTest/CLangTest.xcodeproj/xcuserdata/
+build/
+!build/scripts
+!build/Release+Asserts/bin/

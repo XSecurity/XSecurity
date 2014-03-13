@@ -1,0 +1,13 @@
+
+LICENSE
+_____________________________
+
+XSecurity is available under 2 licenses described as below.
+The Xcode plug-in is made available under the Apache 2.0 license.
+Clang and our custom security checkers for clang static analyzer
+are available under the University of Illinois/NCSA Open Source License.
+
+It contains code written by third parties. Such software will
+have its own individual LICENSE.TXT file in the directory 
+in which it appears. This file will describe the copyrights, 
+license, and restrictions which apply to that code.
