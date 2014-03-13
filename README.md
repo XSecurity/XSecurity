@@ -1,11 +1,13 @@
-XSecurity
-=========
 
+XSecurity
 _____________________________
 
-A security plugin in Xcode plus clang checkers for iOS application development. 
-This plugin aims to reduce the vulnerability made during development by detecting 
-the vulnerability as it is being created. 
+A security plugin in Xcode with clang analyzer's checkers for iOS application development. 
+This plugin aims to reduce the vulnerability made during development by detecting the vulnerability 
+as it is being created. 
+
+This readme file is mainly for the plugin itself for details about the checkers please see
+the readme file under checker folder.
 
 Support Xcode Versions
 Xcode 5.0.2
@@ -43,7 +45,7 @@ _____________________________
 RELEASES
 _____________________________
 
-In XSecurity, as typical with other projects we use git tags to mak our releases and aptly named as 
+In XSecurity, as typical with other projects we use git tags to make our releases and aptly named as 
 Realeaes Tags. Typically one would download one of these Release Tags to build (and automatically 
 apply XSecurity) and work on it. 
 
@@ -121,7 +123,4 @@ our individuality and personality. We strongly adhere to our coding philosophies
 clean coding and uniformity. We believe that clean code begets readablity, modifiability and 
 maintainability. This also applies to code uniformity thus it is with our great appreciation if you can 
 blend in with the following convetions.
-
-
-
 
