@@ -42,9 +42,9 @@
 
 // START TEMP: Temporarily removing these lines to remove from the menu
 // TODO: Figure out to make local predefines
-//    newItem = [[NSMenuItem alloc] initWithTitle:@"Raymund Test" action:@selector(doMenuActionRaymund) keyEquivalent:@""];
-//    [newItem setTarget:self];
-//    [newMenu addItem:newItem];
+    newItem = [[NSMenuItem alloc] initWithTitle:@"Raymund Test" action:@selector(doMenuActionRaymund) keyEquivalent:@""];
+    [newItem setTarget:self];
+    [newMenu addItem:newItem];
 // END TEMP
     
     // Add submenus for Quick Security Help
@@ -233,7 +233,7 @@
             [g_pController retain] ;
         }
         
-        CTargetCode *objTarget = [ [CTargetCode alloc] initWithFile: @"/Users/raymund.pedraita/Projects/own/xsecurity/XSecurity/test/sample.m"] ;
+        CTargetCode *objTarget = [ [CTargetCode alloc] initWithFile: @"/Users/raymund.pedraita/Projects/own/xsecurity/XSecurity/test/sample_sensitive.m"] ;
         
         NSArray *aaaRes = [g_pController detect: objTarget bCommentRemoved: FALSE] ;
         
