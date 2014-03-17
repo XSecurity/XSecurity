@@ -40,12 +40,12 @@
     // For some reason as well, sometimes this work, sometimes not, maybe build should be done first before run, or
     // should quit the new instance of Xcode
 
-// START TEMP: Temporarily removing these lines to remove from the menu
-// TODO: Figure out to make local predefines
-    newItem = [[NSMenuItem alloc] initWithTitle:@"Raymund Test" action:@selector(doMenuActionRaymund) keyEquivalent:@""];
-    [newItem setTarget:self];
-    [newMenu addItem:newItem];
-// END TEMP
+//// START TEMP: Temporarily removing these lines to remove from the menu
+//// TODO: Figure out to make local predefines
+//    newItem = [[NSMenuItem alloc] initWithTitle:@"Raymund Test" action:@selector(doMenuActionRaymund) keyEquivalent:@""];
+//    [newItem setTarget:self];
+//    [newMenu addItem:newItem];
+//// END TEMP
     
     // Add submenus for Quick Security Help
     newMenu = [[NSMenu alloc] initWithTitle:@"Quick Security Help"];
@@ -233,7 +233,7 @@
             [g_pController retain] ;
         }
         
-        CTargetCode *objTarget = [ [CTargetCode alloc] initWithFile: @"/Users/raymund.pedraita/Projects/own/xsecurity/XSecurity/test/sample_sensitive.m"] ;
+        CTargetCode *objTarget = [ [CTargetCode alloc] initWithFile: @"/Users/raymund.pedraita/Projects/own/xsecurity/XSecurity/test/sample.m"] ;
         
         NSArray *aaaRes = [g_pController detect: objTarget bCommentRemoved: FALSE] ;
         

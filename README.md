@@ -21,6 +21,30 @@ Execute build and it will automatically install the plugin into the correct dire
 Quit Xcode and start it again. (Make it sure that Xcode proccess is fully terminate)
 This time XSecurity will be loaded, you will mostlikely find a menu item: XSecurity in the main menu. 
 
+###### NOTE:
+If your Xcode's version is not 4.6, 5.0.2 and 5.1 then you need to add the new DVTPlugInCompatibilityUUID
+to XSecurity Xcode Project. In order to do that please do the following things.
+
+Retrieving DVTPlugInCompatibilityUUID
+- On a Terminal window execute the following command to get DVTPlugInCompatibilityUUID of Xcode.
+$ defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID
+
+- NOTE: Some version 5 Xcode is using /Applications/Xcode5.app/ 
+  You may want to use the specific version of Xcode applicable to your current environment
+- Take note of the displayed UUID
+
+Adding DVTPlugInCompatibilityUUID to the Xcode project
+- In the previously created project (bundle) show Project Navigator
+- Select the project, and on TARGETS select the default target and choose Info
+- If DVTPlugInCompatibilityUUIDs Key is not present add it and select Array for the Type
+- Add new item under DVTPlugInCompatibilityUUIDs and put the UUID retrieved in the previous section.
+
+Screen Shot:
+![alt text](https://github.com/XSecurity/XSecurity/tree/master/plugin/XSecurity/DVTPlugInCompatibilityUUID.png "Adding DVTPlugInCompatibilityUUID")
+
+Additionally if you are using Xcode 5.1 and later you need to comment out [GCC_ENABLE_OBJC_GC = supported;] 
+because it is no longer supported in 
+this version and onwards. After doing that you may need to 
 
 ##### HOW TO UNINSTALL
 _____________________________
