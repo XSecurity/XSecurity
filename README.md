@@ -43,13 +43,13 @@ will be a lot of warnings. Please ignore those warnings, at the time of this wri
 these warnings.
 
 
-Continue the instalation:
+Continue the installation:
 
 In Xcode select the appropriate Scheme. 
 Go to "Edit Scheme" and set instances of "Build Configuration" to "Release"  
 Execute build and it will automatically install the plugin into the correct directory.
-Quit Xcode and start it again. (Make it sure that Xcode proccess is fully terminate)
-This time XSecurity will be loaded, you will mostlikely find a menu item: XSecurity in the main menu. 
+Quit Xcode and start it again. (Make it sure that Xcode process is fully terminate)
+This time XSecurity will be loaded, you will most likely find a menu item: XSecurity in the main menu. 
 
 ##### HOW TO UNINSTALL
 _____________________________
@@ -61,19 +61,19 @@ $HOME/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/XSecurity.xcp
 ##### FEATURE LIST
 _____________________________
 
-- Centralize developer-friendly security features on Xcode IDE
+- Centralized developer-friendly security features on Xcode IDE
 - Provide a solution to avoid making vulnerabilities, detect vulnerabilities at earlier phases of 
   development
 - Quick Security Help with built-in Security Guidelines
 - Real-time Vulnerability Notifications
-- Static Analysis with Clang Static Analyzer
+- Static Analysis with Clang Static Analyser
 
 
 ##### RELEASES
 _____________________________
 
 In XSecurity, as typical with other projects we use git tags to make our releases and aptly named as 
-Realeaes Tags. Typically one would download one of these Release Tags to build (and automatically 
+Release Tags. Typically one would download one of these Release Tags to build (and automatically 
 apply XSecurity) and work on it. 
 
 
@@ -94,7 +94,7 @@ develop branch:
 
 feature or bug fix branch:
   Develop features and bug fixes here, basically any branch made by the contributors. One convention we use
-  in naming feaure or bug fix branch is to have the branch name prefixed with "Feature_" and "BugFix_" 
+  in naming feature or bug fix branch is to have the branch name prefixed with "Feature_" and "BugFix_" 
   respective of their types.
 
 
@@ -149,7 +149,7 @@ _____________________________
 
 As much as we value personal coding styles and personal conventions in creating code, as it reflects
 our individuality and personality. We strongly adhere to our coding philosophies. One of it is we value 
-clean coding and uniformity. We believe that clean code begets readablity, modifiability and 
+clean coding and uniformity. We believe that clean code begets readability, modifiability and 
 maintainability. This also applies to code uniformity thus it is with our great appreciation if you can 
-blend in with the following convetions.
+blend in with the following conventions.
 

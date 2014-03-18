@@ -10,11 +10,20 @@ under the main folder.
 
 ##### PREPARATION
 _____________________________
-We plan to automate things for you but for the meantime plase bear with us by following this procedure.
 
+We included a binary of clang with these checkers pre-built in it but currently there are problems executing it
+from Xcode. So we recomment that you build your own copy of clang with these checkers included.
+We believe that it is better for you to build the original clang first. Then, include the checkers from this 
+repository and build clang again. In this way you can tell whether your setup is working in the first
+place or not.
+
+
+We plan to automate things for you but for the meantime please bear with us by following this procedure.
+
+   
     Get the required tools.
       - See Getting Started with the LLVM System - Requirements.
-      - Note also that Python is needed for running the test suite. Get it at: http://www.python.org/download
+      - Note that Python is needed for running the test suite. Get it at: http://www.python.org/download
    
     Checkout LLVM:
       - Change directory to where you want the llvm directory placed.
@@ -93,10 +102,13 @@ We plan to automate things for you but for the meantime plase bear with us by fo
        | | | |____tools
        | | | | |____scan-build
    
-    Before moving the files, please take note of Checkers.td in llvm/tools/clang/lib/StaticAnalyzer/Checkers,
+    NOTE:
+    - Before moving the files, please take note of Checkers.td in llvm/tools/clang/lib/StaticAnalyzer/Checkers,
     be careful not to directly overwrite it, you may have the latest llvm source code and
     they may have addded more checkers compared to the checkers we have when we created our checkers.
-   
+    - It is highly advised that you compare the two versions of Checkers.td and add only the portion applicable to
+      MSecIOSAppSec.
+
     - Move the the files under checker folder to the root folder of your llvm working folder.
     - Build clang (make) in build folder (some_folder/build)
     - To confirm if the iOSAppSec checkers were built successfully execute the following under the same build folder.
