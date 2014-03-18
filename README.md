@@ -2,7 +2,8 @@
 
 A security plugin in Xcode with clang analyzer's checkers for iOS application development. 
 This plugin aims to reduce the vulnerability made during development by detecting the vulnerability 
-as it is being created. 
+as it is being created. You can also follow us on twitter: https://twitter.com/prj_xsecurity for 
+more updates regarding this tool.
 
 This readme file is mainly for the plugin itself for details about the checkers please see
 the readme file under checker folder.

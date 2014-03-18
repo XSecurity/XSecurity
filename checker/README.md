@@ -4,12 +4,13 @@ A security plugin in Xcode with clang analyzer's checkers for iOS application de
 This plugin aims to reduce the vulnerability made during development by detecting the vulnerability 
 as it is being created. 
 
-This readme file is mainly for the Checkers for details about the plugin please see
-the readme file under the main folder.
+This readme file is mainly for the Checkers for details about the plugin please see the readme file 
+under the main folder.
 
 
 ##### PREPARATION
 _____________________________
+We plan to automate things for you but for the meantime plase bear with us by following this procedure.
 
     Get the required tools.
       - See Getting Started with the LLVM System - Requirements.
@@ -43,11 +44,12 @@ _____________________________
       - mkdir build  
         (for building without polluting the source dir)
       - cd build
-      - ../llvm/configure 
+      - ../llvm/configure --enable-optimized --disable-compiler-version-checks
+
         (configure build folder which is outside the source dir)
         Note: At this point if you are able to successfully execute the above mentioned 
-              command then you might want to have a coffee break after executing the
-              following make, since it will take a little while to complete.
+              command then you might want to have a coffee break or do something else 
+              after executing the following make, since it will take a little while to complete.
       - make
    
     By now you may have the following folder structure:
@@ -106,10 +108,10 @@ _____________________________
 ##### INSTALLATION
 _____________________________
 
- Quit Xcode if it is running.
-
- After succesfully building clang, under llvm working folder's build folder (the one with files in this repository) 
- - some_folder/build/
+You should do the following after succesfully building clang, under llvm working folder's build folder 
+(the one with files in this repository) 
+ - Quit Xcode if it is running.
+ - cd [some_folder]/build/
  - execute ./scripts/apply_new_clang.sh 
 
 
