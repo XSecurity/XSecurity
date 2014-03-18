@@ -18,7 +18,7 @@ repository and build clang again. In this way you can tell whether your setup is
 place or not.
 
 
-We plan to automate things for you but for the meantime plase bear with us by following this procedure.
+We plan to automate things for you but for the meantime please bear with us by following this procedure.
 
    
     Get the required tools.
