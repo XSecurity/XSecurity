@@ -40,12 +40,12 @@
     // For some reason as well, sometimes this work, sometimes not, maybe build should be done first before run, or
     // should quit the new instance of Xcode
 
-// START TEMP: Temporarily removing these lines to remove from the menu
-// TODO: Figure out to make local predefines
+//// START TEMP: Temporarily removing these lines to remove from the menu
+//// TODO: Figure out to make local predefines
 //    newItem = [[NSMenuItem alloc] initWithTitle:@"Raymund Test" action:@selector(doMenuActionRaymund) keyEquivalent:@""];
 //    [newItem setTarget:self];
 //    [newMenu addItem:newItem];
-// END TEMP
+//// END TEMP
     
     // Add submenus for Quick Security Help
     newMenu = [[NSMenu alloc] initWithTitle:@"Quick Security Help"];
