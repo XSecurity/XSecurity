@@ -1407,7 +1407,7 @@
     BOOL _allowsConditionalizeSDK;
 }
 
-@property __weak Xcode3BuildSettingsEditor *buildSettingsEditor; // @synthesize buildSettingsEditor=_buildSettingsEditor;
+@property (assign)__weak Xcode3BuildSettingsEditor *buildSettingsEditor; // @synthesize buildSettingsEditor=_buildSettingsEditor;
 /* - (void).cxx_destruct; */
 - (void)_sdkMenuItemAction:(id)arg1;
 - (void)_architectureMenuItemAction:(id)arg1;
@@ -2208,7 +2208,7 @@
     Xcode3SourceTreesPrefsPaneController *_controller;
 }
 
-@property __weak Xcode3SourceTreesPrefsPaneController *controller; // @synthesize controller=_controller;
+@property (assign)__weak Xcode3SourceTreesPrefsPaneController *controller; // @synthesize controller=_controller;
 /* - (void).cxx_destruct; */
 - (void)resizeSubviewsWithOldSize:(struct CGSize)arg1;
 - (BOOL)isFlipped;
@@ -3152,7 +3152,7 @@
 /* - (void).cxx_destruct; */
 - (id)prefix;
 - (void)setPrefix:(id)arg1;
-//@property __weak id <Xcode3ProjectTemplateOptionParent> parent;
+//@property (assign)__weak id <Xcode3ProjectTemplateOptionParent> parent;
 - (id)values;
 - (id)displayValues;
 - (void)updateEnabledWithOptions:(id)arg1;
@@ -3240,7 +3240,7 @@
 @property(readonly) NSDictionary *macros; // @synthesize macros=_macros;
 @property(readonly) NSArray *nodes; // @synthesize nodes=_nodes;
 @property(copy) NSString *identifier; // @synthesize identifier=_identifier;
-@property __weak id <Xcode3ProjectTemplateUnitParent> parent; // @synthesize parent=_parent;
+@property (assign)__weak id <Xcode3ProjectTemplateUnitParent> parent; // @synthesize parent=_parent;
 /* - (void).cxx_destruct; */
 - (void)valueDidChangeForOption:(id)arg1;
 - (void)addToNode:(id)arg1 andDefinitions:(id)arg2 withOptions:(id)arg3 components:(id)arg4 project:(id)arg5 targets:(id)arg6 executables:(id)arg7 macros:(id)arg8 replacementHandler:(id)arg9;
@@ -3489,7 +3489,7 @@
 /* - (void).cxx_destruct; */
 - (void)_doAction;
 - (void)setMenuSource:(id)arg1 selector:(SEL)arg2;
-@property __weak id menuSource;
+@property (assign)__weak id menuSource;
 
 @end
 
@@ -4305,7 +4305,7 @@
     Xcode3BuildSettingsGroupRowCell *_cell;
 }
 
-@property(nonatomic) __weak Xcode3BuildSettingsGroupRowCell *cell; // @synthesize cell=_cell;
+@property(assign, nonatomic) __weak Xcode3BuildSettingsGroupRowCell *cell; // @synthesize cell=_cell;
 @property(nonatomic) BOOL showRightDivider; // @synthesize showRightDivider=_showRightDivider;
 @property(retain, nonatomic) NSImage *image; // @synthesize image=_image;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;

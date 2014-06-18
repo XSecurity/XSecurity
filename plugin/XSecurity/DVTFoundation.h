@@ -1197,7 +1197,7 @@ typedef union {
 - (void)dealloc;
 - (id)initWithRole:(id)arg1 object:(id)arg2 observingDidChangeRecursively:(BOOL)arg3 onOperationQueue:(id)arg4 block:(id)arg5;
 - (id)initWithRole:(id)arg1 object:(id)arg2 observingDidChangeRecursively:(BOOL)arg3 onDispatchQueue:(struct dispatch_queue_s *)arg4 block:(id)arg5;
-@property __weak id object;
+@property (assign)__weak id object;
 
 @end
 
@@ -4118,7 +4118,7 @@ typedef union {
 - (id)darwinUserCacheDirectoryPath;
 - (void)_createCacheFileIfNeeded:(id)arg1;
 - (id)initWithDelegate:(id)arg1 packagesOnly:(BOOL)arg2;
-@property __weak id <DVTPackageInstallerHelperDelegate> delegate;
+@property (assign)__weak id <DVTPackageInstallerHelperDelegate> delegate;
 
 @end
 
@@ -4594,7 +4594,7 @@ typedef union {
 //- (void).cxx_destruct;
 - (id)valueForUndefinedKey:(id)arg1;
 - (id)registeredKeyPaths;
-@property(nonatomic) __weak id representedObject;
+@property(assign, nonatomic) __weak id representedObject;
 - (void)removeObserver:(id)arg1 forKeyPath:(id)arg2;
 - (void)removeObserver:(id)arg1 forKeyPath:(id)arg2 context:(void *)arg3;
 - (void)addObserver:(id)arg1 forKeyPath:(id)arg2 options:(unsigned long long)arg3 context:(void *)arg4;
@@ -8025,7 +8025,7 @@ __attribute__((visibility("hidden")))
     id _representedObject;
 }
 
-//@property __weak id representedObject; // @synthesize representedObject=_representedObject;
+//@property (assign)__weak id representedObject; // @synthesize representedObject=_representedObject;
 //- (void).cxx_destruct;
 
 @end
@@ -8156,7 +8156,7 @@ __attribute__((visibility("hidden")))
 
 @property(copy) NSString *prsID; // @synthesize prsID=_prsID;
 @property(copy) NSString *sessionID; // @synthesize sessionID=_sessionID;
-@property(nonatomic) __weak DVTDeveloperAccount *account; // @synthesize account=_account;
+@property(assign, nonatomic) __weak DVTDeveloperAccount *account; // @synthesize account=_account;
 //- (void).cxx_destruct;
 - (BOOL)isEqual:(id)arg1;
 - (unsigned long long)hash;
@@ -9397,7 +9397,7 @@ __attribute__((visibility("hidden")))
 @property(nonatomic) struct sysmon_row_s *currentRow; // @synthesize currentRow=_currentRow;
 @property(nonatomic) struct sysmon_request_s *sysmonRequest; // @synthesize sysmonRequest=_sysmonRequest;
 @property(retain, nonatomic) NSDate *currentSampleTimestamp; // @synthesize currentSampleTimestamp=_currentSampleTimestamp;
-@property(nonatomic) __weak id <DVTSysmonBridgeDelegate> delegate; // @synthesize delegate=_delegate;
+@property(assign, nonatomic) __weak id <DVTSysmonBridgeDelegate> delegate; // @synthesize delegate=_delegate;
 //- (void).cxx_destruct;
 - (void)dealloc;
 - (void)disconnect;

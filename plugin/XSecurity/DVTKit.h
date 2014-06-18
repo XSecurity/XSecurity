@@ -1327,7 +1327,7 @@ typedef struct {
 - (id)_modelKeyPath;
 - (id)_infoDictionary;
 - (id)initWithObservedObject:(id)arg1 observedKeyPath:(id)arg2 bindingOptions:(id)arg3;
-@property __weak id observedObject;
+@property (assign)__weak id observedObject;
 
 @end
 
@@ -2208,7 +2208,7 @@ typedef struct {
     id <DVTDisclosureHeaderViewDelegate> _delegate;
 }
 
-@property __weak id <DVTDisclosureHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <DVTDisclosureHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property double preferredHeight; // @synthesize preferredHeight=_preferredHeight;
 @property(nonatomic, getter=isDisclosed) BOOL disclosed; // @synthesize disclosed=_disclosed;
 @property(getter=isDraggable) BOOL draggable; // @synthesize draggable=_draggable;
@@ -3358,7 +3358,7 @@ typedef struct {
     id <DVTDisclosureHeaderViewDelegate> _delegate;
 }
 
-@property __weak id <DVTDisclosureHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <DVTDisclosureHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property double preferredHeight; // @synthesize preferredHeight=_preferredHeight;
 @property(nonatomic, getter=isDisclosed) BOOL disclosed; // @synthesize disclosed=_disclosed;
 @property(getter=isDraggable) BOOL draggable; // @synthesize draggable=_draggable;
@@ -4368,7 +4368,7 @@ typedef struct {
 //- (void).cxx_destruct;
 - (void)primitiveInvalidate;
 - (id)initWithWindow:(id)arg1;
-@property __weak NSWindow *window;
+@property (assign)__weak NSWindow *window;
 
 // Remaining properties
 @property(retain) DVTStackBacktrace *creationBacktrace;
@@ -4403,7 +4403,7 @@ typedef struct {
 - (id)registerActivationStateObserver:(id)arg1;
 - (void)dealloc;
 - (id)initWithWindow:(id)arg1;
-@property __weak NSWindow *window;
+@property (assign)__weak NSWindow *window;
 
 @end
 
@@ -4491,9 +4491,9 @@ typedef struct {
 + (id)keyPathsForValuesAffectingFindRegularExpression;
 + (id)keyPathsForValuesAffectingFindString;
 + (void)initialize;
-@property __weak NSSegmentedControl *doneSegmentedButtom; // @synthesize doneSegmentedButtom=_doneSegmentedButtom;
-@property __weak NSSegmentedControl *replaceSegmentedControl; // @synthesize replaceSegmentedControl=_replaceSegmentedControl;
-@property __weak NSView *findBarView; // @synthesize findBarView=_findBarView;
+@property (assign)__weak NSSegmentedControl *doneSegmentedButtom; // @synthesize doneSegmentedButtom=_doneSegmentedButtom;
+@property (assign)__weak NSSegmentedControl *replaceSegmentedControl; // @synthesize replaceSegmentedControl=_replaceSegmentedControl;
+@property (assign)__weak NSView *findBarView; // @synthesize findBarView=_findBarView;
 @property(nonatomic) long long numberOfMatches; // @synthesize numberOfMatches=_numberOfMatches;
 @property BOOL recentsNeedUpdate; // @synthesize recentsNeedUpdate=_recentsNeedUpdate;
 @property double preferredViewHeight; // @synthesize preferredViewHeight=_preferredViewHeight;
@@ -4878,7 +4878,7 @@ typedef struct {
     DVTTextFold *_fold;
 }
 
-@property __weak DVTTextFold *fold; // @synthesize fold=_fold;
+@property (assign)__weak DVTTextFold *fold; // @synthesize fold=_fold;
 @property(retain) NSView *controlView; // @synthesize controlView=_controlView;
 //- (void).cxx_destruct;
 - (unsigned long long)characterIndexForPoint:(struct CGPoint)arg1 inRect:(struct CGRect)arg2 ofView:(id)arg3;
@@ -6608,9 +6608,9 @@ typedef struct {
     NSView *_rightLabelContainer;
 }
 
-@property __weak NSView *rightLabelContainer; // @synthesize rightLabelContainer=_rightLabelContainer;
-@property __weak NSView *leftLabelContainer; // @synthesize leftLabelContainer=_leftLabelContainer;
-@property __weak DVTCapacityView *capacityView; // @synthesize capacityView=_capacityView;
+@property (assign)__weak NSView *rightLabelContainer; // @synthesize rightLabelContainer=_rightLabelContainer;
+@property (assign)__weak NSView *leftLabelContainer; // @synthesize leftLabelContainer=_leftLabelContainer;
+@property (assign)__weak DVTCapacityView *capacityView; // @synthesize capacityView=_capacityView;
 @property(retain) NSFormatter *valueFormatter; // @synthesize valueFormatter=_valueFormatter;
 @property BOOL circularSegmentLabel; // @synthesize circularSegmentLabel=_circularSegmentLabel;
 @property(copy, nonatomic) NSArray *segments; // @synthesize segments=_segments;
@@ -7111,7 +7111,7 @@ typedef struct {
 + (struct CGSize)maximumSizeForStyle:(long long)arg1;
 + (struct CGSize)minimumSizeForStyle:(long long)arg1;
 + (struct CGSize)maximumIconSize;
-@property(nonatomic) __weak id delegate; // @synthesize delegate=_delegate;
+@property(assign, nonatomic) __weak id delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSString *badgeString; // @synthesize badgeString=_badgeString;
 @property(retain, nonatomic) NSImage *image; // @synthesize image=_image;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
@@ -7321,7 +7321,7 @@ typedef struct {
 - (void)generateCompletionsForDocumentLocation:(id)arg1 context:(id)arg2 completionBlock:(id)arg3;
 - (id)initWithLanguage:(id)arg1;
 - (id)init;
-@property __weak id <DVTTextCompletionDataSourceDelegate> delegate;
+@property (assign)__weak id <DVTTextCompletionDataSourceDelegate> delegate;
 
 @end
 
@@ -10110,7 +10110,7 @@ typedef struct {
 + (id)keyPathsForValuesAffectingSelectedChoice;
 + (void)initialize;
 @property double choicesOffset; // @synthesize choicesOffset=_choicesOffset;
-@property __weak id <DVTTabChooserViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <DVTTabChooserViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSSearchField *searchField; // @synthesize searchField=_searchField;
 //- (void).cxx_destruct;
 - (id)accessibilityHitTest:(struct CGPoint)arg1;
@@ -10216,7 +10216,7 @@ typedef struct {
     id _delegate;
 }
 
-@property(nonatomic) __weak id delegate; // @synthesize delegate=_delegate;
+@property(assign, nonatomic) __weak id delegate; // @synthesize delegate=_delegate;
 //- (void).cxx_destruct;
 - (void)sizeToFitSuggestedSize:(struct CGSize)arg1 forAsset:(id)arg2;
 - (void)refreshWithAsset:(id)arg1 representedObject:(id)arg2;
@@ -11089,12 +11089,12 @@ typedef struct {
 + (BOOL)defaultIgnoresCase;
 + (void)setDefaultMatchStyle:(int)arg1;
 + (int)defaultMatchStyle;
-@property __weak NSView *wrapView; // @synthesize wrapView=_wrapView;
-@property __weak NSView *matchCaseView; // @synthesize matchCaseView=_matchCaseView;
-@property __weak NSView *hitsMustContainView; // @synthesize hitsMustContainView=_hitsMustContainView;
-@property __weak NSView *matchingStyleView; // @synthesize matchingStyleView=_matchingStyleView;
-@property __weak DVTStackView_AppKitAutolayout *stackView; // @synthesize stackView=_stackView;
-@property __weak NSPopover *popover; // @synthesize popover=_popover;
+@property (assign)__weak NSView *wrapView; // @synthesize wrapView=_wrapView;
+@property (assign)__weak NSView *matchCaseView; // @synthesize matchCaseView=_matchCaseView;
+@property (assign)__weak NSView *hitsMustContainView; // @synthesize hitsMustContainView=_hitsMustContainView;
+@property (assign)__weak NSView *matchingStyleView; // @synthesize matchingStyleView=_matchingStyleView;
+@property (assign)__weak DVTStackView_AppKitAutolayout *stackView; // @synthesize stackView=_stackView;
+@property (assign)__weak NSPopover *popover; // @synthesize popover=_popover;
 @property(nonatomic) int matchStyle; // @synthesize matchStyle=_matchStyle;
 @property(nonatomic) BOOL findWraps; // @synthesize findWraps=_findWraps;
 @property(nonatomic) BOOL findIgnoresCase; // @synthesize findIgnoresCase=_findIgnoresCase;
@@ -11736,7 +11736,7 @@ typedef struct {
 - (void)dealloc;
 - (id)initWithSession:(id)arg1;
 @property(readonly, getter=isShowingInlinePreview) BOOL showingInlinePreview;
-@property __weak id <DVTTextCompletionItem> previousSelectedItem;
+@property (assign)__weak id <DVTTextCompletionItem> previousSelectedItem;
 
 @end
 
@@ -12311,7 +12311,7 @@ typedef struct {
 
 + (void)initialize;
 @property(nonatomic, getter=isAnimating) BOOL animating; // @synthesize animating=_animating;
-@property(nonatomic) __weak id <DVTColoredSpinnerDelegate> delegate; // @synthesize delegate=_delegate;
+@property(assign, nonatomic) __weak id <DVTColoredSpinnerDelegate> delegate; // @synthesize delegate=_delegate;
 @property BOOL displaysWhenStopped; // @synthesize displaysWhenStopped=_displaysWhenStopped;
 @property(copy, nonatomic) NSColor *color; // @synthesize color=_color;
 //- (void).cxx_destruct;
@@ -13201,7 +13201,7 @@ typedef struct {
 @property(nonatomic, getter=isEnabled) BOOL enabled; // @synthesize enabled=_enabled;
 @property(nonatomic) unsigned long long controlSize; // @synthesize controlSize=_controlSize;
 @property SEL action; // @synthesize action=_action;
-@property __weak id target; // @synthesize target=_target;
+@property (assign)__weak id target; // @synthesize target=_target;
 @property(getter=isShowingMultipleValues) BOOL showingMultipleValues; // @synthesize showingMultipleValues=_showingMultipleValues;
 @property BOOL supportsNilColor; // @synthesize supportsNilColor=_supportsNilColor;
 @property(nonatomic) int defaultColorMode; // @synthesize defaultColorMode=_defaultColorMode;
@@ -13327,14 +13327,14 @@ typedef struct {
 + (id)colorThemeEditorForProperty:(id)arg1 theme:(id)arg2;
 + (id)themeEditorForProperty:(id)arg1 theme:(id)arg2;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
-@property __weak NSTabView *typeSelectorTabView; // @synthesize typeSelectorTabView=_typeSelectorTabView;
+@property (assign)__weak NSTabView *typeSelectorTabView; // @synthesize typeSelectorTabView=_typeSelectorTabView;
 @property BOOL isCGColor; // @synthesize isCGColor=_isCGColor;
-@property __weak NSColorWell *gradientSecondColor; // @synthesize gradientSecondColor=_gradientSecondColor;
-@property __weak NSColorWell *gradientFirstColor; // @synthesize gradientFirstColor=_gradientFirstColor;
-@property __weak NSTextField *numberField; // @synthesize numberField=_numberField;
-@property __weak NSColorWell *colorWell; // @synthesize colorWell=_colorWell;
-@property __weak NSTextField *label; // @synthesize label=_label;
-@property __weak DVTTheme *theme; // @synthesize theme=_theme;
+@property (assign)__weak NSColorWell *gradientSecondColor; // @synthesize gradientSecondColor=_gradientSecondColor;
+@property (assign)__weak NSColorWell *gradientFirstColor; // @synthesize gradientFirstColor=_gradientFirstColor;
+@property (assign)__weak NSTextField *numberField; // @synthesize numberField=_numberField;
+@property (assign)__weak NSColorWell *colorWell; // @synthesize colorWell=_colorWell;
+@property (assign)__weak NSTextField *label; // @synthesize label=_label;
+@property (assign)__weak DVTTheme *theme; // @synthesize theme=_theme;
 @property(copy) NSString *propertyName; // @synthesize propertyName=_propertyName;
 //- (void).cxx_destruct;
 - (void)windowDidLoad;
@@ -13873,9 +13873,9 @@ typedef struct {
     NSView *_segmentsLabelView;
 }
 
-@property __weak NSView *segmentsLabelView; // @synthesize segmentsLabelView=_segmentsLabelView;
-@property __weak NSTextField *rightLabel; // @synthesize rightLabel=_rightLabel;
-@property __weak NSTextField *leftLabel; // @synthesize leftLabel=_leftLabel;
+@property (assign)__weak NSView *segmentsLabelView; // @synthesize segmentsLabelView=_segmentsLabelView;
+@property (assign)__weak NSTextField *rightLabel; // @synthesize rightLabel=_rightLabel;
+@property (assign)__weak NSTextField *leftLabel; // @synthesize leftLabel=_leftLabel;
 @property(copy) NSString *rightLabelString; // @synthesize rightLabelString=_rightLabelString;
 @property(copy) NSString *leftLabelString; // @synthesize leftLabelString=_leftLabelString;
 //- (void).cxx_destruct;
@@ -14192,7 +14192,7 @@ typedef struct {
     DVTTextStorage *_textStorage;
 }
 
-@property(nonatomic) __weak DVTTextStorage *textStorage; // @synthesize textStorage=_textStorage;
+@property(assign, nonatomic) __weak DVTTextStorage *textStorage; // @synthesize textStorage=_textStorage;
 //- (void).cxx_destruct;
 - (void)_invalidateCallback:(id)arg1;
 
@@ -14327,7 +14327,7 @@ typedef struct {
 }
 
 @property(retain, nonatomic) DVTTextFold *topLevelFold; // @synthesize topLevelFold=_topLevelFold;
-@property __weak id <DVTFoldingManagerDelegate> delegate; // @synthesize delegate;
+@property (assign)__weak id <DVTFoldingManagerDelegate> delegate; // @synthesize delegate;
 //- (void).cxx_destruct;
 - (id)adjustFoldsForRange:(struct _NSRange)arg1 changeInLength:(long long)arg2;
 - (id)foldsEnclosingRange:(struct _NSRange)arg1;
@@ -14361,7 +14361,7 @@ typedef struct {
     DVTFoldingLayoutManager *_foldingLayoutManager;
 }
 
-@property __weak DVTFoldingLayoutManager *foldingLayoutManager; // @synthesize foldingLayoutManager=_foldingLayoutManager;
+@property (assign)__weak DVTFoldingLayoutManager *foldingLayoutManager; // @synthesize foldingLayoutManager=_foldingLayoutManager;
 //- (void).cxx_destruct;
 - (unsigned long long)_getRemainingNominalParagraphRange:(struct _NSRange *)arg1 andParagraphSeparatorRange:(struct _NSRange *)arg2 charactarIndex:(unsigned long long)arg3 layoutManager:(id)arg4 string:(id)arg5;
 - (struct CGRect)boundingBoxForControlGlyphAtIndex:(unsigned long long)arg1 forTextContainer:(id)arg2 proposedLineFragment:(struct CGRect)arg3 glyphPosition:(struct CGPoint)arg4 characterIndex:(unsigned long long)arg5;
