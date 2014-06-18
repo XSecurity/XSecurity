@@ -318,7 +318,7 @@
 		518CFEC017C73D1A004B5B2B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "XSecurity Project.";
 			};
 			buildConfigurationList = 518CFEC317C73D1A004B5B2B /* Build configuration list for PBXProject "XSecurity" */;
@@ -465,7 +465,7 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/SharedFrameworks\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks\"",
 				);
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XSecurity/XSecurity-Prefix.pch";
 				INFOPLIST_FILE = "XSecurity/XSecurity-Info.plist";
@@ -493,7 +493,7 @@
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/SharedFrameworks\"",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks\"",
 				);
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XSecurity/XSecurity-Prefix.pch";
 				INFOPLIST_FILE = "XSecurity/XSecurity-Info.plist";

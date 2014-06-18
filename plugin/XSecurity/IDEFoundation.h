@@ -753,7 +753,7 @@ typedef struct {
 - (id)identifier;
 
 @optional
-@property(nonatomic) __weak id <IDEIndexable> proxy;
+@property(assign, nonatomic) __weak id <IDEIndexable> proxy;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)clearCachedBuildSettings;
 - (id)settingsForFile:(id)arg1;
@@ -3805,7 +3805,7 @@ typedef struct {
 - (long long)realSymbolIdForId:(long long)arg1;
 @property(readonly, nonatomic) long long realGroupId;
 @property(readonly, nonatomic) long long realFileId;
-@property __weak IDEIndexNewFile *includer;
+@property (assign)__weak IDEIndexNewFile *includer;
 - (void)dealloc;
 - (id)initWithPath:(id)arg1 modified:(id)arg2;
 
@@ -6968,7 +6968,7 @@ __attribute__((visibility("hidden")))
 - (id)initWithIndexable:(id)arg1;
 
 // Remaining properties
-@property(nonatomic) __weak id <IDEIndexable> proxy;
+@property(assign, nonatomic) __weak id <IDEIndexable> proxy;
 
 @end
 
@@ -8367,8 +8367,8 @@ __attribute__((visibility("hidden")))
 + (id)diagnosticMessageType;
 @property(copy, nonatomic) NSArray *diagnosticFixItItems; // @synthesize diagnosticFixItItems=_diagnosticFixItItems;
 //- (void).cxx_destruct;
-@property __weak id representedObject;
-@property __weak id <IDEDiagnosticItemDelegate> delegate;
+@property (assign)__weak id representedObject;
+@property (assign)__weak id <IDEDiagnosticItemDelegate> delegate;
 @property(readonly) NSArray *fixableDiagnosticItems;
 @property(readonly) NSArray *diagnosticFixItItemsSnapshot;
 - (void)removeObjectFromDiagnosticFixItItemsAtIndex:(unsigned long long)arg1;
@@ -8397,7 +8397,7 @@ __attribute__((visibility("hidden")))
 
 @property(readonly) DVTTextDocumentLocation *replacementLocation; // @synthesize replacementLocation=_replacementLocation;
 @property(readonly) NSString *fixItString; // @synthesize fixItString=_fixItString;
-@property(nonatomic) __weak IDEDiagnosticActivityLogMessage *diagnosticItem; // @synthesize diagnosticItem=_diagnosticItem;
+@property(assign, nonatomic) __weak IDEDiagnosticActivityLogMessage *diagnosticItem; // @synthesize diagnosticItem=_diagnosticItem;
 //- (void).cxx_destruct;
 - (id)description;
 - (BOOL)isEqual:(id)arg1;
@@ -8413,7 +8413,7 @@ __attribute__((visibility("hidden")))
     BOOL _isCancelled;
 }
 
-@property __weak IDESourceControlRequest *currentRequest; // @synthesize currentRequest=_currentRequest;
+@property (assign)__weak IDESourceControlRequest *currentRequest; // @synthesize currentRequest=_currentRequest;
 //- (void).cxx_destruct;
 - (void)cancel;
 @property(readonly, getter=isCancelled) BOOL cancelled;
@@ -12250,7 +12250,7 @@ __attribute__((visibility("hidden")))
 
 + (BOOL)_initializedForUserInteraction;
 + (void)_initializeRegularExpressionsIfNeeded;
-@property __weak id <IDEOCUnitTestOutputParserDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDEOCUnitTestOutputParserDelegate> delegate; // @synthesize delegate=_delegate;
 //- (void).cxx_destruct;
 - (void)performDelegateBlock:(id)arg1;
 - (void)performParserBlock:(id)arg1;
@@ -12747,7 +12747,7 @@ __attribute__((visibility("hidden")))
 @property(copy) NSString *baseRevision; // @synthesize baseRevision=_baseRevision;
 @property(readonly) NSMutableArray *children; // @synthesize children=_children;
 @property(readonly) IDESourceControlWorkingTree *workingTree; // @synthesize workingTree=_workingTree;
-@property __weak IDESourceControlManager *scm; // @synthesize scm=_scm;
+@property (assign)__weak IDESourceControlManager *scm; // @synthesize scm=_scm;
 //- (void).cxx_destruct;
 - (id)initWithTree:(id)arg1;
 - (void)addNodes:(id)arg1;
@@ -12914,7 +12914,7 @@ __attribute__((visibility("hidden")))
 - (id)identifier;
 
 // Remaining properties
-@property(nonatomic) __weak id <IDEIndexable> proxy;
+@property(assign, nonatomic) __weak id <IDEIndexable> proxy;
 
 @end
 
