@@ -19,3 +19,4 @@ test/CLangTest/CLangTest.xcodeproj/xcuserdata/
 build/
 !build/scripts
 !build/Release+Asserts/bin/
+!build/Release+Asserts/lib/
