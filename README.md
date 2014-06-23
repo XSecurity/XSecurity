@@ -8,24 +8,24 @@ more updates regarding this tool.
 This readme file is mainly for the plugin itself for details about the checkers please see
 the readme file under checker folder.
 
-Support Xcode Versions
-Xcode 5.1.1, 5.1, 5.0.x 4.6.x
+Support Xcode Versions:  
+5.1.1, 5.1, 5.0.x 4.6.x
 
 ##### INSTALLATION
 _____________________________
 
-Download source code(See also "BRANCHES/RELEASES" section) and open XSecurity.xcodeproj on Xcode.
+Download source code(See also "BRANCHES/RELEASES" section) and open XSecurity.xcodeproj on Xcode. 
 
 In Xcode select the appropriate Scheme. 
 Go to "Edit Scheme" and set instances of "Build Configuration" to "Release"  
-Execute build and it will automatically install the plugin into the correct directory ('~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/').
-Quit Xcode and start it again. (Make it sure that Xcode process is fully terminate)
+Execute build and it will automatically install the plugin into the correct directory ('~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/').  
+Quit Xcode and start it again. (Make it sure that Xcode process is fully terminate)  
 This time XSecurity will be loaded, you will most likely find a menu item: XSecurity in the main menu. 
 
 ##### HOW TO UNINSTALL
 _____________________________
 
-Delete the following directory:
+Delete the following directory:  
 ~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/XSecurity.xcplugin
 
 
@@ -54,6 +54,7 @@ _____________________________
  3. Relaunch Xcode.
  4. Open your Xcode project.
  5. Scan the project with our checkers from the menu 'XSecurity > Static Security Analyzer > Analyze'.
+    You many need to deep clean (Option+Command+Shift+K) the projecgt beforehand in some cases.
 
 
 ##### RELEASES
