@@ -9,45 +9,16 @@ This readme file is mainly for the plugin itself for details about the checkers 
 the readme file under checker folder.
 
 Support Xcode Versions
-Xcode 5.0.2
+Xcode 5.1.1, 5.1, 5.0.x 4.6.x
 
 ##### INSTALLATION
 _____________________________
 
 Download source code(See also "BRANCHES/RELEASES" section) and open XSecurity.xcodeproj on Xcode.
 
-If your Xcode's version is not 4.6, 5.0.2 and 5.1 then you need to add the new DVTPlugInCompatibilityUUID
-to XSecurity Xcode Project. In order to do that please do the following things.
-
-1.) Retrieve DVTPlugInCompatibilityUUID
-- On a Terminal window execute the following command to get DVTPlugInCompatibilityUUID of Xcode.
-$ defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID
-
-- NOTE: Some version 5 Xcode is using /Applications/Xcode5.app/ 
-  You may want to use the specific version of Xcode applicable to your current environment
-- Take note of the displayed UUID
-
-
-2.) Add DVTPlugInCompatibilityUUID to the Xcode project
-- In the previously created project (bundle) show Project Navigator
-- Select the project, and on TARGETS select the default target and choose Info
-- If DVTPlugInCompatibilityUUIDs Key is not present add it and select Array for the Type
-- Add new item under DVTPlugInCompatibilityUUIDs and put the UUID retrieved in the previous section.
-
-Screen Shot:
-![alt text](https://github.com/XSecurity/XSecurity/tree/master/plugin/XSecurity/DVTPlugInCompatibilityUUID.png "Adding DVTPlugInCompatibilityUUID")
-
-Additionally if you are using Xcode 5.1 and later you need to comment out [GCC_ENABLE_OBJC_GC = supported;] 
-because it is no longer supported in this version and onwards. After doing that when you build, there
-will be a lot of warnings. Please ignore those warnings, at the time of this writing we are working to remove 
-these warnings.
-
-
-Continue the installation:
-
 In Xcode select the appropriate Scheme. 
 Go to "Edit Scheme" and set instances of "Build Configuration" to "Release"  
-Execute build and it will automatically install the plugin into the correct directory.
+Execute build and it will automatically install the plugin into the correct directory ('~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/').
 Quit Xcode and start it again. (Make it sure that Xcode process is fully terminate)
 This time XSecurity will be loaded, you will most likely find a menu item: XSecurity in the main menu. 
 
@@ -55,7 +26,7 @@ This time XSecurity will be loaded, you will most likely find a menu item: XSecu
 _____________________________
 
 Delete the following directory:
-$HOME/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/XSecurity.xcplugin
+~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/XSecurity.xcplugin
 
 
 ##### FEATURE LIST
@@ -67,6 +38,22 @@ _____________________________
 - Quick Security Help with built-in Security Guidelines
 - Real-time Vulnerability Notifications
 - Static Analysis with Clang Static Analyser
+
+##### How TO USE
+_____________________________
+
+- Quick Security Help with built-in Security Guidelines
+ Activate it from the menu 'Security > Quick Security Help > Activate'.
+
+- Real-time Vulnerability Notifications
+ Activate it from the menu 'XSecurity > Vulnerability Notifications > Activate'.
+
+- Static Analysis with Clang Static Analyser
+ 1. Quit Xcode.
+ 2. Run a script (checker/build/scripts/apply_new_clang.sh) to apply our clang to Xcode.
+ 3. Relaunch Xcode.
+ 4. Open your Xcode project.
+ 5. Scan the project with our checkers from the menu 'XSecurity > Static Security Analyzer > Analyze'.
 
 
 ##### RELEASES
