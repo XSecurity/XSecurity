@@ -35,7 +35,7 @@ $ defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID
 - Add new item under DVTPlugInCompatibilityUUIDs and put the UUID retrieved in the previous section.
 
 Screen Shot:
-![alt text](https://github.com/XSecurity/XSecurity/tree/master/plugin/XSecurity/DVTPlugInCompatibilityUUID.png "Adding DVTPlugInCompatibilityUUID")
+![alt text](https://raw.githubusercontent.com/XSecurity/XSecurity/master/plugin/XSecurity/DVTPlugInCompatibilityUUID.png "Adding DVTPlugInCompatibilityUUID")
 
 Additionally if you are using Xcode 5.1 and later you need to comment out [GCC_ENABLE_OBJC_GC = supported;] 
 because it is no longer supported in this version and onwards. After doing that when you build, there
