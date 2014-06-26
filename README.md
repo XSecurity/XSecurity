@@ -14,8 +14,6 @@ Support Xcode Versions:
 ##### INSTALLATION
 _____________________________
 
-Download source code(See also "BRANCHES/RELEASES" section) and open XSecurity.xcodeproj on Xcode. 
-
 In Xcode select the appropriate Scheme. 
 Go to "Edit Scheme" and set instances of "Build Configuration" to "Release"  
 Execute build and it will automatically install the plugin into the correct directory ('~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/').  
