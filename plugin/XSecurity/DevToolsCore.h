@@ -5834,7 +5834,7 @@ __attribute__((visibility("hidden")))
 }
 
 /* - (void).cxx_destruct; */
-@property __weak id object;
+@property (assign)__weak id object;
 
 @end
 
@@ -10496,7 +10496,7 @@ __attribute__((visibility("hidden")))
 + (id)supportedSourceListItemEditorClasses;
 + (void)initialize;
 //@property(retain) id <IDECapabilitiesContextProviding><IDEPortalInfoDelegate><IDECodesigningInfoDelegate><DVTInvalidation> capabilitiesContext; // @synthesize capabilitiesContext=_capabilitiesContext;
-//@property(nonatomic) __weak id <IDEIndexable> proxy; // @synthesize proxy=_proxy;
+//@property(assign, nonatomic) __weak id <IDEIndexable> proxy; // @synthesize proxy=_proxy;
 @property(retain) IDEActivityLogSection *integrityLog; // @synthesize integrityLog=_integrityLog;
 @property(readonly) Xcode3Project *project; // @synthesize project=_project;
 @property(retain) PBXTarget *pbxTarget; // @synthesize pbxTarget=_pbxTarget;

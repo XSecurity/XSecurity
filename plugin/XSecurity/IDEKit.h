@@ -1612,7 +1612,7 @@ typedef struct {
 @end
 
 @protocol IDESourceControlWindowController <NSObject>
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler;
 @end
 
 /*
@@ -2645,8 +2645,8 @@ typedef struct {
 }
 
 @property(retain) NSArray *charts; // @synthesize charts=_charts;
-@property __weak id <IDEGraphModelChartsModificationDelegate> chartsModificationDelegate; // @synthesize chartsModificationDelegate=_chartsModificationDelegate;
-@property __weak id <IDEGraphDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDEGraphModelChartsModificationDelegate> chartsModificationDelegate; // @synthesize chartsModificationDelegate=_chartsModificationDelegate;
+@property (assign)__weak id <IDEGraphDelegate> delegate; // @synthesize delegate=_delegate;
 //- (void).cxx_destruct;
 - (id)_chartNamed:(id)arg1;
 - (id)chartNamed:(id)arg1;
@@ -2727,7 +2727,7 @@ typedef struct {
 - (void)_cullEntriesOnChart:(id)arg1;
 - (void)_rebuildKeyView;
 - (void)updateConstraints;
-@property __weak id <IDEGraphDelegate> modelDelegate;
+@property (assign)__weak id <IDEGraphDelegate> modelDelegate;
 - (void)clearChartNamed:(id)arg1;
 - (void)addEntries:(id)arg1 onChartNamed:(id)arg2;
 - (void)addEntry:(id)arg1 onChartNamed:(id)arg2;
@@ -3021,7 +3021,7 @@ typedef struct {
 @property(copy, nonatomic) NSArray *childSortDescriptors; // @synthesize childSortDescriptors=_childSortDescriptors;
 @property(nonatomic) BOOL expanded; // @synthesize expanded=_expanded;
 @property(retain, nonatomic) NSPredicate *childFilter; // @synthesize childFilter=_childFilter;
-@property __weak IDEVariablesViewNode *parent; // @synthesize parent=_parent;
+@property (assign)__weak IDEVariablesViewNode *parent; // @synthesize parent=_parent;
 //@property(readonly) id <IDEDataValue> dataValue; // @synthesize dataValue=_dataValue;
 @property(readonly) unsigned long long type; // @synthesize type=_type;
 @property(copy) NSString *placeholderStringForNilDataValue; // @synthesize placeholderStringForNilDataValue=_placeholderStringForNilDataValue;
@@ -5235,14 +5235,14 @@ typedef struct {
 + (void)configureStateSavingObjectPersistenceByName:(id)arg1;
 + (BOOL)automaticallyNotifiesObserversOfSelectedScopeTag;
 + (void)initialize;
-@property __weak NSTableColumn *rawValueColumn; // @synthesize rawValueColumn=_rawValueColumn;
-@property __weak NSTableColumn *compoundColumn; // @synthesize compoundColumn=_compoundColumn;
-@property __weak NSProgressIndicator *loadingIndicator; // @synthesize loadingIndicator=_loadingIndicator;
-@property __weak NSPopUpButton *scopePopUp; // @synthesize scopePopUp=_scopePopUp;
-@property __weak DVTBorderedView *gutterView; // @synthesize gutterView=_gutterView;
-@property __weak DVTSearchField *filterField; // @synthesize filterField=_filterField;
-@property __weak DVTScrollView *scrollView; // @synthesize scrollView=_scrollView;
-@property __weak DVTBorderedView *containerView; // @synthesize containerView=_containerView;
+@property (assign)__weak NSTableColumn *rawValueColumn; // @synthesize rawValueColumn=_rawValueColumn;
+@property (assign)__weak NSTableColumn *compoundColumn; // @synthesize compoundColumn=_compoundColumn;
+@property (assign)__weak NSProgressIndicator *loadingIndicator; // @synthesize loadingIndicator=_loadingIndicator;
+@property (assign)__weak NSPopUpButton *scopePopUp; // @synthesize scopePopUp=_scopePopUp;
+@property (assign)__weak DVTBorderedView *gutterView; // @synthesize gutterView=_gutterView;
+@property (assign)__weak DVTSearchField *filterField; // @synthesize filterField=_filterField;
+@property (assign)__weak DVTScrollView *scrollView; // @synthesize scrollView=_scrollView;
+@property (assign)__weak DVTBorderedView *containerView; // @synthesize containerView=_containerView;
 @property unsigned long long textAlignment; // @synthesize textAlignment=_textAlignment;
 @property BOOL showsRawValues; // @synthesize showsRawValues=_showsRawValues;
 @property BOOL showsType; // @synthesize showsType=_showsType;
@@ -5633,7 +5633,7 @@ typedef struct {
 - (void)menuNeedsUpdate:(id)arg1;
 - (id)description;
 - (id)initWithMenuDelegate:(id)arg1;
-@property __weak id <NSMenuDelegate> menuDelegate;
+@property (assign)__weak id <NSMenuDelegate> menuDelegate;
 
 @end
 
@@ -6712,14 +6712,14 @@ typedef struct {
 + (void)configureStateSavingObjectPersistenceByName:(id)arg1;
 + (BOOL)automaticallyNotifiesObserversOfSelectedScopeTag;
 + (void)initialize;
-@property __weak NSTableColumn *rawValueColumn; // @synthesize rawValueColumn=_rawValueColumn;
-@property __weak NSTableColumn *compoundColumn; // @synthesize compoundColumn=_compoundColumn;
-@property __weak NSProgressIndicator *loadingIndicator; // @synthesize loadingIndicator=_loadingIndicator;
-@property __weak NSPopUpButton *scopePopUp; // @synthesize scopePopUp=_scopePopUp;
-@property __weak DVTBorderedView *gutterView; // @synthesize gutterView=_gutterView;
-@property __weak DVTSearchField *filterField; // @synthesize filterField=_filterField;
-@property __weak DVTScrollView *scrollView; // @synthesize scrollView=_scrollView;
-@property __weak DVTBorderedView *containerView; // @synthesize containerView=_containerView;
+@property (assign)__weak NSTableColumn *rawValueColumn; // @synthesize rawValueColumn=_rawValueColumn;
+@property (assign)__weak NSTableColumn *compoundColumn; // @synthesize compoundColumn=_compoundColumn;
+@property (assign)__weak NSProgressIndicator *loadingIndicator; // @synthesize loadingIndicator=_loadingIndicator;
+@property (assign)__weak NSPopUpButton *scopePopUp; // @synthesize scopePopUp=_scopePopUp;
+@property (assign)__weak DVTBorderedView *gutterView; // @synthesize gutterView=_gutterView;
+@property (assign)__weak DVTSearchField *filterField; // @synthesize filterField=_filterField;
+@property (assign)__weak DVTScrollView *scrollView; // @synthesize scrollView=_scrollView;
+@property (assign)__weak DVTBorderedView *containerView; // @synthesize containerView=_containerView;
 @property unsigned long long textAlignment; // @synthesize textAlignment=_textAlignment;
 @property BOOL showsRawValues; // @synthesize showsRawValues=_showsRawValues;
 @property BOOL showsType; // @synthesize showsType=_showsType;
@@ -8700,7 +8700,7 @@ typedef struct {
     NSWorkspace *_currentWorkspace;
 }
 
-@property __weak NSWorkspace *currentWorkspace; // @synthesize currentWorkspace=_currentWorkspace;
+@property (assign)__weak NSWorkspace *currentWorkspace; // @synthesize currentWorkspace=_currentWorkspace;
 //- (void).cxx_destruct;
 - (void)menuDidClose:(id)arg1;
 - (void)menuWillOpen:(id)arg1;
@@ -8714,7 +8714,7 @@ typedef struct {
     id <IDEActionStackViewDelegate> _delegate;
 }
 
-@property __weak id <IDEActionStackViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDEActionStackViewDelegate> delegate; // @synthesize delegate=_delegate;
 //- (void).cxx_destruct;
 - (void)drawRect:(struct CGRect)arg1;
 - (void)invalidateLayout;
@@ -9602,11 +9602,11 @@ typedef struct {
 + (BOOL)_canCoexistWithWindow:(id)arg1;
 + (id)sharedWelcomeWindowController;
 + (void)initialize;
-@property __weak DVTRolloverImageButton *showWindowCheckbox; // @synthesize showWindowCheckbox=_showWindowCheckbox;
-@property __weak NSScrollView *projectsScrollView; // @synthesize projectsScrollView=_projectsScrollView;
-@property __weak IDEInfiniteLineBox *horizontalLineBelowProjectList; // @synthesize horizontalLineBelowProjectList=_horizontalLineBelowProjectList;
-@property __weak DVTRolloverImageButton *closeButton; // @synthesize closeButton=_closeButton;
-@property __weak IDEInfiniteLineBox *verticalFadeLine; // @synthesize verticalFadeLine=_verticalFadeLine;
+@property (assign)__weak DVTRolloverImageButton *showWindowCheckbox; // @synthesize showWindowCheckbox=_showWindowCheckbox;
+@property (assign)__weak NSScrollView *projectsScrollView; // @synthesize projectsScrollView=_projectsScrollView;
+@property (assign)__weak IDEInfiniteLineBox *horizontalLineBelowProjectList; // @synthesize horizontalLineBelowProjectList=_horizontalLineBelowProjectList;
+@property (assign)__weak DVTRolloverImageButton *closeButton; // @synthesize closeButton=_closeButton;
+@property (assign)__weak IDEInfiniteLineBox *verticalFadeLine; // @synthesize verticalFadeLine=_verticalFadeLine;
 @property(retain) IDEWelcomePocketView *projectListVerticalPocketView; // @synthesize projectListVerticalPocketView=_projectListVerticalPocketView;
 @property(retain) IDEWelcomePocketView *projectListHorizontalPocketView; // @synthesize projectListHorizontalPocketView=_projectListHorizontalPocketView;
 @property(retain) IDEWelcomeFadeView *projectListFadeView; // @synthesize projectListFadeView=_projectListFadeView;
@@ -10750,7 +10750,7 @@ typedef struct {
 - (double)rowHeight;
 @property(readonly) NSDictionary *currentTextAttributes;
 - (id)effectiveAttributes;
-@property __weak id lastUpdateContext;
+@property (assign)__weak id lastUpdateContext;
 
 @end
 
@@ -10819,7 +10819,7 @@ typedef struct {
 }
 
 @property(copy) NSColor *textColor; // @synthesize textColor=_textColor;
-@property __weak id <IDESourceControlLogFilesChangedViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDESourceControlLogFilesChangedViewDelegate> delegate; // @synthesize delegate=_delegate;
 //- (void).cxx_destruct;
 - (void)drawRect:(struct CGRect)arg1;
 - (void)_drawWholeTokenWithTextFrame:(struct CGRect)arg1 tokenFrame:(struct CGRect)arg2;
@@ -12119,7 +12119,7 @@ typedef struct {
 
 + (BOOL)automaticallyNotifiesObserversOfRootNavigableItem;
 + (void)initialize;
-@property __weak NSMutableDictionary *cachedStateForParentViewController; // @synthesize cachedStateForParentViewController=_cachedStateForParentViewController;
+@property (assign)__weak NSMutableDictionary *cachedStateForParentViewController; // @synthesize cachedStateForParentViewController=_cachedStateForParentViewController;
 @property(retain, nonatomic) IDENavigableItem *rootNavigableItem; // @synthesize rootNavigableItem=_rootNavigableItem;
 @property(retain, nonatomic) NSPredicate *filterPredicate; // @synthesize filterPredicate=_filterPredicate;
 @property(retain) NSView *_primaryFilterControl; // @synthesize _primaryFilterControl;
@@ -12327,7 +12327,7 @@ typedef struct {
     id <IDEActionStackViewDelegate> _delegate;
 }
 
-@property __weak id <IDEActionStackViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDEActionStackViewDelegate> delegate; // @synthesize delegate=_delegate;
 //- (void).cxx_destruct;
 - (void)drawRect:(struct CGRect)arg1;
 - (void)invalidateLayout;
@@ -13252,7 +13252,7 @@ typedef struct {
 }
 
 + (void)initialize;
-@property __weak id <IDEProjectItemStatusViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDEProjectItemStatusViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) int status; // @synthesize status=_status;
 //- (void).cxx_destruct;
 - (void)resolveIssuesForFlightCheckListView:(id)arg1;
@@ -13519,8 +13519,8 @@ typedef struct {
 
 + (BOOL)scrollbarMarkerHighlight;
 + (BOOL)wantsScrollbarMarker;
-//@property __weak DVTDiffSession *diffSession; // @synthesize diffSession=_diffSession;
-//@property __weak DVTDiffDescriptor *diffDescriptor; // @synthesize diffDescriptor=_diffDescriptor;
+//@property (assign)__weak DVTDiffSession *diffSession; // @synthesize diffSession=_diffSession;
+//@property (assign)__weak DVTDiffDescriptor *diffDescriptor; // @synthesize diffDescriptor=_diffDescriptor;
 @property int dataSourceType; // @synthesize dataSourceType=_dataSourceType;
 @property(retain) NSURL *documentURL; // @synthesize documentURL=_documentURL;
 //- (void).cxx_destruct;
@@ -15129,7 +15129,7 @@ typedef struct {
 }
 
 @property(copy) id completionBlock; // @synthesize completionBlock=_completionBlock;
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
 @property BOOL inProgress; // @synthesize inProgress=_inProgress;
 @property(retain) IDESourceControlSwitchOperationInfo *operationInfo; // @synthesize operationInfo=_operationInfo;
 @property(retain) IDEWorkspace *workspace; // @synthesize workspace=_workspace;
@@ -16435,7 +16435,7 @@ typedef struct {
 + (struct CGImage *)revIndicatorNormalRef;
 + (struct CGImage *)revIndicatorOverRef;
 @property(retain) IDEEditorDocument *document; // @synthesize document=_document;
-@property __weak IDEWorkspace *workspace; // @synthesize workspace=_workspace;
+@property (assign)__weak IDEWorkspace *workspace; // @synthesize workspace=_workspace;
 @property unsigned long long currentPage; // @synthesize currentPage=_currentPage;
 @property(retain) NSMutableDictionary *revisionNameToRevisionTable; // @synthesize revisionNameToRevisionTable=_revisionNameToRevisionTable;
 @property(retain) NSMutableDictionary *revisionNameToLayerTable; // @synthesize revisionNameToLayerTable=_revisionNameToLayerTable;
@@ -17117,7 +17117,7 @@ typedef struct {
 - (void)endEditing;
 - (void)selectWithFrame:(struct CGRect)arg1 inView:(id)arg2 editor:(id)arg3 delegate:(id)arg4 start:(long long)arg5 length:(long long)arg6;
 - (id)fieldEditorForView:(id)arg1;
-@property __weak id <IDEKeyBindingFieldCellDelegate> delegate;
+@property (assign)__weak id <IDEKeyBindingFieldCellDelegate> delegate;
 - (id)attributedStringValueForEditing:(BOOL)arg1;
 - (id)attributedStringValue;
 - (void)setObjectValue:(id)arg1;
@@ -18154,7 +18154,7 @@ __attribute__((visibility("hidden")))
 - (double)preferredHeight;
 - (id)initWithOwner:(id)arg1;
 - (id)init;
-@property __weak id representedObject;
+@property (assign)__weak id representedObject;
 
 @end
 
@@ -18515,13 +18515,13 @@ __attribute__((visibility("hidden")))
 
 + (id)keyPathsForValuesAffectingCanRemoveBranch;
 @property BOOL isLoading; // @synthesize isLoading=_isLoading;
-@property __weak id <IDESourceControlBranchTableDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDESourceControlBranchTableDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain) IDESourceControlBranch *currentBranch; // @synthesize currentBranch=_currentBranch;
 @property(retain) IDESourceControlBranch *selectedBranch; // @synthesize selectedBranch=_selectedBranch;
 @property BOOL showLoading; // @synthesize showLoading=_showLoading;
 @property BOOL hideBranchHistory; // @synthesize hideBranchHistory=_hideBranchHistory;
 @property BOOL showCurrentBranch; // @synthesize showCurrentBranch=_showCurrentBranch;
-@property __weak DVTDynamicTableView *tableView; // @synthesize tableView=_tableView;
+@property (assign)__weak DVTDynamicTableView *tableView; // @synthesize tableView=_tableView;
 //- (void).cxx_destruct;
 - (id)dynamicTableView:(id)arg1 toolTipForRow:(long long)arg2 inSection:(long long)arg3;
 - (void)clearBranches;
@@ -19474,7 +19474,7 @@ __attribute__((visibility("hidden")))
 }
 
 @property(retain) IDEWorkspace *workspace; // @synthesize workspace=_workspace;
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
 //- (void).cxx_destruct;
 - (void)createGitRepositoryForFilePath:(id)arg1 pushingToServer:(id)arg2;
 - (void)alertDidEnd:(id)arg1 returnCode:(long long)arg2 contextInfo:(void *)arg3;
@@ -19940,7 +19940,7 @@ __attribute__((visibility("hidden")))
 }
 
 @property(retain) NSTableView *tableView; // @synthesize tableView=_tableView;
-@property __weak IDECombinedDownloadsPrefPaneController *prefPaneController; // @synthesize prefPaneController=_prefPaneController;
+@property (assign)__weak IDECombinedDownloadsPrefPaneController *prefPaneController; // @synthesize prefPaneController=_prefPaneController;
 @property(retain) IDEDownloadableContentTypeGroup *downloadablesGroup; // @synthesize downloadablesGroup=_downloadablesGroup;
 @property(copy) NSString *downloadableTypeName; // @synthesize downloadableTypeName=_downloadableTypeName;
 //- (void).cxx_destruct;
@@ -19984,9 +19984,9 @@ __attribute__((visibility("hidden")))
 }
 
 @property(retain) NSTrackingArea *trackingArea; // @synthesize trackingArea=_trackingArea;
-@property __weak IDEDownloadableCapsuleViewController *capsuleController; // @synthesize capsuleController=_capsuleController;
-@property __weak IDEComponentDownloadsPrefPaneItem *downloadableItem; // @synthesize downloadableItem=_downloadableItem;
-@property __weak IDECombinedDownloadsPrefPaneController *controller; // @synthesize controller=_controller;
+@property (assign)__weak IDEDownloadableCapsuleViewController *capsuleController; // @synthesize capsuleController=_capsuleController;
+@property (assign)__weak IDEComponentDownloadsPrefPaneItem *downloadableItem; // @synthesize downloadableItem=_downloadableItem;
+@property (assign)__weak IDECombinedDownloadsPrefPaneController *controller; // @synthesize controller=_controller;
 @property(retain) DVTGauge *progressGauge; // @synthesize progressGauge=_progressGauge;
 @property(retain) NSTextField *downloadSizeField; // @synthesize downloadSizeField=_downloadSizeField;
 @property(retain) NSButton *downloadButton; // @synthesize downloadButton=_downloadButton;
@@ -20069,7 +20069,7 @@ __attribute__((visibility("hidden")))
 }
 
 @property(copy) id clickCallbackBlock; // @synthesize clickCallbackBlock=_clickCallbackBlock;
-@property __weak NSObject<IDESourceControlNameTokenViewDelegate> *delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak NSObject<IDESourceControlNameTokenViewDelegate> *delegate; // @synthesize delegate=_delegate;
 //- (void).cxx_destruct;
 - (void)drawRect:(struct CGRect)arg1;
 - (void)_drawWholeTokenWithTextFrame:(struct CGRect)arg1 tokenFrame:(struct CGRect)arg2;
@@ -21025,10 +21025,10 @@ __attribute__((visibility("hidden")))
 + (id)_branchImage;
 @property(retain) IDESourceControlBranch *parentBranch; // @synthesize parentBranch=_parentBranch;
 @property(retain) IDESourceControlBranch *currentBranch; // @synthesize currentBranch=_currentBranch;
-@property __weak DVTReplacementView *replacementView; // @synthesize replacementView=_replacementView;
+@property (assign)__weak DVTReplacementView *replacementView; // @synthesize replacementView=_replacementView;
 @property BOOL inProgress; // @synthesize inProgress=_inProgress;
 @property BOOL shouldLandBranch; // @synthesize shouldLandBranch=_shouldLandBranch;
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
 @property(copy) id continuationBlock; // @synthesize continuationBlock=_continuationBlock;
 @property(retain) IDESourceControlMergeOperationInfo *operationInfo; // @synthesize operationInfo=_operationInfo;
 @property(retain) IDEWorkspace *workspace; // @synthesize workspace=_workspace;
@@ -21854,7 +21854,7 @@ __attribute__((visibility("hidden")))
 }
 
 @property(readonly) unsigned long long orientation; // @synthesize orientation=_orientation;
-@property __weak IDENavigationHUDTabLayoutCell *parentCell; // @synthesize parentCell=_parentCell;
+@property (assign)__weak IDENavigationHUDTabLayoutCell *parentCell; // @synthesize parentCell=_parentCell;
 //@property(readonly) NSArray *childCells; // @synthesize childCells=_childCells;
 @property(readonly) IDEWorkspaceTabControllerLayoutTreeNode *representedLayoutTreeNode; // @synthesize representedLayoutTreeNode=_representedLayoutTreeNode;
 //- (void).cxx_destruct;
@@ -22562,7 +22562,7 @@ __attribute__((visibility("hidden")))
 
 @property BOOL disableFastForwards; // @synthesize disableFastForwards=_disableFastForwards;
 @property(copy) id commitAndPushConinuationBlock; // @synthesize commitAndPushConinuationBlock=_commitAndPushConinuationBlock;
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
 @property(copy) NSString *buttonText; // @synthesize buttonText=_buttonText;
 @property(copy) NSString *messageText; // @synthesize messageText=_messageText;
 @property int requestType; // @synthesize requestType=_requestType;
@@ -22612,7 +22612,7 @@ __attribute__((visibility("hidden")))
 + (id)keyPathsForValuesAffectingCanContinue;
 @property BOOL shouldCreateNewBranch; // @synthesize shouldCreateNewBranch=_shouldCreateNewBranch;
 @property(retain) NSString *userNewBranchName; // @synthesize userNewBranchName=_userNewBranchName;
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
 @property(retain) IDESourceControlBranchChooserItem *chooserItem; // @synthesize chooserItem=_chooserItem;
 @property BOOL inProgress; // @synthesize inProgress=_inProgress;
 @property(copy) id continuationBlock; // @synthesize continuationBlock=_continuationBlock;
@@ -22666,7 +22666,7 @@ __attribute__((visibility("hidden")))
 + (id)keyPathsForValuesAffectingCanContinue;
 @property BOOL disableFastForwards; // @synthesize disableFastForwards=_disableFastForwards;
 @property(copy) id commitAndPushConinuationBlock; // @synthesize commitAndPushConinuationBlock=_commitAndPushConinuationBlock;
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
 @property BOOL canContinue; // @synthesize canContinue=_canContinue;
 @property BOOL inProgress; // @synthesize inProgress=_inProgress;
 @property(copy) NSString *buttonText; // @synthesize buttonText=_buttonText;
@@ -22827,7 +22827,7 @@ __attribute__((visibility("hidden")))
     id <IDESourceControlBranchChooserItemDelegate> _delegate;
 }
 
-@property __weak id <IDESourceControlBranchChooserItemDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDESourceControlBranchChooserItemDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain) IDESourceControlBranch *currentBranch; // @synthesize currentBranch=_currentBranch;
 @property(retain) IDESourceControlBranch *selectedBranch; // @synthesize selectedBranch=_selectedBranch;
 //- (void).cxx_destruct;
@@ -23847,7 +23847,7 @@ __attribute__((visibility("hidden")))
 + (id)createProcessActionPopUpMenuItemWithPopUpImage:(id)arg1 menuItemImage:(id)arg2 action:(SEL)arg3;
 + (id)_transientStateForKey:(id)arg1;
 + (void)registerDelegateClassForStatePersistence:(Class)arg1;
-@property __weak DVTBorderedView *glassBarBorderedView; // @synthesize glassBarBorderedView=_glassBarBorderedView;
+@property (assign)__weak DVTBorderedView *glassBarBorderedView; // @synthesize glassBarBorderedView=_glassBarBorderedView;
 @property(readonly) BOOL isInUserDirectSelection; // @synthesize isInUserDirectSelection=_isInUserDirectSelection;
 @property(nonatomic) BOOL showOnlyInterestingContent; // @synthesize showOnlyInterestingContent=_showOnlyInterestingContent;
 @property(readonly) IDENavigatorOutlineView *outlineView; // @synthesize outlineView=_outlineView;
@@ -23971,7 +23971,7 @@ __attribute__((visibility("hidden")))
     NSTextField *_textField;
 }
 
-@property __weak NSTextField *textField; // @synthesize textField=_textField;
+@property (assign)__weak NSTextField *textField; // @synthesize textField=_textField;
 //- (void).cxx_destruct;
 - (void)setupRefreshTriggersAndConfigure;
 - (unsigned long long)_textAlignmentFromString:(id)arg1;
@@ -24437,7 +24437,7 @@ __attribute__((visibility("hidden")))
 
 + (id)keyPathsForValuesAffectingSelectedNavigable;
 + (id)keyPathsForValuesAffectingPathControlIsEnabled;
-@property(nonatomic) __weak NSToolbarItem *toolbarItem; // @synthesize toolbarItem=_toolbarItem;
+@property(assign, nonatomic) __weak NSToolbarItem *toolbarItem; // @synthesize toolbarItem=_toolbarItem;
 @property(retain) IDENavigableItem *rootNavigable; // @synthesize rootNavigable=_rootNavigable;
 //- (void).cxx_destruct;
 - (void)_newContextAction:(id)arg1;
@@ -25968,8 +25968,8 @@ __attribute__((visibility("hidden")))
 
 + (id)cachedExtensionsByIdentifier;
 + (id)cachedExtensions;
-@property __weak DVTTabChooserView *tabChooserView; // @synthesize tabChooserView=_tabChooserView;
-@property __weak DVTBorderedView *borderedView; // @synthesize borderedView=_borderedView;
+@property (assign)__weak DVTTabChooserView *tabChooserView; // @synthesize tabChooserView=_tabChooserView;
+@property (assign)__weak DVTBorderedView *borderedView; // @synthesize borderedView=_borderedView;
 @property(retain) DVTReplacementView *replacementView; // @synthesize replacementView;
 //- (void).cxx_destruct;
 - (void)primitiveInvalidate;
@@ -26066,8 +26066,8 @@ __attribute__((visibility("hidden")))
 @property(retain, nonatomic) NSSet *namesOfLinkedBinaries; // @synthesize namesOfLinkedBinaries=_namesOfLinkedBinaries;
 @property(retain, nonatomic) DVTFilePath *filePath; // @synthesize filePath=_filePath;
 @property(nonatomic, getter=isCached) BOOL cached; // @synthesize cached=_cached;
-@property(nonatomic) __weak id <IDEBlueprint> blueprint; // @synthesize blueprint=_blueprint;
-@property(nonatomic) __weak id <IDEBuildableProduct> buildableProduct; // @synthesize buildableProduct=_buildableProduct;
+@property(assign, nonatomic) __weak id <IDEBlueprint> blueprint; // @synthesize blueprint=_blueprint;
+@property(assign, nonatomic) __weak id <IDEBuildableProduct> buildableProduct; // @synthesize buildableProduct=_buildableProduct;
 //- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isValid) BOOL valid;
 - (unsigned long long)visibilityOfHeaderAtFilePath:(id)arg1;
@@ -26160,7 +26160,7 @@ __attribute__((visibility("hidden")))
 }
 
 + (void)initialize;
-@property __weak NSTextField *licenseSubtitle; // @synthesize licenseSubtitle=_licenseSubtitle;
+@property (assign)__weak NSTextField *licenseSubtitle; // @synthesize licenseSubtitle=_licenseSubtitle;
 @property(retain) NSView *foregroundContentView; // @synthesize foregroundContentView=_foregroundContentView;
 @property int agreementStatus; // @synthesize agreementStatus=_agreementStatus;
 //- (void).cxx_destruct;
@@ -26223,7 +26223,7 @@ __attribute__((visibility("hidden")))
 }
 
 + (void)initialize;
-@property __weak NSImageView *imageView; // @synthesize imageView=_imageView;
+@property (assign)__weak NSImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly) NSArray *packagesToInstall; // @synthesize packagesToInstall=_packagesToInstall;
 @property(copy) NSArray *appsThatNeedToBeQuitBeforeInstallCanProceed; // @synthesize appsThatNeedToBeQuitBeforeInstallCanProceed=_appsThatNeedToBeQuitBeforeInstallCanProceed;
 @property(copy) id installationCompleteButtonHandler; // @synthesize installationCompleteButtonHandler=_installationCompleteButtonHandler;
@@ -27074,7 +27074,7 @@ __attribute__((visibility("hidden")))
 
 + (void)initialize;
 @property SEL action; // @synthesize action=_action;
-@property __weak id target; // @synthesize target=_target;
+@property (assign)__weak id target; // @synthesize target=_target;
 //- (void).cxx_destruct;
 - (void)layoutBottomUp;
 - (void)layoutTopDown;
@@ -27148,7 +27148,7 @@ __attribute__((visibility("hidden")))
 }
 
 + (id)defaultViewNibName;
-@property __weak id <RVPeoplePickerDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <RVPeoplePickerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly) BOOL pickingPerson; // @synthesize pickingPerson=_pickingPerson;
 @property(retain) IDEPeoplePickerContentViewController *currentVC; // @synthesize currentVC=_currentVC;
 @property(readonly) ABPerson *selectedPerson; // @synthesize selectedPerson=_selectedPerson;
@@ -27221,7 +27221,7 @@ __attribute__((visibility("hidden")))
 
 + (id)inspectedArrayControllerKeyPaths;
 + (void)initialize;
-@property __weak id <IDEParagraphStylePopoverControllerDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDEParagraphStylePopoverControllerDelegate> delegate; // @synthesize delegate=_delegate;
 //- (void).cxx_destruct;
 - (void)valuesDidFinishChanging;
 - (void)loadView;
@@ -27372,7 +27372,7 @@ __attribute__((visibility("hidden")))
 - (long long)segmentForItem:(id)arg1;
 - (id)itemForSegment:(long long)arg1;
 - (id)groupForSegment:(long long)arg1;
-@property __weak id <IDEGroupedSegmentedControlDelegate> delegate;
+@property (assign)__weak id <IDEGroupedSegmentedControlDelegate> delegate;
 - (void)awakeFromNib;
 
 @end
@@ -27782,10 +27782,10 @@ __attribute__((visibility("hidden")))
     NSView *_contentView;
 }
 
-@property __weak NSView *contentView; // @synthesize contentView=_contentView;
-@property __weak NSView *accessoryContainer; // @synthesize accessoryContainer=_accessoryContainer;
-@property __weak NSTextField *labelField; // @synthesize labelField=_labelField;
-@property __weak IDEGaugeReportTopSectionContentBackground *backgroundView; // @synthesize backgroundView=_backgroundView;
+@property (assign)__weak NSView *contentView; // @synthesize contentView=_contentView;
+@property (assign)__weak NSView *accessoryContainer; // @synthesize accessoryContainer=_accessoryContainer;
+@property (assign)__weak NSTextField *labelField; // @synthesize labelField=_labelField;
+@property (assign)__weak IDEGaugeReportTopSectionContentBackground *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property double height; // @synthesize height=_height;
 //- (void).cxx_destruct;
 - (id)initWithComponentLabel:(id)arg1 accessoryView:(id)arg2 view:(id)arg3 lastComponent:(BOOL)arg4;
@@ -27812,7 +27812,7 @@ __attribute__((visibility("hidden")))
 
 @property BOOL disableFastForwards; // @synthesize disableFastForwards=_disableFastForwards;
 @property(copy) NSArray *workingTreeItems; // @synthesize workingTreeItems=_workingTreeItems;
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
 @property(copy) NSString *messageText; // @synthesize messageText=_messageText;
 @property int requestType; // @synthesize requestType=_requestType;
 @property(copy) id continuationBlock; // @synthesize continuationBlock=_continuationBlock;
@@ -27860,7 +27860,7 @@ __attribute__((visibility("hidden")))
 @property BOOL inProgress; // @synthesize inProgress=_inProgress;
 @property(copy) id continuationBlock; // @synthesize continuationBlock=_continuationBlock;
 @property(retain) NSArray *patches; // @synthesize patches=_patches;
-@property __weak IDEWorkspace *workspace; // @synthesize workspace=_workspace;
+@property (assign)__weak IDEWorkspace *workspace; // @synthesize workspace=_workspace;
 //@property DVTTableView *tableView; // @synthesize tableView;
 //- (void).cxx_destruct;
 - (void)remove:(id)arg1;
@@ -28063,7 +28063,7 @@ __attribute__((visibility("hidden")))
     NSTableView *_tableView;
 }
 
-@property(nonatomic) __weak NSTableView *tableView; // @synthesize tableView=_tableView;
+@property(assign, nonatomic) __weak NSTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) IDEKeyBindingField *keyBindingField; // @synthesize keyBindingField=_keyBindingField;
 //- (void).cxx_destruct;
 - (void)beginEditingFromEvent:(id)arg1 inTableView:(id)arg2 column:(long long)arg3 row:(long long)arg4;
@@ -28104,8 +28104,8 @@ __attribute__((visibility("hidden")))
 }
 
 + (id)keyPathsForValuesAffectingCanContinue;
-@property __weak DVTReplacementView *replacementView; // @synthesize replacementView=_replacementView;
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
+@property (assign)__weak DVTReplacementView *replacementView; // @synthesize replacementView=_replacementView;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
 @property BOOL inProgress; // @synthesize inProgress=_inProgress;
 @property(retain) IDESourceControlSwitchOperationInfo *operationInfo; // @synthesize operationInfo=_operationInfo;
 @property(retain) IDEWorkspace *workspace; // @synthesize workspace=_workspace;
@@ -28153,7 +28153,7 @@ __attribute__((visibility("hidden")))
     NSButton *_leftMostButton;
 }
 
-@property __weak NSButton *leftMostButton; // @synthesize leftMostButton=_leftMostButton;
+@property (assign)__weak NSButton *leftMostButton; // @synthesize leftMostButton=_leftMostButton;
 @property(retain) IDESourceControlRepository *repository; // @synthesize repository=_repository;
 @property(retain) NSString *statusText; // @synthesize statusText=_statusText;
 //- (void).cxx_destruct;
@@ -29300,7 +29300,7 @@ __attribute__((visibility("hidden")))
 @property(retain) IDESourceControlRequest *infoRequest; // @synthesize infoRequest=_infoRequest;
 @property(retain) IDESourceControlOperationWindow *scmOperationPanel; // @synthesize scmOperationPanel=_scmOperationPanel;
 @property BOOL presentedCredentials; // @synthesize presentedCredentials=_presentedCredentials;
-@property __weak NSView *containerView; // @synthesize containerView=_containerView;
+@property (assign)__weak NSView *containerView; // @synthesize containerView=_containerView;
 @property(retain) NSView *credentialsTypeView; // @synthesize credentialsTypeView=_credentialsTypeView;
 @property(copy, nonatomic) id completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(readonly) BOOL didValidateAddress; // @synthesize didValidateAddress=_didValidateAddress;
@@ -29343,8 +29343,8 @@ __attribute__((visibility("hidden")))
 + (id)keyPathsForValuesAffectingConnectionError;
 + (id)keyPathsForValuesAffectingAddressContainsUser;
 @property(retain) DVTBorderedView *borderedView; // @synthesize borderedView=_borderedView;
-@property __weak NSImageView *errorImageView; // @synthesize errorImageView=_errorImageView;
-@property __weak DVTToggleSwitch *toggleSwitch; // @synthesize toggleSwitch=_toggleSwitch;
+@property (assign)__weak NSImageView *errorImageView; // @synthesize errorImageView=_errorImageView;
+@property (assign)__weak DVTToggleSwitch *toggleSwitch; // @synthesize toggleSwitch=_toggleSwitch;
 @property BOOL isVerifiying; // @synthesize isVerifiying=_isVerifiying;
 //- (void).cxx_destruct;
 - (void)primitiveInvalidate;
@@ -29630,8 +29630,8 @@ __attribute__((visibility("hidden")))
 @property double addressFieldInitialLayoutWidth; // @synthesize addressFieldInitialLayoutWidth=_addressFieldInitialLayoutWidth;
 @property(retain) DVTBorderedView *borderedView; // @synthesize borderedView=_borderedView;
 @property(retain) NSButton *viewServerButton; // @synthesize viewServerButton=_viewServerButton;
-@property __weak NSTextField *addressTextField; // @synthesize addressTextField=_addressTextField;
-@property __weak DVTToggleSwitch *enableSwitch; // @synthesize enableSwitch=_enableSwitch;
+@property (assign)__weak NSTextField *addressTextField; // @synthesize addressTextField=_addressTextField;
+@property (assign)__weak DVTToggleSwitch *enableSwitch; // @synthesize enableSwitch=_enableSwitch;
 @property BOOL authenticateAsRegisteredUser; // @synthesize authenticateAsRegisteredUser=_authenticateAsRegisteredUser;
 @property(nonatomic) unsigned long long authenticationUserType; // @synthesize authenticationUserType=_authenticationUserType;
 @property(retain) NSImageView *connectionErrorImageView; // @synthesize connectionErrorImageView=_connectionErrorImageView;
@@ -29823,7 +29823,7 @@ __attribute__((visibility("hidden")))
 
 + (BOOL)isForIOS;
 @property(retain, nonatomic) NSButton *joinButton; // @synthesize joinButton=_joinButton;
-@property(nonatomic) __weak IDEAccountPrefsDeveloperAccountDetailViewController *detailViewController; // @synthesize detailViewController=_detailViewController;
+@property(assign, nonatomic) __weak IDEAccountPrefsDeveloperAccountDetailViewController *detailViewController; // @synthesize detailViewController=_detailViewController;
 //- (void).cxx_destruct;
 - (void)updateUI;
 - (id)isMemberImage;
@@ -30063,8 +30063,8 @@ __attribute__((visibility("hidden")))
 + (id)showChatButtonTransformer;
 + (id)nibName;
 @property BOOL isChangedFilesExpanded; // @synthesize isChangedFilesExpanded=_isChangedFilesExpanded;
-@property __weak IDESourceControlTree *sourceTree; // @synthesize sourceTree=_sourceTree;
-@property __weak IDESourceControlLogViewController *owningController; // @synthesize owningController=_owningController;
+@property (assign)__weak IDESourceControlTree *sourceTree; // @synthesize sourceTree=_sourceTree;
+@property (assign)__weak IDESourceControlLogViewController *owningController; // @synthesize owningController=_owningController;
 @property(retain) DVTBorderedView *borderedView; // @synthesize borderedView=_borderedView;
 @property(retain) IDESourceControlNameTokenView *nameTokenView; // @synthesize nameTokenView=_nameTokenView;
 @property(retain) NSTextField *messageField; // @synthesize messageField=_messageField;
@@ -30084,7 +30084,7 @@ __attribute__((visibility("hidden")))
 - (void)setDate:(id)arg1;
 - (void)setDescriptionWithDate:(id)arg1 revision:(id)arg2 workingCopyName:(id)arg3;
 - (void)setMessage:(id)arg1;
-@property __weak IDESourceControlLogItem *logItem;
+@property (assign)__weak IDESourceControlLogItem *logItem;
 @property(retain) IDESourceControlPerson *author;
 - (void)awakeFromNib;
 - (id)initWithFrame:(struct CGRect)arg1;
@@ -30420,17 +30420,17 @@ __attribute__((visibility("hidden")))
     NSView *_v1Look;
 }
 
-@property __weak NSView *v1Look; // @synthesize v1Look=_v1Look;
-@property __weak NSView *v2Look; // @synthesize v2Look=_v2Look;
-@property __weak NSView *contentContainer; // @synthesize contentContainer=_contentContainer;
-@property __weak NSView *accessoryContainer; // @synthesize accessoryContainer=_accessoryContainer;
-@property __weak NSView *descriptionContainer; // @synthesize descriptionContainer=_descriptionContainer;
-@property __weak NSView *shortDescriptionContainer; // @synthesize shortDescriptionContainer=_shortDescriptionContainer;
-@property __weak NSTextField *shortDescriptionLabel; // @synthesize shortDescriptionLabel=_shortDescriptionLabel;
-@property __weak NSLayoutConstraint *titleAccessoryContainerWidthConstraintToBeDeleted; // @synthesize titleAccessoryContainerWidthConstraintToBeDeleted=_titleAccessoryContainerWidthConstraintToBeDeleted;
-@property __weak NSView *titleAccessoryContainer; // @synthesize titleAccessoryContainer=_titleAccessoryContainer;
-@property __weak NSTextField *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property __weak NSImageView *imageView; // @synthesize imageView=_imageView;
+@property (assign)__weak NSView *v1Look; // @synthesize v1Look=_v1Look;
+@property (assign)__weak NSView *v2Look; // @synthesize v2Look=_v2Look;
+@property (assign)__weak NSView *contentContainer; // @synthesize contentContainer=_contentContainer;
+@property (assign)__weak NSView *accessoryContainer; // @synthesize accessoryContainer=_accessoryContainer;
+@property (assign)__weak NSView *descriptionContainer; // @synthesize descriptionContainer=_descriptionContainer;
+@property (assign)__weak NSView *shortDescriptionContainer; // @synthesize shortDescriptionContainer=_shortDescriptionContainer;
+@property (assign)__weak NSTextField *shortDescriptionLabel; // @synthesize shortDescriptionLabel=_shortDescriptionLabel;
+@property (assign)__weak NSLayoutConstraint *titleAccessoryContainerWidthConstraintToBeDeleted; // @synthesize titleAccessoryContainerWidthConstraintToBeDeleted=_titleAccessoryContainerWidthConstraintToBeDeleted;
+@property (assign)__weak NSView *titleAccessoryContainer; // @synthesize titleAccessoryContainer=_titleAccessoryContainer;
+@property (assign)__weak NSTextField *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property (assign)__weak NSImageView *imageView; // @synthesize imageView=_imageView;
 //- (void).cxx_destruct;
 - (void)loadView;
 - (void)_addContentSubviews;
@@ -30486,10 +30486,10 @@ __attribute__((visibility("hidden")))
     NSLayoutConstraint *_minimumWidthConstraint;
 }
 
-@property __weak NSLayoutConstraint *minimumWidthConstraint; // @synthesize minimumWidthConstraint=_minimumWidthConstraint;
-@property __weak NSLayoutConstraint *stackViewHeightConstraintToBeRemoved; // @synthesize stackViewHeightConstraintToBeRemoved=_stackViewHeightConstraintToBeRemoved;
-@property __weak DVTStackView_AppKitAutolayout *stackView; // @synthesize stackView=_stackView;
-@property __weak NSScrollView *mainContentScrollView; // @synthesize mainContentScrollView=_mainContentScrollView;
+@property (assign)__weak NSLayoutConstraint *minimumWidthConstraint; // @synthesize minimumWidthConstraint=_minimumWidthConstraint;
+@property (assign)__weak NSLayoutConstraint *stackViewHeightConstraintToBeRemoved; // @synthesize stackViewHeightConstraintToBeRemoved=_stackViewHeightConstraintToBeRemoved;
+@property (assign)__weak DVTStackView_AppKitAutolayout *stackView; // @synthesize stackView=_stackView;
+@property (assign)__weak NSScrollView *mainContentScrollView; // @synthesize mainContentScrollView=_mainContentScrollView;
 @property(readonly) double minimumWidth; // @synthesize minimumWidth=_minimumWidth;
 @property(retain, nonatomic) id <IDEDebugGaugeReportContentDelegate> contentDelegate; // @synthesize contentDelegate=_contentDelegate;
 //- (void).cxx_destruct;
@@ -30524,11 +30524,11 @@ __attribute__((visibility("hidden")))
     NSLayoutConstraint *_widthConstraintToRemoveAtRuntime;
 }
 
-@property __weak NSLayoutConstraint *widthConstraintToRemoveAtRuntime; // @synthesize widthConstraintToRemoveAtRuntime=_widthConstraintToRemoveAtRuntime;
-@property __weak IDEDebugGaugeReportContentBackground *contentContainer; // @synthesize contentContainer=_contentContainer;
-@property __weak NSView *accessoryContainerView; // @synthesize accessoryContainerView=_accessoryContainerView;
-@property __weak NSTextField *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property __weak NSView *headerContainer; // @synthesize headerContainer=_headerContainer;
+@property (assign)__weak NSLayoutConstraint *widthConstraintToRemoveAtRuntime; // @synthesize widthConstraintToRemoveAtRuntime=_widthConstraintToRemoveAtRuntime;
+@property (assign)__weak IDEDebugGaugeReportContentBackground *contentContainer; // @synthesize contentContainer=_contentContainer;
+@property (assign)__weak NSView *accessoryContainerView; // @synthesize accessoryContainerView=_accessoryContainerView;
+@property (assign)__weak NSTextField *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property (assign)__weak NSView *headerContainer; // @synthesize headerContainer=_headerContainer;
 //- (void).cxx_destruct;
 - (void)_installTitleAccessoryView:(id)arg1;
 - (void)addContentView:(id)arg1;
@@ -30671,8 +30671,8 @@ __attribute__((visibility("hidden")))
 + (id)keyPathsForValuesAffectingCanContinue;
 @property(retain) NSMapTable *cellViewMouseTrackerObservers; // @synthesize cellViewMouseTrackerObservers=_cellViewMouseTrackerObservers;
 @property BOOL isMultiCheckoutWorkflow; // @synthesize isMultiCheckoutWorkflow=_isMultiCheckoutWorkflow;
-@property __weak DVTReplacementView *branchTableReplacementView; // @synthesize branchTableReplacementView=_branchTableReplacementView;
-@property __weak IDEWorkspace *workspace; // @synthesize workspace=_workspace;
+@property (assign)__weak DVTReplacementView *branchTableReplacementView; // @synthesize branchTableReplacementView=_branchTableReplacementView;
+@property (assign)__weak IDEWorkspace *workspace; // @synthesize workspace=_workspace;
 @property BOOL checkoutFileMissingForProjectOrWorkspace; // @synthesize checkoutFileMissingForProjectOrWorkspace=_checkoutFileMissingForProjectOrWorkspace;
 @property(copy) id progressCompletionHandler; // @synthesize progressCompletionHandler=_progressCompletionHandler;
 @property BOOL enableMissingCheckoutWorkflow; // @synthesize enableMissingCheckoutWorkflow=_enableMissingCheckoutWorkflow;
@@ -30827,7 +30827,7 @@ __attribute__((visibility("hidden")))
 @property(retain) IDESourceControlWorkingCopyConfiguration *wcc; // @synthesize wcc=_wcc;
 @property(retain) IDESourceControlWorkingTree *workingTree; // @synthesize workingTree=_workingTree;
 @property(retain) IDEWorkspace *workspace; // @synthesize workspace=_workspace;
-@property __weak DVTTabChooserView *tabChooser; // @synthesize tabChooser=_tabChooser;
+@property (assign)__weak DVTTabChooserView *tabChooser; // @synthesize tabChooser=_tabChooser;
 //- (void).cxx_destruct;
 - (void)setRequired:(id)arg1;
 - (void)setOptional:(id)arg1;
@@ -30863,7 +30863,7 @@ __attribute__((visibility("hidden")))
 }
 
 @property(retain) IDEWorkspace *workspace; // @synthesize workspace=_workspace;
-@property __weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
+@property (assign)__weak IDESourceControlWorkspaceUIHandler *workspaceUIHandler; // @synthesize workspaceUIHandler=_workspaceUIHandler;
 //- (void).cxx_destruct;
 - (void)upgradeWorkingTrees:(id)arg1;
 - (void)alertDidEnd:(id)arg1 returnCode:(long long)arg2 contextInfo:(void *)arg3;
@@ -31107,10 +31107,10 @@ __attribute__((visibility("hidden")))
 + (id)successStrokeColor;
 + (id)successFillColor;
 + (void)initialize;
-@property __weak NSTextField *noIntegrationsTextField; // @synthesize noIntegrationsTextField=_noIntegrationsTextField;
-@property __weak NSTextField *integrationFailedTextField; // @synthesize integrationFailedTextField=_integrationFailedTextField;
-@property __weak NSView *integrationFailedHostView; // @synthesize integrationFailedHostView=_integrationFailedHostView;
-@property __weak NSImageView *integrationFailedImageView; // @synthesize integrationFailedImageView=_integrationFailedImageView;
+@property (assign)__weak NSTextField *noIntegrationsTextField; // @synthesize noIntegrationsTextField=_noIntegrationsTextField;
+@property (assign)__weak NSTextField *integrationFailedTextField; // @synthesize integrationFailedTextField=_integrationFailedTextField;
+@property (assign)__weak NSView *integrationFailedHostView; // @synthesize integrationFailedHostView=_integrationFailedHostView;
+@property (assign)__weak NSImageView *integrationFailedImageView; // @synthesize integrationFailedImageView=_integrationFailedImageView;
 @property(retain) NSView *tilePlaceholderView; // @synthesize tilePlaceholderView=_tilePlaceholderView;
 @property(readonly, nonatomic) NSImage *testsStatusImage; // @synthesize testsStatusImage=_testsStatusImage;
 @property(retain, nonatomic) NSTextField *testsFailedTextField; // @synthesize testsFailedTextField=_testsFailedTextField;
@@ -31118,7 +31118,7 @@ __attribute__((visibility("hidden")))
 @property(retain, nonatomic) NSTextField *buildWarningsTextField; // @synthesize buildWarningsTextField=_buildWarningsTextField;
 @property(retain, nonatomic) NSTextField *buildErrorsTextField; // @synthesize buildErrorsTextField=_buildErrorsTextField;
 @property(retain, nonatomic) NSTextField *titleTextField; // @synthesize titleTextField=_titleTextField;
-//@property(nonatomic) __weak id <IDEStatusAndIssueCountsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
+//@property(assign, nonatomic) __weak id <IDEStatusAndIssueCountsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) BOOL showOverallStatusImage; // @synthesize showOverallStatusImage=_showOverallStatusImage;
 @property(retain, nonatomic) NSString *commitString; // @synthesize commitString=_commitString;
 @property(retain, nonatomic) NSDate *endDate; // @synthesize endDate=_endDate;
@@ -31239,7 +31239,7 @@ __attribute__((visibility("hidden")))
 @property(retain, nonatomic) NSButton *resolveButton; // @synthesize resolveButton=_resolveButton;
 @property(retain, nonatomic) NSMapTable *flightCheckToViewMap; // @synthesize flightCheckToViewMap=_flightCheckToViewMap;
 @property(retain, nonatomic) DVTStackView_ML *stackView; // @synthesize stackView=_stackView;
-@property __weak id <IDEFlightCheckListViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property (assign)__weak id <IDEFlightCheckListViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) int style; // @synthesize style=_style;
 @property(copy, nonatomic) NSArray *flightChecks; // @synthesize flightChecks=_flightChecks;
 //- (void).cxx_destruct;
@@ -31448,11 +31448,11 @@ __attribute__((visibility("hidden")))
     NSImageView *_throttleStatusImageView;
 }
 
-@property __weak NSImageView *throttleStatusImageView; // @synthesize throttleStatusImageView=_throttleStatusImageView;
-@property __weak NSTextField *throttleStatusField; // @synthesize throttleStatusField=_throttleStatusField;
-@property(nonatomic) __weak NSTextField *energyLogScoreField; // @synthesize energyLogScoreField=_energyLogScoreField;
-@property(nonatomic) __weak NSTextField *averageWakeCountField; // @synthesize averageWakeCountField=_averageWakeCountField;
-@property(nonatomic) __weak NSTextField *lastSecondWakeCountField; // @synthesize lastSecondWakeCountField=_lastSecondWakeCountField;
+@property (assign)__weak NSImageView *throttleStatusImageView; // @synthesize throttleStatusImageView=_throttleStatusImageView;
+@property (assign)__weak NSTextField *throttleStatusField; // @synthesize throttleStatusField=_throttleStatusField;
+@property(assign, nonatomic) __weak NSTextField *energyLogScoreField; // @synthesize energyLogScoreField=_energyLogScoreField;
+@property(assign, nonatomic) __weak NSTextField *averageWakeCountField; // @synthesize averageWakeCountField=_averageWakeCountField;
+@property(assign, nonatomic) __weak NSTextField *lastSecondWakeCountField; // @synthesize lastSecondWakeCountField=_lastSecondWakeCountField;
 @property(retain, nonatomic) NSView *wastedCPUGuidance; // @synthesize wastedCPUGuidance=_wastedCPUGuidance;
 @property(retain, nonatomic) NSView *idlePreventionGuidance; // @synthesize idlePreventionGuidance=_idlePreventionGuidance;
 @property(retain, nonatomic) NSView *meterArea; // @synthesize meterArea=_meterArea;
@@ -31460,7 +31460,7 @@ __attribute__((visibility("hidden")))
 @property(retain, nonatomic) NSView *throttledGuidance; // @synthesize throttledGuidance=_throttledGuidance;
 @property(retain, nonatomic) NSView *highCPUGuidance; // @synthesize highCPUGuidance=_highCPUGuidance;
 @property(retain) NSView *throttleStatusArea; // @synthesize throttleStatusArea=_throttleStatusArea;
-@property __weak DVTMeterView *energyMeterView; // @synthesize energyMeterView=_energyMeterView;
+@property (assign)__weak DVTMeterView *energyMeterView; // @synthesize energyMeterView=_energyMeterView;
 @property(retain, nonatomic) IDEEnergyAdditionGuidance *throttlesApplied; // @synthesize throttlesApplied=_throttlesApplied;
 @property(retain, nonatomic) IDEEnergyAdditionGuidance *wasteIssue; // @synthesize wasteIssue=_wasteIssue;
 @property(retain, nonatomic) IDEEnergyAdditionGuidance *wakingIssue; // @synthesize wakingIssue=_wakingIssue;
