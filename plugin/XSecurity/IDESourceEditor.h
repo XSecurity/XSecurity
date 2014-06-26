@@ -1030,13 +1030,13 @@ struct _NSRange {
 - (id)currentSelectedItems;
 - (void)_refreshCurrentSelectedItemsIfNeeded;
 - (BOOL)_isCurrentSelectedItemsValid;
-@property __weak IDEViewController<IDESourceEditorViewControllerHost> *hostViewController;
+@property (assign)__weak IDEViewController<IDESourceEditorViewControllerHost> *hostViewController;
 @property(readonly) IDESourceCodeEditorAnnotationProvider *annotationProvider; // @synthesize annotationProvider=_annotationProvider;
 - (id)mainScrollView;
 @property(readonly) IDESourceCodeDocument *sourceCodeDocument;
 - (void)loadView;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2 document:(id)arg3;
-@property __weak DVTScopeBarController *analyzerResultsScopeBar;
+@property (assign)__weak DVTScopeBarController *analyzerResultsScopeBar;
 
 // Remaining properties
 @property(retain) DVTStackBacktrace *creationBacktrace;
@@ -1238,12 +1238,12 @@ struct _NSRange {
 }
 
 + (void)initialize;
-@property __weak NSTextField *autoHighlightTokensDelayField; // @synthesize autoHighlightTokensDelayField=_autoHighlightTokensDelayField;
-@property __weak NSTextField *pageGuideLocationField; // @synthesize pageGuideLocationField=_pageGuideLocationField;
-@property __weak NSTextField *wrappedLinesIndentWidthField; // @synthesize wrappedLinesIndentWidthField=_wrappedLinesIndentWidthField;
-@property __weak NSTextField *braceIndentWidthField; // @synthesize braceIndentWidthField=_braceIndentWidthField;
-@property __weak NSTextField *indentWidthField; // @synthesize indentWidthField=_indentWidthField;
-@property __weak NSTextField *tabWidthField; // @synthesize tabWidthField=_tabWidthField;
+@property (assign)__weak NSTextField *autoHighlightTokensDelayField; // @synthesize autoHighlightTokensDelayField=_autoHighlightTokensDelayField;
+@property (assign)__weak NSTextField *pageGuideLocationField; // @synthesize pageGuideLocationField=_pageGuideLocationField;
+@property (assign)__weak NSTextField *wrappedLinesIndentWidthField; // @synthesize wrappedLinesIndentWidthField=_wrappedLinesIndentWidthField;
+@property (assign)__weak NSTextField *braceIndentWidthField; // @synthesize braceIndentWidthField=_braceIndentWidthField;
+@property (assign)__weak NSTextField *indentWidthField; // @synthesize indentWidthField=_indentWidthField;
+@property (assign)__weak NSTextField *tabWidthField; // @synthesize tabWidthField=_tabWidthField;
 /*- (void).cxx_destruct;*/
 - (void)autoHighlightDelayChanged:(id)arg1;
 - (void)pageGuideLocationChanged:(id)arg1;
@@ -1675,8 +1675,8 @@ struct _NSRange {
     IDESourceCodeVersionsTwoUpSubmode *_submode;
 }
 
-@property __weak IDESourceCodeVersionsTwoUpSubmode *submode; // @synthesize submode=_submode;
-@property __weak id <DVTComparisonScrollContentAreaDelegate> contentAreaDelegate; // @synthesize contentAreaDelegate=_contentAreaDelegate;
+@property (assign)__weak IDESourceCodeVersionsTwoUpSubmode *submode; // @synthesize submode=_submode;
+@property (assign)__weak id <DVTComparisonScrollContentAreaDelegate> contentAreaDelegate; // @synthesize contentAreaDelegate=_contentAreaDelegate;
 @property(retain) NSView *rightContentView; // @synthesize rightContentView=_rightContentView;
 @property(retain) NSScroller *globalScroller; // @synthesize globalScroller=_globalScroller;
 @property(retain) NSSplitView *comparisonSplitView; // @synthesize comparisonSplitView=_comparisonSplitView;
@@ -2286,7 +2286,7 @@ struct _NSRange {
 - (void)addSourceModelItem:(id)arg1;
 - (id)initWithDocument:(id)arg1 editor:(id)arg2 workspaceIndex:(id)arg3 completionBlock:(id)arg4;
 - (id)description;
-@property __weak IDESourceCodeEditor *editor;
+@property (assign)__weak IDESourceCodeEditor *editor;
 
 // Remaining properties
 @property(retain) DVTStackBacktrace *creationBacktrace;
