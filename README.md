@@ -37,7 +37,7 @@ _____________________________
 - Real-time Vulnerability Notifications
 - Static Analysis with Clang Static Analyser
 
-##### How TO USE
+##### HOW TO USE
 _____________________________
 
 - Quick Security Help with built-in Security Guidelines
