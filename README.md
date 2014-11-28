@@ -37,7 +37,7 @@ _____________________________
 - Real-time Vulnerability Notifications
 - Static Analysis with Clang Static Analyser
 
-##### How TO USE
+##### HOW TO USE
 _____________________________
 
 - Quick Security Help with built-in Security Guidelines
@@ -137,5 +137,5 @@ As much as we value personal coding styles and personal conventions in creating 
 our individuality and personality. We strongly adhere to our coding philosophies. One of it is we value 
 clean coding and uniformity. We believe that clean code begets readability, modifiability and 
 maintainability. This also applies to code uniformity thus it is with our great appreciation if you can 
-blend in with the following conventions.
+blend in with our existing conventions.
 
