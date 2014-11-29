@@ -287,6 +287,9 @@ static  NSDictionary *m_dicCategories = nil ;
     NSArray *aaaRet = nil ;
     NSMutableArray *aaaWorkResults = [ [[NSMutableArray alloc] init] autorelease ] ;
     
+    
+    [CLog xlog: @"Detecting..." ] ;
+    
     do
     {
         // Out of memory?
@@ -322,7 +325,8 @@ static  NSDictionary *m_dicCategories = nil ;
         
         aaaRet = [NSArray arrayWithArray: aaaWorkResults] ;
     } while ( _PASSING_ ) ;
-    
+
+    [CLog xlog: @"Done!" ] ;
     return aaaRet ;
 }
 
