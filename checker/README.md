@@ -123,8 +123,7 @@ _____________________________
 You should do the following after succesfully building clang, under llvm working folder's build folder 
 (the one with files in this repository) 
  - Quit Xcode if it is running.
- - cd [some_folder]/build/
- - execute ./scripts/apply_new_clang.sh 
+ - execute [some_folder]/build/scripts/install.sh 
 
 
 ##### EXECUTION in Xcode

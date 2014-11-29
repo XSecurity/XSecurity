@@ -201,3 +201,7 @@ NSUserDefaults *credentials = [NSUserDefaults standardUserDefaults];
 
 // sample 23
 NSString *name =[[NSUserDefaults standardUserDefaults] stringForKey: USERNAME] ;
+
+
+
+// Adding new sample data see what will happen.

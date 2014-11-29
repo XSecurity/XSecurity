@@ -31,7 +31,6 @@ NSLog(@"Authentication Token: %@", token);
 
 #define MSEC_DBG
 #include "clang/StaticAnalyzer/Core/MSecCommon.h"
-
 #include "SensitiveInfo.h"
 
 using namespace clang ;
@@ -75,7 +74,7 @@ iOSAppSecLeakingLogsChecker::iOSAppSecLeakingLogsChecker()
   , m_piiNSLogv   (NULL)
   , m_szReportDesc("Sensitive information is leaked via Logs.")  
 {
-  MSEC_DEBUG_FUNC("redwud:","ENTER") ;
+//  MSEC_DEBUG_FUNC("redwud:","ENTER") ;
   // Initialize the bug type, no sinks in this vulnerability.
 
   m_pInsecureInstBugType.reset(new BugType( "Leaking Logs",
@@ -84,7 +83,7 @@ iOSAppSecLeakingLogsChecker::iOSAppSecLeakingLogsChecker()
   // Sinks are higher importance bugs as well as calls to assert() or exit(0).
   m_pInsecureInstBugType ->setSuppressOnSink( true );
 
-  MSEC_DEBUG_FUNC("redwud:","EXIT") ;
+//  MSEC_DEBUG_FUNC("redwud:","EXIT") ;
 }
 
 
@@ -100,8 +99,8 @@ iOSAppSecLeakingLogsChecker::iOSAppSecLeakingLogsChecker()
 //       NSString *format,
 //          va_list args
 //    );
+//#define MSEC_DBG
 
-// Checking for SecItemAdd and SecItemUpdate, no particular reason for assigning it to PostCall
 void iOSAppSecLeakingLogsChecker::checkPostCall(const CallEvent &Call,
                                         CheckerContext &C) const 
 {
@@ -109,7 +108,7 @@ void iOSAppSecLeakingLogsChecker::checkPostCall(const CallEvent &Call,
   {
     if ( !m_pInsecureInstBugType )
     {
-      MSEC_DEBUG( "redwud: ", "!m_pInsecureInstBugType" ) ;
+      // MSEC_DEBUG( "redwud: ", "!m_pInsecureInstBugType" ) ;
       break ;
     }
 
@@ -118,7 +117,7 @@ void iOSAppSecLeakingLogsChecker::checkPostCall(const CallEvent &Call,
     //redwud: Obviously it is what it is
     if ( !Call.isGlobalCFunction() )
     {
-      MSEC_DEBUG( "redwud: ", "!Call.isGlobalCFunction" ) ;
+      // MSEC_DEBUG( "redwud: ", "!Call.isGlobalCFunction" ) ;
       break ;
     }
 
@@ -134,8 +133,10 @@ void iOSAppSecLeakingLogsChecker::checkPostCall(const CallEvent &Call,
       {
         break ;
       }
+      // This path is for NSLogv(), don't get confused!!!
+
       //FIXME: Workaround to evade 2nd and onward parameters of NSLogv
-      //  Idea: Use identifier for slot from s
+      //  Idea: Use identifier for slot... ??? whoops I did it again!
       iNumArgs = 1 ;
     }
 
@@ -188,6 +189,8 @@ void iOSAppSecLeakingLogsChecker::checkPostCall(const CallEvent &Call,
 
 }
 
+//#undef MSEC_DBG
+
 //NOTE: This method is made to be separated because ASTContext is not available during instatiation
 void iOSAppSecLeakingLogsChecker::initIdentifierInfo(ASTContext &Ctx) const 
 {
@@ -210,7 +213,7 @@ void iOSAppSecLeakingLogsChecker::initIdentifierInfo(ASTContext &Ctx) const
   } while (_PASSING_) ;
 }
 
-// Through macro I guess this has to follow a certain naving convention
+// Through macro I guess this has to follow a certain naming convention
 void ento::registeriOSAppSecLeakingLogsChecker(CheckerManager &rMrg) 
 {
   rMrg.registerChecker<iOSAppSecLeakingLogsChecker>();

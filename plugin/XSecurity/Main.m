@@ -7,6 +7,7 @@
 //
 
 #import "Main.h"
+#import "XSecDefs.h"
 
 static Main *g_sharedPlugin = nil;
 
@@ -35,6 +36,7 @@ static Main *g_sharedPlugin = nil;
 - (void) applicationDidFinishLaunching: (NSNotification*) notification
 {
     [CLog xlog:@"The application is launched."];
+    [CLog xlogv: @"Checkers: %@", _CHECKERS_] ;
     [self main];
 }
 
