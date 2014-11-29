@@ -29,24 +29,12 @@ connection:handleWillCacheResponse:
 
 Bad Example:
  
-In your Application Delegate
  
-- (BOOL)connection:(UIApplication *)connection
-openURL:(NSURL *)url
-sourceApplication:(NSString *)sourceApplication
-annotation:(id)annotation {
- 
-// Perform transaction like Skype which allowed a malicious call
- 
-return YES;
-}
-
 //////////
 
-(BOOL)connection:(UIApplication *)connection handleWillCacheResponse:(NSURL *)url
+(BOOL)connection:(UIApplication *)connection willCacheResponse:(NSURL *)url
 {
-  // Ask for authorization
-  // Perform transaction
+
 }
 
 */
@@ -61,7 +49,7 @@ return YES;
 #include "clang/StaticAnalyzer/Core/PathSensitive/CallEvent.h"
 #include "clang/StaticAnalyzer/Core/PathSensitive/CheckerContext.h"
 
-#define MSEC_DBG
+//#define MSEC_DBG
 #include "clang/StaticAnalyzer/Core/MSecCommon.h"
 
 using namespace clang ;
@@ -94,7 +82,11 @@ namespace
   public:
     //redwud: Default Constructor
     iOSAppSecLeakingWebCachesChecker() ;
+
+    // Smaller coverage/inner layer thus implementation declaration
     void checkASTDecl(const ObjCMethodDecl *pMD, AnalysisManager &rMgr, BugReporter &rBR) const ;
+
+    // Bigger coverage/outler layer thus implementation declaration
     void checkASTDecl(const ObjCImplementationDecl *pImplDecl, AnalysisManager &rMgr, BugReporter &rBR) const ;
 
   } ; // end iOSAppSecLeakingWebCachesChecker  
@@ -181,12 +173,13 @@ void iOSAppSecLeakingWebCachesChecker::checkASTDecl(const ObjCMethodDecl *pMD, A
 
     ASTContext &Ctx = rBR.getContext() ; 
 
-    // willCacheResponse:
+    // Two arguments
     if ( S.getNumArgs() != 2 )
     {
       break ;
     }
     
+    // willCacheResponse:
     if ( S.getIdentifierInfoForSlot(1) != m_piiWillCacheResponse )
     {
       break ;
@@ -206,15 +199,17 @@ void iOSAppSecLeakingWebCachesChecker::checkASTDecl(const ObjCMethodDecl *pMD, A
   MSEC_DEBUG_FUNC( "redwud: ", "EXIT (Method)" ) ;
 }
 
-//Note: This may apply to web caches, FIXME: Needs reviewing
+//Note: FIXME: Needs reviewing
 //      Determining whether there will be a vulnerable execution/behaviour is hard 
 //      thus for the meantime warn the user that it returns YES, meaning it processed 
 //      connection:openURL:sourceApplication:annotation: in Skype's case allowing
 //      the phone to make a call without user's permission I guess.
 
 //Temporary constraint: Only notifies one instance of non-zero return value, since 
-//  this would be a lax checker so one is enough, the user will mostlikely get the idea  anyway, 
+//  this would be a lax checker so one is enough, the user will mostlikely get the idea anyway, 
 //  maybe on the second time and so on. (Yeah rationalize it!)
+
+//FIXME: There is something to fix here, I just forgot what it is all about  
 
 bool iOSAppSecLeakingWebCachesChecker::checkWillCacheResponse( const ObjCMethodDecl *pMD, ASTContext &Ctx ) const
 {
@@ -306,7 +301,7 @@ void iOSAppSecLeakingWebCachesChecker::initIdentifierInfo(ASTContext &Ctx) const
   } while (_PASSING_) ;
 }
 
-// Through macro I guess this has to follow a certain naving convention
+// Through macro I guess this has to follow a certain naming convention
 void ento::registeriOSAppSecLeakingWebCachesChecker(CheckerManager &rMgr) 
 {
   rMgr.registerChecker< iOSAppSecLeakingWebCachesChecker >();

@@ -1,0 +1,23 @@
+#
+# This should be moved to ~/Applications/XSecurity folder when deployed
+#
+confidential|name|developer|programmer|token|(trade\s*)*secret
+\s+pass((w(or)*d))*
+us(e)*r((name|id))*
+credit((\s*)?card((\s*)?n(o(\.)*|um(ber)*))*)*
+id(entification)*
+
+#(dev(ice)*member|student|employee|biometric)(\s*)?[^\(](\s*)?id(entification)*
+((dev(ice)*member|student|employee|biometric)(\s*)?)*[^\(](\s*)?id(entification)*
+
+(expir(y|ation)|birth)\s*(day|date)*
+(ip|internet\s*(protocol)*)|(e(lectronic|\-)\s*mail)|((\s*)?addr(ess)*)
+contact\s*(info(rmation)*)*
+(b(a)*nk|rec(ord)*|bal(ance)*(\s*)?|rat(e|ing))
+(ACH|acc(ou)*nt|serial|fax|pp|pas*po*rt)((\s*)?n(o(\.)*|um(ber)*))*
+(visa\s*)(code)*|(code)
+(grade|pay|salary|financ(e|ial))\s*(info(rmation)*)*
+(ss|soc(ial)*\s*sec(urity)*)((\s*)?n(o(\.)*|um(ber)*))*
+(arc|alien|resident)\s*(card((\s*)?n(o(\.)*|um(ber)*))*)*
+(driver\'s\s*license|asset|liability|intellectual\s*property)
+(firewall\s*)+(conf(iguration)*)*|(conf(iguration)*)

@@ -80,7 +80,7 @@
 #include "clang/StaticAnalyzer/Core/PathSensitive/CallEvent.h"
 #include "clang/StaticAnalyzer/Core/PathSensitive/CheckerContext.h"
 
-#define MSEC_DBG
+//#define MSEC_DBG
 #include "clang/StaticAnalyzer/Core/MSecCommon.h"
 
 using namespace clang ;
@@ -210,6 +210,7 @@ void iOSAppSecSQLInjectionChecker::checkPostObjCMessage(const ObjCMethodCall &M,
       MSEC_DEBUG( "redwud: ", "Unlikely but true, !pProgStateFinish" ) ; 
       break ;
     }
+
     //
     // Check if previously marked as insecure symbol breeds more insecure symbols
     //
@@ -272,6 +273,15 @@ void iOSAppSecSQLInjectionChecker::checkPostObjCMessage(const ObjCMethodCall &M,
        //MSEC_DEBUG( "redwud: ", "!Format string  <<< " << piiFormat ->getName() ) ; 
        break ;
     }
+    
+    unsigned iParams = M.getNumArgs() ;
+
+    // One and below it means it is equal to initialization, rather than formatting
+    if ( iParams < 2 )
+    {
+      MSEC_DEBUG( "redwud: ", "Too few parameters =  " << (void *)M.getReturnValue().getAsSymbol() ) ; 
+      break ;
+    }
    
     const Expr *pFormatExpr = M.getArgExpr(0) ;
 
@@ -291,10 +301,55 @@ void iOSAppSecSQLInjectionChecker::checkPostObjCMessage(const ObjCMethodCall &M,
       break ;
     }
 
-    // Has format specifier?
+    // Doesn't have format specifier?
     if ( szFormat.find('%') == StringRef::npos )
     {
       MSEC_DEBUG( "redwud: ", "% !present <<< ") ; 
+      break ;
+    }
+
+    //
+    // Check if the parameters for the formatter is constant string
+    //
+   
+    StringRef szParams ;
+    bool bOneEmpty = false ;
+    
+    //MSEC_DEBUG( "redwud: ", " parmeter " << iParams << "\n" ) ; 
+    const Expr *pExpr = M.getOriginExpr() ;
+
+    for ( unsigned iCtr = 1; iCtr < iParams; iCtr++ )
+    {
+      const Expr *pParamExpr = CMSecCommon::getParamExpr( pExpr, iCtr ) ;
+      
+      if ( !pParamExpr )
+      {
+        MSEC_DEBUG( "redwud: ", "!pParamExpr " << iCtr << "\n" ) ;
+        continue ;
+      }
+      
+      CMSecCommon::getStrFromExpr( szParams, pParamExpr ) ;
+      
+      if ( szParams.empty() )
+      {
+        bOneEmpty = true ;
+        MSEC_DEBUG( "redwud: ", "Empty String: \n" ) ;
+        MSEC_DEBUG( "redwud: ", "Dumping parmeter " << iCtr << "\n" ) ; 
+        
+#ifdef MSEC_DEBUG
+        pParamExpr ->dumpColor() ;
+#endif
+        continue ;
+      }
+      // else
+      // {
+      //   MSEC_DEBUG( "redwud: ", "String: " << szParams << "\n" ) ;
+      // }
+    }
+
+    //FIXME: This is a temporary fix for checking if the passed string is a constant or not.
+    if ( !bOneEmpty )
+    {
       break ;
     }
 
@@ -311,7 +366,6 @@ void iOSAppSecSQLInjectionChecker::checkPostObjCMessage(const ObjCMethodCall &M,
       //MSEC_DEBUG( "redwud: ", "$$$$$$$$$ Marked as insecure =  " << (void *)M.getReturnValue().getAsSymbol() ) ; 
       break ;
     }
-
   } while (_PASSING_) ;
 
   MSEC_DEBUG_FUNC("redwud: ","EXIT") ;
@@ -661,7 +715,7 @@ void iOSAppSecSQLInjectionChecker::initIdentifierInfo(ASTContext &Ctx) const
 
 }
 
-// Through macro I guess this has to follow a certain naving convention
+// Through macro I guess this has to follow a certain naming convention
 void ento::registeriOSAppSecSQLInjectionChecker(CheckerManager &mgr) 
 {
   mgr.registerChecker<iOSAppSecSQLInjectionChecker>();

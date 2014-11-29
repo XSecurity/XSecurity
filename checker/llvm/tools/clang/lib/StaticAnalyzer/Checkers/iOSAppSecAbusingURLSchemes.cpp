@@ -284,6 +284,8 @@ bool iOSAppSecAbusingURLSchemesChecker::checkOpenURL( const ObjCMethodDecl *pMD,
       MSEC_DEBUG("redwud: ","Impossible to have nobody!" ) ;
       break ;
     }
+      
+    MSEC_DEBUG("redwud: ","Iterating each child" ) ;
     
     for ( Stmt::child_iterator pItem = pStBody ->child_begin()
             , pEndItem = pStBody ->child_end() ;
@@ -303,8 +305,10 @@ bool iOSAppSecAbusingURLSchemesChecker::checkOpenURL( const ObjCMethodDecl *pMD,
         break ;
       }
        
-      //MSEC_DEBUG("redwud: ","Found return statement " ) ;
+      MSEC_DEBUG("redwud: ","Found return statement " ) ;
       //pReturnValue ->dumpColor() ;
+
+      pReturnValue ->dump() ;
 
       if ( const ObjCBoolLiteralExpr *pBool = dyn_cast < ObjCBoolLiteralExpr > ( pReturnValue ) )
       {
@@ -314,8 +318,17 @@ bool iOSAppSecAbusingURLSchemesChecker::checkOpenURL( const ObjCMethodDecl *pMD,
           break ;
         }
       }
-      
-      if ( const IntegerLiteral *pIntLiteral = dyn_cast < IntegerLiteral > ( *(pReturnValue ->child_begin()) ) )
+    
+      Expr::child_iterator piChild = pReturnValue ->child_begin() ;
+
+      if ( pReturnValue ->child_end() == piChild )
+      {
+        MSEC_DEBUG( "redwud: ", "last child !!!\n" ) ;
+        break ;
+      }
+
+
+      if ( const IntegerLiteral *pIntLiteral = dyn_cast < IntegerLiteral > ( *piChild ) )
       {
         MSEC_DEBUG("redwud: ","Return Value " << (pIntLiteral)  ) ;
 
@@ -328,7 +341,7 @@ bool iOSAppSecAbusingURLSchemesChecker::checkOpenURL( const ObjCMethodDecl *pMD,
     } // Each statement in the body
   } while(_PASSING_) ;
 
-  MSEC_DEBUG_FUNC( "redwud: ", "ENTER" ) ;
+  MSEC_DEBUG_FUNC( "redwud: ", "EXIT" ) ;
 
   return bRet ;
 }
@@ -364,7 +377,7 @@ void iOSAppSecAbusingURLSchemesChecker::initIdentifierInfo(ASTContext &Ctx) cons
   } while (_PASSING_) ;
 }
 
-// Through macro I guess this has to follow a certain naving convention
+// Through macro I guess this has to follow a certain naming convention
 void ento::registeriOSAppSecAbusingURLSchemesChecker(CheckerManager &rMgr) 
 {
   rMgr.registerChecker< iOSAppSecAbusingURLSchemesChecker >();

@@ -63,7 +63,7 @@
 #include "clang/StaticAnalyzer/Core/PathSensitive/CallEvent.h"
 #include "clang/StaticAnalyzer/Core/PathSensitive/CheckerContext.h"
 
-#define MSEC_DBG
+//#define MSEC_DBG
 #include "clang/StaticAnalyzer/Core/MSecCommon.h"
 
 using namespace clang ;
@@ -474,7 +474,7 @@ void iOSAppSecInsecureKeyChainStorageChecker::initIdentifierInfo(ASTContext &Ctx
 
 }
 
-// Through macro I guess this has to follow a certain naving convention
+// Through macro I guess this has to follow a certain naming convention
 void ento::registeriOSAppSecInsecureKeyChainStorageChecker(CheckerManager &mgr) 
 {
   mgr.registerChecker<iOSAppSecInsecureKeyChainStorageChecker>();
