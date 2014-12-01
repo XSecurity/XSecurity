@@ -12,7 +12,7 @@ under the main folder.
 _____________________________
 
 We included a binary of clang with these checkers pre-built in it but currently there are problems executing it
-from Xcode. So we recomment that you build your own copy of clang with these checkers included.
+from Xcode. So we recommend that you build your own copy of clang with these checkers included.
 We believe that it is better for you to build the original clang first. Then, include the checkers from this 
 repository and build clang again. In this way you can tell whether your setup is working in the first
 place or not.
