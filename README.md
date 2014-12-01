@@ -2,22 +2,24 @@
 
 A security plugin in Xcode with clang analyzer's checkers for iOS application development. 
 This plugin aims to reduce the vulnerability made during development by detecting the vulnerability 
-as it is being created. You can also follow us on twitter: https://twitter.com/prj_xsecurity for 
-more updates regarding this tool.
+as it is being created. You can also follow us on twitter: https://twitter.com/prj_xsecurity to get notified of the updates of this tool.
 
-This readme file is mainly for the plugin itself for details about the checkers please see
-the readme file under checker folder.
+This readme file is mainly for the plugin itself. If you want to contribute and build the checkers, it is best to see
+the designated [readme](https://github.com/XSecurity/XSecurity/tree/master/checker) first **before cloning this repostory**.
 
 Support Xcode Versions:  
-5.1.1, 5.1, 5.0.x 4.6.x
+6.1, 5.1.1, 5.1, 5.0.x 4.6.x
+
+Support OS X Versions:  
+Mavericks (10.9) , Mountain Lion (10.8)
 
 ##### INSTALLATION
 _____________________________
 
-In Xcode select the appropriate Scheme. 
-Go to "Edit Scheme" and set instances of "Build Configuration" to "Release"  
-Execute build and it will automatically install the plugin into the correct directory ('~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/').  
-Quit Xcode and start it again. (Make it sure that Xcode process is fully terminate)  
+- In some cases maybe not be necessary, but to be sure:
+In Xcode select the XSecurity Scheme. Go to "Edit Scheme" and set instances of "Build Configuration" to "Release"  
+- Execute build and it will automatically install the plugin into the correct directory ('~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/').  
+- Quit Xcode and start it again. (Make it sure that the Xcode process is fully terminated)  
 This time XSecurity will be loaded, you will most likely find a menu item: XSecurity in the main menu. 
 
 ##### HOW TO UNINSTALL
@@ -30,7 +32,7 @@ Delete the following directory:
 ##### FEATURE LIST
 _____________________________
 
-- Centralized developer-friendly security features on Xcode IDE
+- Developer-friendly security features on Xcode IDE
 - Provide a solution to avoid making vulnerabilities, detect vulnerabilities at earlier phases of 
   development
 - Quick Security Help with built-in Security Guidelines
