@@ -153,7 +153,7 @@ Uninstall the plugin-in see the main readme file.
 ##### FEATURE LIST
 _____________________________
 
-These are the supported vulnerabilities as of the moment.
+These are the supported vulnerabilities.
 - Insecure NSUserDefaults Usage
 - Unencrypted Data in plist File
 - Insecure Permanent Credential Storage
@@ -163,6 +163,7 @@ These are the supported vulnerabilities as of the moment.
 - Leaking Logs
 - Leaking Pasteboard
 - SQL Injection (SQLite)
+- Buffer Overflow APIs 
 
 
 ##### RELEASES, BRANCHES & BUG REPORTING
@@ -199,6 +200,7 @@ It contains code written by third parties. Such software will
 have its own individual LICENSE.TXT file in the directory 
 in which it appears. This file will describe the copyrights, 
 license, and restrictions which apply to that code.
+
 
 
 ##### OTHER CONVENTIONS AND VALUES
