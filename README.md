@@ -1,11 +1,11 @@
 ### XSecurity
 
-A security plugin in Xcode with clang analyzer's checkers for iOS application development. 
-This plugin aims to reduce the vulnerability made during development by detecting the vulnerability 
+A security plug-in in Xcode with clang analyzer's checkers for iOS application development. 
+This plug-in aims to reduce the vulnerability made during development by detecting the vulnerability 
 as it is being created. You can also follow us on twitter: https://twitter.com/prj_xsecurity to get notified of the updates of this tool.
 
-This readme file is mainly for the plugin itself. If you want to contribute and build the checkers, it is best to see
-the designated [readme](https://github.com/XSecurity/XSecurity/tree/master/checker) first **before cloning this repostory**.
+This readme is mainly for the plug-in itself. If you want to contribute and build the checkers, it is best to see
+the designated [README](https://github.com/XSecurity/XSecurity/tree/master/checker) first **before cloning this repostory**.
 
 Support Xcode Versions:  
 6.1, 5.1.1, 5.1, 5.0.x 4.6.x
@@ -13,20 +13,25 @@ Support Xcode Versions:
 Support OS X Versions:  
 Mavericks (10.9) , Mountain Lion (10.8)
 
+
 ##### INSTALLATION
 _____________________________
 
-- In some cases maybe not be necessary, but to be sure:
+- Most of the time this may not be necessary, but to be sure:
 In Xcode select the XSecurity Scheme. Go to "Edit Scheme" and set instances of "Build Configuration" to "Release"  
-- Execute build and it will automatically install the plugin into the correct directory ('~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/').  
+- Clean the build folder of the XSecurity project
+  *Execute Alt-Shift-Cmd-K or hold Alt key while selecting  Main Menu -> Product -> Clean
+  *In some cases XSecurity plug-in will not work if the build folder is not properly cleaned. 
+- Execute build and it will automatically install the plug-in into the correct directory ('~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/').  
 - Quit Xcode and start it again. (Make it sure that the Xcode process is fully terminated)  
 This time XSecurity will be loaded, you will most likely find a menu item: XSecurity in the main menu. 
+
 
 ##### HOW TO UNINSTALL
 _____________________________
 
 Delete the following directory:  
-~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/XSecurity.xcplugin
+~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/XSecurity.xcplug-in
 
 
 ##### FEATURE LIST
@@ -49,8 +54,9 @@ _____________________________
  Activate it from the menu 'XSecurity > Vulnerability Notifications > Activate'.
 
 - Static Analysis with Clang Static Analyser
+ 0. Jump to step 3. if you already done this when dealing with the checker  
  1. Quit Xcode.
- 2. Run a script (checker/build/scripts/apply_new_clang.sh) to apply our clang to Xcode.
+ 2. Run a script (checker/build/scripts/install.sh) to apply our clang to Xcode.
  3. Relaunch Xcode.
  4. Open your Xcode project.
  5. Scan the project with our checkers from the menu 'XSecurity > Static Security Analyzer > Analyze'.
@@ -61,8 +67,8 @@ _____________________________
 _____________________________
 
 In XSecurity, as typical with other projects we use git tags to make our releases and aptly named as 
-Release Tags. Typically one would download one of these Release Tags to build (and automatically 
-apply XSecurity) and work on it. 
+Release Tags. Usually one would download one of these Release Tags to build (and automatically 
+apply XSecurity) and one may work on it. 
 
 
 ##### BRANCHES
@@ -100,6 +106,7 @@ reports the following information:
 - Xcode version
 - XSecurity version (Version number of the revision you built)
 
+We would like to thank you in advance for this.
 
 ##### HOW DO WE HANDLE THE ISSUED BUGS
 _____________________________

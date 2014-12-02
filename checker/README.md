@@ -1,17 +1,20 @@
 ### XSecurity (Checkers)
+A security plug-in in Xcode with clang analyzer's checkers for iOS application development. 
 
-A security plugin in Xcode with clang analyzer's checkers for iOS application development. 
-This plugin aims to reduce the vulnerability made during development by detecting the vulnerability 
-as it is being created. 
-
-This readme file is mainly for the Checkers for details about the plugin please see the readme file 
+This readme is purely for the Checkers for details about the plug-in please see the [README](https://github.com/XSecurity/XSecurity) file 
 under the main folder.
 
 
 ##### PREPARATION
 _____________________________
 
-We included a clang binary with these checkers pre-built in it. If you want to just use the checkers right away after cloning this repository you can proceed to [INSTALLATION](#install). If you plan to contribute to this project or build it yourself, proceed on the following preparation **before cloning**.
+We included a clang binary with these checkers pre-built in it. If you want to just use the checkers right away, clone this repository and proceed to [INSTALLATION](#install). 
+
+NOTE: **Before cloning... this repository**
+If you plan to contribute to this project we highly suggest that you follow [this guide](https://github.com/XSecurity/XSecurity/blob/master/BUILD_CLANG_AND_HELP.md) instead of the following.  
+
+If you just want to build it yourself and don't want reflect your changes proceed with the following preparation.
+
 We believe that it is better for you to build the original clang first. Then, include the checkers from this repository and build clang again. In this way you can tell whether your setup is working in the first place or not.
 
 
@@ -19,47 +22,61 @@ We plan to automate things for you but for the meantime please bear with us by f
 
    
     Get the required tools.
-      - See Getting Started with the LLVM System - Requirements.
+      - See [Getting Started with the LLVM System - Requirements.](http://llvm.org/docs/GettingStarted.html#requirements)
       - Note that Python is needed for running the test suite. Get it at: http://www.python.org/download
    
     Checkout LLVM:
       - Change directory to where you want the llvm directory placed. This will be your [llvm working folder](#llvm_working_folder)
-      - $ svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm 
-        (Currently we are using the revision 200605. You should check it out with 
-        -r option like svn co -r 200605 http://xxxx.)
+      - $ svn co -r 200605 http://llvm.org/svn/llvm-project/llvm/trunk llvm 
+        (We've been using the revision 200605, thus the use of -r option. )
    
     Checkout Clang:
-      - cd llvm/tools
-      - svn co http://llvm.org/svn/llvm-project/cfe/trunk clang 
-        (Use same option mentioned above)
-      - cd ../..
+      - $ cd ./llvm/tools
+      - $ svn co -r 200605 http://llvm.org/svn/llvm-project/cfe/trunk clang 
    
     Checkout extra Clang Tools: (optional)
-      - cd llvm/tools/clang/tools
-      - svn co http://llvm.org/svn/llvm-project/clang-tools-extra/trunk extra 
-        (Use same option mentioned above)
-      - cd ../../../..
+      - $ cd ../../llvm/tools/clang/tools
+      - $ svn co -r 200605 http://llvm.org/svn/llvm-project/clang-tools-extra/trunk extra 
    
     Checkout Compiler-RT:
-      - cd llvm/projects
-      - svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt 
-        (Use same option mentioned above)
-      - cd ../..
+      - $ cd ../../../../llvm/projects
+      - $ svn co -r 200605 http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt 
    
     Build LLVM and Clang:
-      - mkdir build  
+      - $ cd ../..
+      - $ mkdir build  
         (for building without polluting the source dir)
-      - cd build
-      - ../llvm/configure --enable-optimized --disable-compiler-version-checks
+      - $ cd build
 
+        Note: The following may take little while.
+
+      - $ ../llvm/configure --enable-optimized --disable-compiler-version-checks
         (configure build folder which is outside the source dir)
-        Note: At this point if you are able to successfully execute the above mentioned 
-              command then you might want to have a coffee break or do something else 
-              after executing the following make, since it will take a little while to complete.
-      - make
+
+        Note: At this point if you are able to successfully execute the above mentioned command after executing the following make command, then you might want to have a coffee break or do something else since it will take time to complete.
+      
+      - $ make
    
-    By now you may have the following folder structure:
-      ____XSecurity                    <a name="repo_root" />(repo root folder)
+    By now you may have a similar folder structure as the following:
+      ____some_folder                   <a name="llvm_working_folder" />(llvm working folder)
+       |____build
+       | |____Release+Asserts
+       | | |____bin
+       | |____scripts
+       |
+       |____llvm
+       | |____tools
+       | | |____clang
+       | | | |____lib
+       | | | | |____StaticAnalyzer
+       | | | | | |____Checkers
+       | | | |
+       | | | |____tools
+       | | | | |____scan-build
+
+       
+       
+       ____XSecurity                    <a name="repo_root" />(repo root folder)
        |____checker                    <a name="checker_folder" />(checker folder)
        | |____build
        | | |____Release+Asserts
@@ -78,26 +95,11 @@ We plan to automate things for you but for the meantime please bear with us by f
        | |  
        | |____test
        | 
-       |____plugin
+       |____plug-in
        | |____XSecurity
        | | |____XSecurity
    
    
-      ____some_folder                   <a name="llvm_working_folder" />(llvm working folder)
-       |____build
-       | |____Release+Asserts
-       | | |____bin
-       | |____scripts
-       |
-       |____llvm
-       | |____tools
-       | | |____clang
-       | | | |____lib
-       | | | | |____StaticAnalyzer
-       | | | | | |____Checkers
-       | | | |
-       | | | |____tools
-       | | | | |____scan-build
    
     - At this point you have two choices if you already cloned the repository **1.) Move the repo files to llvm folder** or better when you are not able to clone the repository yet **2.) Overwrite checkers with repo files**  
     
@@ -147,7 +149,7 @@ _____________________________
 ##### HOW TO UNINSTALL
 _____________________________
 
-Uninstall the plugin-in see the main readme file.
+Uninstall the plug-in-in see the main readme file.
 
 
 ##### FEATURE LIST
