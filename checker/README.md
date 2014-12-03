@@ -85,7 +85,7 @@ By now you may have a similar folder structure as the following: <a name="llvm_w
 
     $ git clone https://github.com/XSecurity/XSecurity.git ./XSecurity
 
-<a name="repo_root" />(repo root folder -> XSecurity below, <a name="checker_folder" />checker folder -> checker below)
+<a name="repo_root" />(repo root folder -> "XSecurity" below, <a name="checker_folder" />checker folder -> "checker" below)
 
     __XSecurity               <- repo root folder
     |____checker              <- checker folder
@@ -118,9 +118,9 @@ By now you may have a similar folder structure as the following: <a name="llvm_w
 - Before overwriting the files, please take note of Checkers.td and CMakeLists.txt in llvm/tools/clang/lib/StaticAnalyzer/Checkers of [llvm working folder](#llvm_working_folder). We suggest that you do not overwrite it right away, if you have the latest llvm source code and the authors may have addded more checkers compared to the checkers we have when we created our checkers.
 - It is highly advised that you compare the two versions of the said files and add only the portion applicable to MSecIOSAppSec.
 
-Copy the the files under [checker folder](#checker_folder) to the root folder of your [llvm working folder](#llvm_working_folder).
+Copy the contents of [checker folder](#checker_folder) to your [llvm working folder](#llvm_working_folder).
 
-    $ cp -ir < checker folder > < llvm working folder >  
+    $ cp -ir < checker folder >/* < llvm working folder >/*  
 
 
 ######Rebuild Clang 
@@ -177,7 +177,7 @@ These are the supported weakness/vulnerabilities.
 ##### RELEASES, BRANCHES, BUG REPORTING & HOW DO WE HANDLE THE ISSUED BUGS
 _____________________________
 
-See the main [README](https://github.com/XSecurity/XSecurity) file for these topics.
+See the main [README](https://github.com/XSecurity/XSecurity#releases) file for these topics.
 
 
 ##### LICENSE

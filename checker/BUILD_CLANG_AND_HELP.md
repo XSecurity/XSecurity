@@ -1,6 +1,6 @@
 ### Building Clang with XSecurity Checkers
 
-For your working environment readily available to contribute to XSecurity please proceed with the following guide. 
+For your working environment readily available to contribute to XSecurity,carry on with this guide. 
 
 ##### PREPARATION
 _____________________________
@@ -16,12 +16,17 @@ We plan to automate things for you but for the meantime please bear with us by f
 
 ######Checkout LLVM:
 
-- Change directory to where you want the llvm directory placed. This will be your [llvm working folder](#llvm_working_folder)
-- We've been using the revision 200605, thus the use of -r option.
+- Create your repo root folder, e.g. "XSecurity". Later it will be explained later why this is your repo folder.
+- Under it create another folder and should be named "checker"
+- Change to this checker folder. This will be your [llvm working folder](#llvm_working_folder)
+- We''ve been using the revision 200605, thus the use of -r option.
 
 Accordingly can be done by doing...
 
-    $ cd < llvm working folder > 
+    $ mkdir XSecurity 
+    $ cd XSecurity
+    $ mkdir checker 
+    $ cd checker 
     $ svn co -r 200605 http://llvm.org/svn/llvm-project/llvm/trunk llvm 
 
 ######Checkout Clang:
@@ -55,39 +60,40 @@ To build without polluting the source directory
 
     $ make
 
-By now you may have a similar folder structure as the following: <a name="llvm_working_folder" />(llvm working folder -> "some_folder" below)
-        
-    ___some_folder             <- llvm working folder 
-    |____build
-    | |____Release+Asserts
-    | | |____bin
-    | |____scripts
-    |
-    |____llvm
-    | |____tools
-    | | |____clang
-    | | | |____lib
-    | | | | |____StaticAnalyzer
-    | | | | | |____Checkers
-    | | | |
-    | | | |____tools
-    | | | | |____scan-build
+By now you may have a similar folder structure as the following: (<a name="repo_root_folder" />repo root folder -> "XSecurity" below, <a name="llvm_working_folder" />llvm working folder -> "checker" below)
+
+
+    __XSecurity               <- repo root folder
+    |____checker              <- llvm working folder
+    | |____build
+    | | |____Release+Asserts
+    | | | |____bin
+    | | |____scripts
+    | |
+    | |____llvm
+    | | |____tools
+    | | | |____clang
+    | | | | |____lib
+    | | | | | |____StaticAnalyzer
+    | | | | | | |____Checkers
+    | | | | |
+    | | | | |____tools
+    | | | | | |____scan-build
 
 
 ######Overwrite the llvm working folder with Repo Files
+Instead of cloning this repository you should fetch the repository  from your [repo root folder](#repo_root_folder). If either fetch or checkout fail, just add -f for the option and will be good to go.  
 
-**NOTE:  If you are using the most recent version of Clang and need to use the recent Checkers**
+    $ cd <repo root folder> 
+    $ git init 
+    $ git remote add origin https://github.com/XSecurity/XSecurity.git 
+    $ git fetch origin 
+    $ git checkout --track origin/master 
 
-- Before overwriting the files, please take note of Checkers.td and CMakeLists.txt in llvm/tools/clang/lib/StaticAnalyzer/Checkers of [llvm working folder](#llvm_working_folder). We suggest that you do not overwrite it right away, if you have the latest llvm source code and the authors may have addded more checkers compared to the checkers we have when we created our checkers.
-- It is highly advised that you compare the two versions of the said files and add only the portion applicable to MSecIOSAppSec.
-
-
-    $ git clone https://github.com/XSecurity/XSecurity.git ./XSecurity
-
-<a name="repo_root" />(repo root folder -> XSecurity below, <a name="checker_folder" />checker folder -> checker below)
+The resulting folder structure should look like the following
 
     __XSecurity               <- repo root folder
-    |____checker              <- checker folder
+    |____checker              <- llvm working folder
     | |____build
     | | |____Release+Asserts
     | | | |____bin
@@ -109,8 +115,6 @@ By now you may have a similar folder structure as the following: <a name="llvm_w
     | |____XSecurity
     | | |____XSecurity
     
-
-
 
 ######Rebuild Clang 
 
@@ -190,3 +194,22 @@ clean coding and uniformity. We believe that clean code begets readablity, modif
 maintainability. This also applies to code uniformity thus it is with our great appreciation if you can 
 blend in with our existing convetions.
 
+
+
+
+
+    ___checker             <- llvm working folder 
+    |____build
+    | |____Release+Asserts
+    | | |____bin
+    | |____scripts
+    |
+    |____llvm
+    | |____tools
+    | | |____clang
+    | | | |____lib
+    | | | | |____StaticAnalyzer
+    | | | | | |____Checkers
+    | | | |
+    | | | |____tools
+    | | | | |____scan-build
