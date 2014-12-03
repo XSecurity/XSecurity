@@ -82,15 +82,15 @@ By now you may have a similar folder structure as the following: (<a name="repo_
 
 
 ######Overwrite the llvm working folder with Repo Files
-Instead of cloning this repository you should fetch the repository  from your [repo root folder](#repo_root_folder). If either fetch or checkout fail, just add -f for the option and will be good to go.  
+Instead of cloning this repository you should fetch the repository from your [repo root folder](#repo_root_folder). If either fetch or checkout fails just add -f for the option and will be good to go.  
 
-    $ cd <repo root folder> 
+    $ cd <repo root folder: XSecurity> 
     $ git init 
     $ git remote add origin https://github.com/XSecurity/XSecurity.git 
     $ git fetch origin 
     $ git checkout --track origin/master 
 
-The resulting folder structure should look like the following
+The resulting folder structure should look like the following:
 
     __XSecurity               <- repo root folder
     |____checker              <- llvm working folder
@@ -120,7 +120,7 @@ The resulting folder structure should look like the following
 
 Build Clang again in [llvm working folder](#llvm_working_folder)/build
 
-    $ cd < llvm working folder >/build
+    $ cd <llvm working folder: checker>/build
     $ make
 
 To confirm if the iOSAppSec checkers were built successfully execute the following under the same build folder.
@@ -194,22 +194,3 @@ clean coding and uniformity. We believe that clean code begets readablity, modif
 maintainability. This also applies to code uniformity thus it is with our great appreciation if you can 
 blend in with our existing convetions.
 
-
-
-
-
-    ___checker             <- llvm working folder 
-    |____build
-    | |____Release+Asserts
-    | | |____bin
-    | |____scripts
-    |
-    |____llvm
-    | |____tools
-    | | |____clang
-    | | | |____lib
-    | | | | |____StaticAnalyzer
-    | | | | | |____Checkers
-    | | | |
-    | | | |____tools
-    | | | | |____scan-build
