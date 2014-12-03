@@ -121,7 +121,7 @@ Reported bugs will be handled using the following steps.
 - Merge the changes to 'master'
 - Close the issue.
 
-We greatly appreciate your pull request if you can make one.  See some section (TBD) for more details. 
+We greatly appreciate if you can do a pull request when fixing the bugs on your own.
 
 
 ##### LICENSE
