@@ -113,13 +113,13 @@ By now you may have a similar folder structure as the following: <a name="llvm_w
 
 ######Overwrite the llvm working folder with Repo Files
 
-**NOTE:  If you are using the most recent version of Clang**
+**NOTE:  If you are using the most recent version of Clang and need to use the recent Checkers**
 
-- Before overwriting the files, please take note of Checkers.td and CMakeLists.txt in llvm/tools/clang/lib/StaticAnalyzer/Checkers of [llvm working folder](#llvm_working_folder). We suggest that you do not overwrite it right away, you may have the latest llvm source code and they may have addded more checkers compared to the checkers we have when we created our checkers.
+- Before overwriting the files, please take note of Checkers.td and CMakeLists.txt in llvm/tools/clang/lib/StaticAnalyzer/Checkers of [llvm working folder](#llvm_working_folder). We suggest that you do not overwrite it right away, if you have the latest llvm source code and the authors may have addded more checkers compared to the checkers we have when we created our checkers.
 - It is highly advised that you compare the two versions of the said files and add only the portion applicable to MSecIOSAppSec.
-- Copy the the files under [checker folder](#checker_folder) to the root folder of your [llvm working folder](#llvm_working_folder).
 
-You can do like this...
+Copy the the files under [checker folder](#checker_folder) to the root folder of your [llvm working folder](#llvm_working_folder).
+
     $ cp -ir < checker folder > < llvm working folder >  
 
 
@@ -145,7 +145,7 @@ You should do the following after succesfully building Clang, under [llvm workin
 - Execute [llvm working folder](#llvm_working_folder)/build/scripts/install.sh 
 
 
-##### RUNNING THE CHECKERS IN Xcode
+##### RUNNING the CHECKERS in Xcode
 _____________________________
 
 Open Xcode and find "XSecurity" in the main menu, typically before the Help item. If you can't find the XSecurity menu then the plug-in was not loaded/installed successfully. Under "XSecurity", you can find the last menu item, "Static Security Analyzer". Under it select "Analyze". 
