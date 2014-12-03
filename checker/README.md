@@ -1,7 +1,5 @@
 ### XSecurity (Checkers)
-A security plug-in in Xcode with Clang analyzer's checkers for iOS application development. 
-
-This readme is purely for the Checkers for details about the plug-in please see the [README](https://github.com/XSecurity/XSecurity) file under the main folder.
+A security plug-in in Xcode with Clang analyzer's checkers for iOS application development. This readme is purely related to Checkers, for details about the plug-in please see the [README](https://github.com/XSecurity/XSecurity) file under the main folder.
 
 
 ##### PREPARATION
@@ -9,10 +7,10 @@ _____________________________
 
 We included a Clang binary with these checkers pre-built in it. If you want to just use the checkers right away, clone this repository and proceed to [INSTALLATION](#install). 
 
-NOTE: **Before cloning this repository!**
+**NOTE: Before cloning this repository!**
 
-- *If you plan to* **contribute** *to this project we highly suggest that you follow [this guide](https://github.com/XSecurity/XSecurity/blob/master/BUILD_CLANG_AND_HELP.md) instead of the following.* 
-- *If you* **just want to build** *it yourself and don't want reflect your changes proceed with the following preparation.*
+- *If you plan to* **contribute** *to this project we highly suggest that you follow [this guide](https://github.com/XSecurity/XSecurity/blob/master/BUILD_CLANG_AND_HELP.md) instead.* 
+- *If you* **just want to build** *it yourself and don't want reflect your changes,* **carry on!.**
 
 We believe that it is better for you to build the original Clang first. Then, include the checkers from this repository and build Clang again. In this way you can tell whether your setup is working in the first place or not.
 We plan to automate things for you but for the meantime please bear with us by following this procedure.
@@ -115,13 +113,13 @@ By now you may have a similar folder structure as the following: <a name="llvm_w
 
 ######Overwrite the llvm working folder with Repo Files
 
-**NOTE:  If you are using the most recent version of Clang project**
+**NOTE:  If you are using the most recent version of Clang**
 
 - Before overwriting the files, please take note of Checkers.td and CMakeLists.txt in llvm/tools/clang/lib/StaticAnalyzer/Checkers of [llvm working folder](#llvm_working_folder). We suggest that you do not overwrite it right away, you may have the latest llvm source code and they may have addded more checkers compared to the checkers we have when we created our checkers.
 - It is highly advised that you compare the two versions of the said files and add only the portion applicable to MSecIOSAppSec.
 - Copy the the files under [checker folder](#checker_folder) to the root folder of your [llvm working folder](#llvm_working_folder).
 
-
+You can do like this...
     $ cp -ir < checker folder > < llvm working folder >  
 
 
@@ -163,7 +161,7 @@ _____________________________
 ##### FEATURE LIST
 _____________________________
 
-These are the supported vulnerabilities.
+These are the supported weakness/vulnerabilities.
 - Insecure NSUserDefaults Usage
 - Unencrypted Data in plist File
 - Insecure Permanent Credential Storage
@@ -179,21 +177,20 @@ These are the supported vulnerabilities.
 ##### RELEASES, BRANCHES, BUG REPORTING & HOW DO WE HANDLE THE ISSUED BUGS
 _____________________________
 
-See the main [readme](https://github.com/XSecurity/XSecurity) file for these topics.
+See the main [README](https://github.com/XSecurity/XSecurity) file for these topics.
 
 
 ##### LICENSE
 _____________________________
 
-XSecurity is available under 2 licenses described as below.
-The Xcode plug-in is made available under the Apache 2.0 license.
-Clang and our custom security checkers for Clang Static Analyzer
-are available under the University of Illinois/NCSA Open Source License.
+XSecurity is available under 2 licenses.
+- The Xcode plug-in is made available under the Apache 2.0 license.
+- Clang and our custom security checkers for Clang Static Analyzer are available under the University of Illinois/NCSA Open Source License.
 
-It contains code written by third parties. Such software will
-have its own individual LICENSE.TXT file in the directory 
-in which it appears. This file will describe the copyrights, 
-license, and restrictions which apply to that code.
+In line with this if you want to contribute in this project we encourage you to sign the Individual License Agreement (ICLA.TXT)
+
+Should it contain code written by third parties, such software will have its own individual LICENSE.TXT file in the directory in which it appears. This file will describe the copyrights, license, and restrictions which apply to that code.
+
 
 ##### OTHER CONVENTIONS AND VALUES
 _____________________________

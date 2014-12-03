@@ -127,17 +127,13 @@ We greatly appreciate if you can do a pull request when fixing the bugs on your 
 ##### LICENSE
 _____________________________
 
-XSecurity is available under 2 licenses described as below.
-The Xcode plug-in is made available under the Apache 2.0 license. In line with this if you want to contribute 
-in this project we encourage you to sign the Individual License Agreement (ICLA.TXT)
+XSecurity is available under 2 licenses.
+- The Xcode plug-in is made available under the Apache 2.0 license.
+- Clang and our custom security checkers for Clang Static Analyzer are available under the University of Illinois/NCSA Open Source License.
 
-Clang and the custom security checkers for clang static analyzer are available under the University of 
-Illinois/NCSA Open Source License.
+In line with this if you want to contribute in this project we encourage you to sign the Individual License Agreement (ICLA.TXT)
 
-It contains code written by third parties. Such software will have its own individual LICENSE.TXT file in the
-directory in which it appears. This file will describe the copyrights, license, and restrictions which apply 
-to that code.
-
+Should it contain code written by third parties, such software will have its own individual LICENSE.TXT file in the directory in which it appears. This file will describe the copyrights, license, and restrictions which apply to that code.
 
 ##### OTHER CONVENTIONS AND VALUES
 _____________________________
