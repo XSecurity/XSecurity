@@ -30,13 +30,11 @@ Get the required tools.
 Checkout LLVM:
 
 - Change directory to where you want the llvm directory placed. This will be your [llvm working folder](#llvm_working_folder)
-
-
-    $ cd < llvm working folder > 
-
 - We've been using the revision 200605, thus the use of -r option.
 
+Correspondingly can be done by doing
 
+    $ cd < llvm working folder > 
     $ svn co -r 200605 http://llvm.org/svn/llvm-project/llvm/trunk llvm 
 
 
