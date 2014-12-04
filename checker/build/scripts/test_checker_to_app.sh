@@ -4,8 +4,10 @@
 #if (( $# != 2 )); then
 if [ $# -lt 2 ] || [ $# -gt 3 ]; then
     echo "Usage: $0 <checker> <app project path> [simulator version]" >&2
-    echo "e.g. $0 osx.KeychainAPI ~\Project\testapp 6.1" >&2
+    echo ""
+    echo "e.g. $0 msec.iosappsec.iOSAppSecInsecureNSUserDefaultsUsageChecker  ~\Project\testapp 6.1" >&2
     echo "Note: [simulator version] is optional the default is 6.0"
+    echo ""
     exit 1
 fi
 
@@ -28,12 +30,29 @@ fi
 #go to the specified folder
 pushd $2
 
+#security.insecureAPI.getpw
 
 real_cmd="$scan_build_dir --use-analyzer $clang_dir -enable-checker $1 xcodebuild -configuration Debug -sdk $simulator_version"
+# real_cmd="$scan_build_dir --use-analyzer $clang_dir -enable-checker $1 -disable-checker security.insecureAPI.getpw xcodebuild -configuration Debug -sdk $simulator_version"
 
-echo "######### cmd ########"
+#real_cmd="$scan_build_dir --use-analyzer $clang_dir -disable-checker security.insecureAPI.getpw xcodebuild -configuration Debug -sdk $simulator_version"
+
+#real_cmd="$scan_build_dir --use-analyzer $clang_dir -disable-checker security.insecureAPI.gets xcodebuild -configuration Debug -sdk $simulator_version"
+
+#real_cmd="$scan_build_dir --use-analyzer $clang_dir -enable-checker $1 -disable-checker security.insecureAPI.gets xcodebuild -configuration Debug -sdk $simulator_version"
+echo "######### scan_build_dir ########"
+echo $scan_build_dir 
+echo "######### scan_build_dir ########"
+echo "."
+
+echo "######### clang_dir ########"
+echo $clang_dir 
+echo "######### clang_dir ########"
+echo "."
+
+echo "######### real_cmd ########"
 echo $real_cmd 
-echo "######### cmd ########"
+echo "######### real_cmd ########"
 echo "."
 
 $real_cmd

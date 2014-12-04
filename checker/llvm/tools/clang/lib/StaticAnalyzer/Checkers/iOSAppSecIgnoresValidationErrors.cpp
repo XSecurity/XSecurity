@@ -100,7 +100,7 @@ if ( CFReadStreamSetProperty(inCfStream, kCFStreamPropertySSLSettings, (CFTypeRe
 #include "clang/StaticAnalyzer/Core/PathSensitive/CallEvent.h"
 #include "clang/StaticAnalyzer/Core/PathSensitive/CheckerContext.h"
 
-#define MSEC_DBG
+//#define MSEC_DBG
 #include "clang/StaticAnalyzer/Core/MSecCommon.h"
 #include "llvm/ADT/SmallPtrSet.h"
 
@@ -1050,7 +1050,7 @@ void iOSAppSecIgnoresValidationErrorsChecker::initIdentifierInfo(ASTContext &Ctx
 
 }
 
-// Through macro I guess this has to follow a certain naving convention
+// Through macro I guess this has to follow a certain naming convention
 void ento::registeriOSAppSecIgnoresValidationErrorsChecker(CheckerManager &mgr) 
 {
   mgr.registerChecker< iOSAppSecIgnoresValidationErrorsChecker >();

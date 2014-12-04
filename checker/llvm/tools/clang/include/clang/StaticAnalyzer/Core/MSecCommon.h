@@ -36,10 +36,20 @@
   #define MSEC_DEBUG_FUNC(_prefix_,_str_)
 #endif
 
+#ifdef MSEC_INN_DBG
+  #define MSEC_INN_DEBUG(_prefix_,_str_)      MSEC_DEBUG(_prefix_,_str_)      
+  #define MSEC_INN_DEBUG_FUNC(_prefix_,_str_) MSEC_DEBUG_FUNC(_prefix_,_str_) 
+#else
+  #define MSEC_INN_DEBUG(_prefix_,_str_) 
+  #define MSEC_INN_DEBUG_FUNC(_prefix_,_str_)
+#endif
+
 #define MAGICK_SYMBOL_REF (0xBEEF)
+
 
 using namespace clang ;
 using namespace ento ;
+
 
 namespace msec_cmn 
 {
@@ -124,7 +134,7 @@ namespace msec_cmn
       
         if ( !pSymQuery || !pErrNode )
         {
-          MSEC_DEBUG("redwud: ", "Missed bug report!" ) ;
+          MSEC_INN_DEBUG("redwud: ", "Missed bug report!" ) ;
           break ;
         }
         
@@ -132,13 +142,13 @@ namespace msec_cmn
         
         if ( !pReport )
         {
-          MSEC_DEBUG("redwud: ", "missed bug report!" ) ;
+          MSEC_INN_DEBUG("redwud: ", "missed bug report!" ) ;
           break ;
         }
        
         if ( !isConjuredSymbolRef( pSymQuery ) )
         { 
-          pReport -> markInteresting( pSymQuery ) ;  
+          pReport ->markInteresting( pSymQuery ) ;  
         }
     
         C.emitReport( pReport ) ;
@@ -149,7 +159,7 @@ namespace msec_cmn
 
     static void reportInsecureInstance( BugType &rTheBug, StringRef szDesc, BugReporter &rBR, const Decl *pDecl )
     {
-      MSEC_DEBUG_FUNC("redwud: ","ENTER") ;
+      MSEC_INN_DEBUG_FUNC("redwud: ","ENTER") ;
 
       do
       {
@@ -160,7 +170,7 @@ namespace msec_cmn
         //
         //if ( !pReport )
         //{
-        //  MSEC_DEBUG("redwud: ", "missed bug report!" ) ;
+        //  MSEC_INN_DEBUG("redwud: ", "missed bug report!" ) ;
         //  break ;
         //}
        
@@ -172,12 +182,12 @@ namespace msec_cmn
 
       } while ( _PASSING_ ) ;
       
-      MSEC_DEBUG_FUNC("redwud: ","EXIT") ;
+      MSEC_INN_DEBUG_FUNC("redwud: ","EXIT") ;
     } //reportInsecureInstance
 
     static bool findIdentifierInDeclStmt(const DeclStmt *pDeclStmt, const IdentifierInfo *pInfo)
     {
-      MSEC_DEBUG_FUNC("redwud: ","ENTER") ;
+      MSEC_INN_DEBUG_FUNC("redwud: ","ENTER") ;
       
       bool bRet = false ;
     
@@ -199,7 +209,7 @@ namespace msec_cmn
         }
       }
     
-      MSEC_DEBUG_FUNC("redwud: ","EXIT") ;
+      MSEC_INN_DEBUG_FUNC("redwud: ","EXIT") ;
       return bRet ;
     }
     
@@ -267,7 +277,7 @@ namespace msec_cmn
               pItem != pEndItem;
               pItem++, iCtr++ )
         {
-          // MSEC_DEBUG("\nredwud: ", "Dumping child #: " << iCtr << "name " << pItem ->getStmtClassName()  <<  "\n" ) ;
+          // MSEC_INN_DEBUG("\nredwud: ", "Dumping child #: " << iCtr << "name " << pItem ->getStmtClassName()  <<  "\n" ) ;
           const Stmt *pSourceExpr = *pItem ;
     
           if ( pSourceExpr && (isa <OpaqueValueExpr> (pSourceExpr)) )
@@ -312,7 +322,7 @@ namespace msec_cmn
       {
         if ( !pIfDecl || !pInfo )
         {
-          MSEC_DEBUG( "redwud: ", "!pIfDecl" ) ;
+          MSEC_INN_DEBUG( "redwud: ", "!pIfDecl" ) ;
           break ;
         }
         
@@ -340,7 +350,7 @@ namespace msec_cmn
 
           if ( !pSL )
           {
-            MSEC_DEBUG( "redwud: ", "!pSL !!!\n" ) ;
+            MSEC_INN_DEBUG( "redwud: ", "!pSL !!!\n" ) ;
             break ;
           }
 
@@ -349,9 +359,11 @@ namespace msec_cmn
       } while (_PASSING_) ;
     }
 
+//#define MSEC_DBG 1
+
     static void getStrFromExpr( StringRef &rszRet, const Expr *pExpr, StringRef *pIdName = NULL ) 
     {
-    //  MSEC_DEBUG_FUNC( "redwud: ", "Enter" ) ;
+      MSEC_INN_DEBUG_FUNC( "redwud: ", "ENTER /////////" ) ;
 
       do
       {
@@ -360,6 +372,11 @@ namespace msec_cmn
           break ;
         }
 
+        MSEC_INN_DEBUG( "redwud: ", "Dumping pExpr\n" ) ;
+        //pExpr ->dumpColor() ;
+
+
+        MSEC_INN_DEBUG( "redwud: ", "futuristic trouble !!!\n" ) ;
         //FIXME: Make this really nice, seems that this will create trouble in the future
         if ( const ObjCStringLiteral *pOCSL = dyn_cast <ObjCStringLiteral> ( pExpr ) )
         {
@@ -367,15 +384,28 @@ namespace msec_cmn
           break ;
         }
 
-        // FIXME: This is just a work-around for a NSString passed with stringWithFormat, other may explode as well.
+        MSEC_INN_DEBUG( "redwud: ", "pre casting ObjCMessageExpr !!!\n" ) ;
+        // FIXME: This is just a work-around for a NSString passed with stringWithFormat, others may explode as well.
         if ( const ObjCMessageExpr *pMsg = dyn_cast <ObjCMessageExpr> (pExpr) )
         {
-          //MSEC_DEBUG( "redwud: ", "!Bingo !!!\n" ) ;
-          const ObjCStringLiteral *pOCSL = dyn_cast <ObjCStringLiteral> (pMsg ->getArg( 0 )) ;
+          if ( !(pMsg ->getNumArgs()) )
+          {
+            break ;
+          }
+
+          const Expr *pArg = pMsg ->getArg(0) ;
+
+          if ( !pArg )
+          {
+             break ;
+          }
+
+          MSEC_INN_DEBUG( "redwud: ", "pre casting ObjCStringLiteral !!!\n" ) ;
+          const ObjCStringLiteral *pOCSL = dyn_cast <ObjCStringLiteral> ( pArg ) ;
 
           if ( !pOCSL )
           {
-            //MSEC_DEBUG( "redwud: ", "but no win !!!\n" ) ;
+            //MSEC_INN_DEBUG( "redwud: ", "but no win !!!\n" ) ;
             break ;
           }
 
@@ -383,9 +413,33 @@ namespace msec_cmn
           break ;
         }
 
+        //TODO: Consider this on intial check, but temporarily do this checking at this point
+        if ( isa <PredefinedExpr> (pExpr) )
+        {
+          MSEC_INN_DEBUG( "redwud: ", "PredefineExpr\n" ) ;
+          break ;
+        }
+
+        //if ( !isa <const DeclRefExpr> (pExpr) )
+        //{
+        //  MSEC_INN_DEBUG( "redwud: ", "!DeclRefExpr\n" ) ;
+        //  break ;
+        //}
+        
+        MSEC_INN_DEBUG( "redwud: ", "Pre casting DeclRefExpr !!!\n" ) ;
         if ( const DeclRefExpr *pDeclRef = dyn_cast <DeclRefExpr> (pExpr) )
         {
-          const VarDecl *pVarDecl = dyn_cast <VarDecl> (pDeclRef ->getDecl()) ;
+          MSEC_INN_DEBUG( "redwud: ", "pre pDeclRef ->getDecl() !!!\n" ) ;
+          const ValueDecl *pValueDecl = pDeclRef ->getDecl() ;
+
+          MSEC_INN_DEBUG( "redwud: ", "post pDeclRef ->getDecl() !!!\n" ) ;
+          if ( !pValueDecl )
+          {
+            break ;
+          }
+
+          MSEC_INN_DEBUG( "redwud: ", "Pre casting VarDecl !!!\n" ) ;
+          const VarDecl *pVarDecl = dyn_cast <VarDecl> (pValueDecl) ;
 
           if ( !pVarDecl )
           {
@@ -394,6 +448,7 @@ namespace msec_cmn
 
           do
           {
+             //Fill in pIdName if it has been set 
              if ( !pIdName )
              {
                break ;
@@ -401,7 +456,8 @@ namespace msec_cmn
            
              //FIXME: Decide whether to include all the referenced names or just the immediate name
              //       ObjC objects can be passed around thus it is possible to mind those names.
-             // Already been assigned before
+
+             // Already been assigned sometime along the way
              if ( !(pIdName ->empty()) )
              {
                break ;
@@ -411,22 +467,27 @@ namespace msec_cmn
 
              if ( !pInfo )
              {
-               //MSEC_DEBUG( "redwud: ", "!pInfo !!!\n" ) ;
+               //MSEC_INN_DEBUG( "redwud: ", "!pInfo !!!\n" ) ;
                break ;
              } 
 
              *pIdName = pInfo ->getName() ;
-             //MSEC_DEBUG( "redwud: ", "Name found!"  << *pIdName <<  "!\n" ) ;
+             //MSEC_INN_DEBUG( "redwud: ", "Name found!"  << *pIdName <<  "!\n" ) ;
 
           } while (_PASSING_) ;
 
+          const Expr *pAnyInit = pVarDecl ->getAnyInitializer() ;
 
-          const Expr *pAnyInit           = pVarDecl ->getAnyInitializer() ;
+          if ( !pAnyInit )
+          {
+            break ;
+          }
+          
           const ObjCStringLiteral *pOCSL = dyn_cast <ObjCStringLiteral> ( pAnyInit ) ;
 
           if ( !pOCSL )
           {
-            //MSEC_DEBUG( "redwud: ", "!pInit !!!\n" ) ;
+            MSEC_INN_DEBUG( "redwud: ", "recursing !!!\n" ) ;
             getStrFromExpr( rszRet, pAnyInit, pIdName ) ; 
             break ;
           }
@@ -435,19 +496,30 @@ namespace msec_cmn
           break ;
         }
 
+        MSEC_INN_DEBUG( "redwud: ", "isa <IntegerLiteral> (pExpr)\n" ) ;
         if ( isa <IntegerLiteral> (pExpr) )
         {
           // Not a string after all
-          //MSEC_DEBUG( "redwud: ", "!String !!!\n" ) ;
+          //MSEC_INN_DEBUG( "redwud: ", "!String !!!\n" ) ;
           break ;
         }
 
-        // MSEC_DEBUG( "redwud: ", "about to call getStrFromExpr !!!\n" ) ;
-        
-        getStrFromExpr( rszRet, dyn_cast <Expr> (*( pExpr ->child_begin() )), pIdName ) ;        
+        MSEC_INN_DEBUG( "redwud: ", "recursing !!!\n" ) ;
+
+        Expr::const_child_iterator piChild = pExpr ->child_begin() ;
+
+        if ( pExpr ->child_end() == piChild )
+        {
+          MSEC_INN_DEBUG( "redwud: ", "last child !!!\n" ) ;
+          break ;
+        }
+
+        getStrFromExpr( rszRet, dyn_cast <Expr> (*(piChild)), pIdName ) ;        
 
       } while (_PASSING_) ;
-    }
+
+      MSEC_INN_DEBUG_FUNC("redwud:","EXIT /////////") ;
+    } // End of getStrFromExpr() ;
 
     // Only checks for the first of every child, parameter, etc
     // Returns true if found, else false
@@ -481,7 +553,7 @@ namespace msec_cmn
               pItem != pEndItem;
               pItem++, iCtr++ )
         {
-          // MSEC_DEBUG("\nredwud: ", "Dumping child #: " << iCtr << "name " << pItem ->getStmtClassName()  <<  "\n" ) ;
+          // MSEC_INN_DEBUG("\nredwud: ", "Dumping child #: " << iCtr << "name " << pItem ->getStmtClassName()  <<  "\n" ) ;
           const Stmt *pSourceExpr = *pItem ;
     
           if ( pSourceExpr && (isa <OpaqueValueExpr> (pSourceExpr)) )
@@ -499,6 +571,26 @@ namespace msec_cmn
       } while (_PASSING_) ;
     
       return bFound ;
+    }
+
+    static const Expr *getParamExpr( const Expr *pExpr, unsigned iParam )
+    {
+      const Expr *pRet = NULL ;
+      unsigned iCtr = 0 ;
+
+      for ( Stmt::const_child_iterator pItem = pExpr -> child_begin(),
+              pEndItem = pExpr -> child_end() ;
+            pItem != pEndItem ;
+            pItem++, iCtr++ )
+      {
+        if ( iCtr == iParam )
+        {
+          pRet = dyn_cast<Expr> ( *pItem ) ;
+          break ;
+        }
+      }
+
+      return pRet ;
     }
   } ; //CMSecCommon
 

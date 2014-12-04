@@ -42,7 +42,7 @@
 #include "clang/StaticAnalyzer/Core/PathSensitive/CallEvent.h"
 #include "clang/StaticAnalyzer/Core/PathSensitive/CheckerContext.h"
 
-#define MSEC_DBG
+//#define MSEC_DBG
 #include "clang/StaticAnalyzer/Core/MSecCommon.h"
 
 #include "SensitiveInfo.h"
@@ -430,7 +430,7 @@ void iOSAppSecInsecureNSUserDefaultsUsageChecker::initIdentifierInfo(ASTContext 
 
 }
 
-// Through macro I guess this has to follow a certain naving convention
+// Through macro I guess this has to follow a certain naming convention
 void ento::registeriOSAppSecInsecureNSUserDefaultsUsageChecker(CheckerManager &mgr) 
 {
   mgr.registerChecker<iOSAppSecInsecureNSUserDefaultsUsageChecker>();

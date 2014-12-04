@@ -16,6 +16,7 @@
 #import "CVulnController.h"
 #import "XSecDefs.h"
 
+//TODO: Clean up this mess
 @implementation CMenuController
 - (void)setMenu
 {
@@ -26,7 +27,7 @@
     NSMenu* newMenu = [[NSMenu alloc] initWithTitle:@"XSecurity"];
     
     [menuBarItem setSubmenu:newMenu];
-    [[NSApp mainMenu] insertItem:menuBarItem atIndex:11]; // Index 11 is after the "Window" item
+    [[NSApp mainMenu] insertItem:menuBarItem atIndex:11]; // Index 11 is before the "Window" item
     
 
     /*
@@ -39,21 +40,25 @@
     // For some reason this should be in this location to work.
     // For some reason as well, sometimes this work, sometimes not, maybe build should be done first before run, or
     // should quit the new instance of Xcode
-
-//// START TEMP: Temporarily removing these lines to remove from the menu
-//// TODO: Figure out to make local predefines
+    
+// START TEMP: Temporarily removing these lines to remove from the menu
+// TODO: Figure out to make local predefines
 //    newItem = [[NSMenuItem alloc] initWithTitle:@"Raymund Test" action:@selector(doMenuActionRaymund) keyEquivalent:@""];
 //    [newItem setTarget:self];
 //    [newMenu addItem:newItem];
-//// END TEMP
+// END TEMP
     
     // Add submenus for Quick Security Help
     newMenu = [[NSMenu alloc] initWithTitle:@"Quick Security Help"];
+    
     NSMenuItem *newSubItem1 = [[NSMenuItem alloc] initWithTitle:@"Activate" action:@selector(doQuickSecurityHelpActivate) keyEquivalent:@""];
+    
     [newSubItem1 setTarget:self];
     [newMenu addItem:newSubItem1];
     
+    
     NSMenuItem *newSubItem2 = [[NSMenuItem alloc] initWithTitle:@"Deactivate" action:@selector(doQuickSecurityHelpDeactivate) keyEquivalent:@""];
+    
     [newSubItem2 setTarget:self];
     [newMenu addItem:newSubItem2];
     
@@ -89,16 +94,9 @@
     NSMenuItem *newItem3 = [[NSApp mainMenu] itemWithTitle:@"XSecurity"];
     [[newItem3 submenu] addItem:newItem];
     
-    
     // Add submenus for Static Security Analyzer
     newMenu = [[NSMenu alloc] initWithTitle:@"Static Security Analyzer"];
-    /*
-    NSMenuItem *newSubItem5 = [[NSMenuItem alloc] initWithTitle:@"Rules..." action:@selector(doStaticAnalyzerRules) keyEquivalent:@""];
-    [newSubItem5 setTarget:self];
-    [newMenu addItem:newSubItem5];
-    
-    [newMenu addItem:[NSMenuItem separatorItem]];
-     */
+
 
     
     NSMenuItem *newSubItem6 = [[NSMenuItem alloc] initWithTitle:@"Analyze" action:@selector(doStaticAnalyzerAnalyze) keyEquivalent:@""];
@@ -111,9 +109,21 @@
     
     [newMenu setAutoenablesItems:YES];
     
+    // Test
+//    NSMenuItem *newSubItemRules = [[NSMenuItem alloc] initWithTitle:@"Rules..." action:@selector(doStaticAnalyzerRules) keyEquivalent:@""];
+//    [newSubItem5 setTarget:self];
+//    [newMenu addItem:newSubItem5];
     
-    NSMenuItem *newItem4 = [[NSApp mainMenu] itemWithTitle:@"XSecurity"];
-    [[newItem4 submenu] addItem:newItem];
+//    [newMenu addItem:[NSMenuItem separatorItem]];
+    
+    NSMenuItem *menuXSecurity = [[NSApp mainMenu] itemWithTitle:@"XSecurity"];
+    [[menuXSecurity submenu] addItem:newItem];
+
+    [[menuXSecurity submenu] addItem: [NSMenuItem separatorItem]];
+    
+    newItem = [[NSMenuItem alloc] initWithTitle:@"Version: 0.0.3" action:NULL keyEquivalent:@""];
+    [[menuXSecurity submenu] addItem: newItem];
+    
     
 }
 
@@ -233,7 +243,7 @@
             [g_pController retain] ;
         }
         
-        CTargetCode *objTarget = [ [CTargetCode alloc] initWithFile: @"/Users/raymund.pedraita/Projects/own/xsecurity/XSecurity/test/sample.m"] ;
+        CTargetCode *objTarget = [ [CTargetCode alloc] initWithFile: @"/Users/raymund.pedraita/Projects/own/xsecurity/XSecurity/test/sample_sensitive.m"] ;
         
         NSArray *aaaRes = [g_pController detect: objTarget bCommentRemoved: FALSE] ;
         

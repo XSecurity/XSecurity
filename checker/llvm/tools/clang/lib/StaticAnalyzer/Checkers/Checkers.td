@@ -212,6 +212,7 @@ def UnreachableCodeChecker : Checker<"UnreachableCode">,
 
 } // end "alpha.deadcode"
 
+
 //===----------------------------------------------------------------------===//
 // Security checkers.
 //===----------------------------------------------------------------------===//
@@ -242,6 +243,7 @@ let ParentPackage = InsecureAPI in {
     HelpText<"Warn on uses of functions whose return values must be always checked">,
     DescFile<"CheckSecuritySyntaxOnly.cpp">;
 }
+
 let ParentPackage = Security in {
   def FloatLoopCounter : Checker<"FloatLoopCounter">,
     HelpText<"Warn on using a floating point value as a loop counter (CERT: FLP30-C, FLP30-CPP)">,
@@ -267,6 +269,7 @@ def MallocOverflowSecurityChecker : Checker<"MallocOverflow">,
   DescFile<"MallocOverflowSecurityChecker.cpp">;
 
 } // end "alpha.security"
+
 
 //===----------------------------------------------------------------------===//
 // Taint checkers.
@@ -594,6 +597,10 @@ def iOSAppSecInsecurePlistUsageChecker : Checker<"iOSAppSecInsecurePlistUsageChe
 def iOSAppSecInsecureNSUserDefaultsUsageChecker : Checker<"iOSAppSecInsecureNSUserDefaultsUsageChecker">,
    HelpText<"The application stores sensitive data in NSUserDefaults without encrypting it.">,
    DescFile<"iOSAppSecInsecureNSUserDefaultsUsage.cpp">;
+
+def iOSAppSecBufferOverflowChecker : Checker<"iOSAppSecBufferOverflowChecker">,
+   HelpText<"Most vulnerabilities in C and sometimes in Objective-c are related to buffer overflows external link and string manipulation.">,
+   DescFile<"iOSAppSecBufferOverflow.cpp">;
 
 } // end "iosappsec"
 

@@ -62,7 +62,8 @@
     IDERunContextManager *runContextManager = [workspace runContextManager];
     IDEScheme *activeScheme = runContextManager.activeRunContext;
     
-    for (PBXNativeTarget *pbxTarget in pbxProject.targets) {
+    for (PBXNativeTarget *pbxTarget in pbxProject.targets)
+    {
         
         if (![[pbxTarget name] isEqualToString:activeScheme.name])
             continue;
@@ -82,7 +83,8 @@
         [CLog xlog:@"configuration.buildSettings: " withObject:configuration.buildSettings];
         [CLog xlog:@"[pbxtarget allBuildSettingNamesWithBuildParameters:nil]): " withObject:[pbxTarget allBuildSettingNamesWithBuildParameters:nil]];
         
-        for (NSString *buildSettingString in [configuration.buildSettings valueForKey:@"WARNING_CFLAGS"]) {
+        for (NSString *buildSettingString in [configuration.buildSettings valueForKey:@"WARNING_CFLAGS"])
+        {
             tmpBuildString = [tmpBuildString stringByAppendingString:buildSettingString];
             tmpBuildString = [tmpBuildString stringByAppendingString:@" "];
         }
