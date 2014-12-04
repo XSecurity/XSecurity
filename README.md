@@ -76,17 +76,17 @@ _____________________________
 
 This explains the branches and some conventions used in this project.
 
-master branch:
+**master** branch:
   The release branch, where if something is merged here it indicates an upcoming release. 
   We take it as a convention that all merges to this branch is from develop branch. 
   Should you find a critical bug in one of these releases, please do report and use the latest 'master'
   branch instead.
                    
-develop branch:
+**develop** branch:
   Working features are merged in this branch, bug fixes of all sort too. If want to implement a feature,
   create a feature branch and do a pull request in order to merge that feature in this branch.
 
-feature or bug fix branch:
+**feature** or **bug fix** branch:
   Develop features and bug fixes here, basically any branch made by the contributors. One convention we use
   in naming feature or bug fix branch is to have the branch name prefixed with "Feature_" and "BugFix_" 
   respective of their types.
