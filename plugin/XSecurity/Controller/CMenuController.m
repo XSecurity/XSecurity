@@ -100,7 +100,6 @@
     // Add Vulnerability Notificaiton item to the XSecurity Menu
     [objXSecurityMenu addItem: objXSecItem] ;
 
-
     //
     // Add submenus for Static Security Analyzer
     //
@@ -114,30 +113,6 @@
     [objXSecurityMenu addItem: objXSecItem] ;
     
     [objXSecurityMenu setAutoenablesItems: YES] ;
-
-    //objSubMenu  = [[NSMenu alloc] initWithTitle:     @"Static Security Analyzer"] ;
-
-    //[objXSecItem setSubmenu: objSubMenu] ;
-    
-    //NSMenuItem *newSubItem6 = [[NSMenuItem alloc] initWithTitle: @"Analyze" action: @selector(doStaticAnalyzerAnalyze) keyEquivalent: @""] ;
-    //[newSubItem6 setTarget: self] ;
-    //[objSubMenu addItem: newSubItem6] ;
-    //
-    //[newItem setSubmenu: objSubMenu] ;
-    //
-    //
-    //[objSubMenu setAutoenablesItems: YES] ;
-    
-  // Test
-//    NSMenuItem *newSubItemRules = [[NSMenuItem alloc] initWithTitle: @"Rules..." action: @selector(doStaticAnalyzerRules) keyEquivalent: @""] ;
-//    [newSubItem5 setTarget: self] ;
-//    [objMenu addItem: newSubItem5] ;
-    
-//    [objMenu addItem: [NSMenuItem separatorItem]] ;
-    
- //   NSMenuItem *menuXSecurity = [[NSApp mainMenu] itemWithTitle: @"XSecurity"] ;
- //   [[menuXSecurity submenu] addItem: newItem] ;
-
     [objXSecurityMenu addItem: [NSMenuItem separatorItem]] ;
 
     // Add the current version of the plug-in
@@ -145,132 +120,20 @@
     objXSecItem = [[NSMenuItem alloc] initWithTitle: @"v0.0.3" action: NULL keyEquivalent: @""] ;
     
     [objXSecurityMenu addItem: objXSecItem] ;
-    
 }
-
-  ////TODO: Clean up this mess
-  ////@implementation CMenuController
-  //- (void)setMenu
-  //{
-  //    // Create a new menu and add new items
-  //    NSMenuItem* menuBarItem = [[NSMenuItem alloc]
-  //                               initWithTitle:@"XSecurity" action:NULL keyEquivalent:@""] ;
-  //    
-  //    NSMenu* newMenu = [[NSMenu alloc] initWithTitle:@"XSecurity"] ;
-  //    
-  //    [menuBarItem setSubmenu:newMenu] ;
-  //    [[NSApp mainMenu] insertItem:menuBarItem atIndex:11] ; // Index 11 is before the "Window" item
-  //    
-  //
-  //    /*
-  //    NSMenuItem* newItem = [[NSMenuItem alloc] initWithTitle:@"Scan" action:@selector(doMenuAction) keyEquivalent:@""] ;
-  //    [newItem setTarget:self] ;
-  //    [newMenu addItem:newItem] ;
-  //    */
-  //    NSMenuItem* newItem ;
-  //
-  //    // For some reason this should be in this location to work.
-  //    // For some reason as well, sometimes this work, sometimes not, maybe build should be done first before run, or
-  //    // should quit the new instance of Xcode
-  //    
-  //// START TEMP: Temporarily removing these lines to remove from the menu
-  //// TODO: Figure out to make local predefines
-  ////    newItem = [[NSMenuItem alloc] initWithTitle:@"Raymund Test" action:@selector(doMenuActionRaymund) keyEquivalent:@""] ;
-  ////    [newItem setTarget:self] ;
-  ////    [newMenu addItem:newItem] ;
-  //// END TEMP
-  //    
-  //    // Add submenus for Quick Security Help
-  //    newMenu = [[NSMenu alloc] initWithTitle:@"Quick Security Help"] ;
-  //    
-  //    NSMenuItem *newSubItem1 = [[NSMenuItem alloc] initWithTitle:@"Activate" action:@selector(doQuickSecurityHelpActivate) keyEquivalent:@""] ;
-  //    
-  //    [newSubItem1 setTarget:self] ;
-  //    [newMenu addItem:newSubItem1] ;
-  //    
-  //    
-  //    NSMenuItem *newSubItem2 = [[NSMenuItem alloc] initWithTitle:@"Deactivate" action:@selector(doQuickSecurityHelpDeactivate) keyEquivalent:@""] ;
-  //    
-  //    [newSubItem2 setTarget:self] ;
-  //    [newMenu addItem:newSubItem2] ;
-  //    
-  //    newItem = [[NSMenuItem alloc] initWithTitle:@"Quick Security Help" action:NULL keyEquivalent:@""] ;
-  //    [newItem setSubmenu:newMenu] ;
-  //    
-  //    
-  //    //[newMenu setAutoenablesItems:YES] ;
-  //    
-  //    
-  //    // This seems to be the actual addition of the entire menu being created above
-  //    NSMenuItem *newItem2 = [[NSApp mainMenu] itemWithTitle:@"XSecurity"] ;
-  //    [[newItem2 submenu] addItem:newItem] ;
-  //    
-  //    
-  //    // Add submenus for Realtime Security Scanner
-  //    newMenu = [[NSMenu alloc] initWithTitle:@"Security Scanner"] ;
-  //    NSMenuItem *newSubItem3 = [[NSMenuItem alloc] initWithTitle:@"Activate" action:@selector(doSecurityScanActivate) keyEquivalent:@""] ;
-  //    [newSubItem3 setTarget:self] ;
-  //    [newMenu addItem:newSubItem3] ;
-  //    
-  //    NSMenuItem *newSubItem4 = [[NSMenuItem alloc] initWithTitle:@"Deactivate" action:@selector(doSecurityScanDeactivate) keyEquivalent:@""] ;
-  //    [newSubItem4 setTarget:self] ;
-  //    [newMenu addItem:newSubItem4] ;
-  //    
-  //    newItem = [[NSMenuItem alloc] initWithTitle:@"Vulnerability Notifications" action:NULL keyEquivalent:@""] ;
-  //    [newItem setSubmenu:newMenu] ;
-  //    
-  //    
-  //    [newMenu setAutoenablesItems:YES] ;
-  //    
-  //
-  //    NSMenuItem *newItem3 = [[NSApp mainMenu] itemWithTitle:@"XSecurity"] ;
-  //    [[newItem3 submenu] addItem:newItem] ;
-  //    
-  //    // Add submenus for Static Security Analyzer
-  //    newMenu = [[NSMenu alloc] initWithTitle:@"Static Security Analyzer"] ;
-  //
-  //
-  //    
-  //    NSMenuItem *newSubItem6 = [[NSMenuItem alloc] initWithTitle:@"Analyze" action:@selector(doStaticAnalyzerAnalyze) keyEquivalent:@""] ;
-  //    [newSubItem6 setTarget:self] ;
-  //    [newMenu addItem:newSubItem6] ;
-  //    
-  //    newItem = [[NSMenuItem alloc] initWithTitle:@"Static Security Analyzer" action:NULL keyEquivalent:@""] ;
-  //    [newItem setSubmenu:newMenu] ;
-  //    
-  //    
-  //    [newMenu setAutoenablesItems:YES] ;
-  //    
-  //    // Test
-  ////    NSMenuItem *newSubItemRules = [[NSMenuItem alloc] initWithTitle:@"Rules..." action:@selector(doStaticAnalyzerRules) keyEquivalent:@""] ;
-  ////    [newSubItem5 setTarget:self] ;
-  ////    [newMenu addItem:newSubItem5] ;
-  //    
-  ////    [newMenu addItem:[NSMenuItem separatorItem]] ;
-  //    
-  //    NSMenuItem *menuXSecurity = [[NSApp mainMenu] itemWithTitle:@"XSecurity"] ;
-  //    [[menuXSecurity submenu] addItem:newItem] ;
-  //
-  //    [[menuXSecurity submenu] addItem: [NSMenuItem separatorItem]] ;
-  //    
-  //    newItem = [[NSMenuItem alloc] initWithTitle:@"Version: 0.0.3" action:NULL keyEquivalent:@""] ;
-  //    [[menuXSecurity submenu] addItem: newItem] ;
-  //    
-  //    
-  //}
 
 - (void)doQuickSecurityHelpActivate
 {
-        [CLog xlog:@"Quick Security Help is activated."] ;
-        NSNotification *quickSecurityHelpActivateNotification = [NSNotification notificationWithName:@"XSecurityQuickSecurityHelpActivation" object:self] ;
-        [[NSNotificationCenter defaultCenter] postNotification:quickSecurityHelpActivateNotification] ;
+    [CLog xlog:@"Quick Security Help is activated."] ;
+    NSNotification *quickSecurityHelpActivateNotification = [NSNotification notificationWithName:@"XSecurityQuickSecurityHelpActivation" object:self] ;
+    [[NSNotificationCenter defaultCenter] postNotification:quickSecurityHelpActivateNotification] ;
 }
 
 - (void)doQuickSecurityHelpDeactivate
 {
-        [CLog xlog:@"Quick Security Help is deactivated."] ;
-        NSNotification *quickSecurityHelpDeactivateNotification = [NSNotification notificationWithName:@"XSecurityQuickSecurityHelpDeactivation" object:self] ;
-        [[NSNotificationCenter defaultCenter] postNotification:quickSecurityHelpDeactivateNotification] ;
+    [CLog xlog:@"Quick Security Help is deactivated."] ;
+    NSNotification *quickSecurityHelpDeactivateNotification = [NSNotification notificationWithName:@"XSecurityQuickSecurityHelpDeactivation" object:self] ;
+    [[NSNotificationCenter defaultCenter] postNotification:quickSecurityHelpDeactivateNotification] ;
 }
 
 - (void)doSecurityScanActivate
