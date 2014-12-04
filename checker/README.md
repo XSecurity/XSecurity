@@ -9,7 +9,7 @@ We included a Clang binary with these checkers pre-built in it. If you want to j
 
 **NOTE: Before cloning this repository!**
 
-- *If you plan to* **contribute** *to this project we highly suggest that you follow [this guide](https://github.com/XSecurity/XSecurity/blob/master/BUILD_CLANG_AND_HELP.md) instead.* 
+- *If you plan to* **contribute** *to this project we highly suggest that you follow [this guide](https://github.com/XSecurity/XSecurity/blob/master/checker/BUILD_CLANG_AND_HELP.md) instead.* 
 - *If you* **just want to build** *it yourself and don't want reflect your changes,* **carry on!.**
 
 We believe that it is better for you to build the original Clang first. Then, include the checkers from this repository and build Clang again. In this way you can tell whether your setup is working in the first place or not.
