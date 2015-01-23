@@ -144,12 +144,24 @@ You should do the following after succesfully building Clang, under [llvm workin
 - Quit Xcode if it is running.
 - Execute [llvm working folder](#llvm_working_folder)/build/scripts/install.sh 
 
+##### SMOKE TEST the CHECKERS in Xcode
+_____________________________
+Open Xcode, open the test project called CLangTest. You can find CLangTest in [checker folder](#checker_folder)/test. Follow the following guide to run the checkers. 
 
 ##### RUNNING the CHECKERS in Xcode
 _____________________________
 
-Open Xcode and find "XSecurity" in the main menu, typically before the Help item. If you can't find the XSecurity menu then the plug-in was not loaded/installed successfully. Under "XSecurity", you can find the last menu item, "Static Security Analyzer". Under it select "Analyze". 
+Open Xcode and find "XSecurity" in the main menu, typically before the Window or Help item. If you can't find the XSecurity menu then the plug-in was not loaded/installed successfully. Under "XSecurity", you can find the last menu item, "Static Security Analyzer: Analyze". Select it to run the checkers". You would know if it work if there are no errors and some security issues are being displayed. 
 
+If you find errors similar to the following, just remove the specified pcm file.
+
+
+> fatal error: file '/Users/<username>/Projects/XSecurity/checker/build/Release+Asserts/bin/../lib/clang/3.5/include/stdarg.h' has been modified since the precompiled header '/Users/<username>/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/UIKit.pcm' was built
+> note: '/Users/<username>/Projects/XSecurity/checker/build/Release+Asserts/bin/../lib/clang/3.5/include/stdarg.h' required by '/Users/<username>/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/Darwin.pcm'
+> note: '/Users/<username>/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/Darwin.pcm' required by '/Users/<username>/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/UIKit.pcm'
+> note: please rebuild precompiled header '/Users/<username>/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/UIKit.pcm'
+> 1 error generated.
+> Command /Users/<username>/Projects/XSecurity/checker/build/Release+Asserts/bin/clang failed with exit code 1
 
 ##### UNINSTALL
 _____________________________
