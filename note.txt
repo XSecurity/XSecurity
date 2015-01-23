@@ -1,6 +1,0 @@
-fatal error: file '/Users/excadmin/Projects/XSecurity/checker/build/Release+Asserts/bin/../lib/clang/3.5/include/stdarg.h' has been modified since the precompiled header '/Users/excadmin/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/UIKit.pcm' was built
-note: '/Users/excadmin/Projects/XSecurity/checker/build/Release+Asserts/bin/../lib/clang/3.5/include/stdarg.h' required by '/Users/excadmin/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/Darwin.pcm'
-note: '/Users/excadmin/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/Darwin.pcm' required by '/Users/excadmin/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/UIKit.pcm'
-note: please rebuild precompiled header '/Users/excadmin/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/UIKit.pcm'
-1 error generated.
-Command /Users/excadmin/Projects/XSecurity/checker/build/Release+Asserts/bin/clang failed with exit code 1
