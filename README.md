@@ -7,10 +7,10 @@ as it is being created. You can also follow us on twitter: https://twitter.com/p
 This readme is mainly for the plug-in itself. If you want to contribute and build the checkers, it is best to see
 the designated [README](https://github.com/XSecurity/XSecurity/tree/master/checker) first **before cloning this repostory**.
 
-Support Xcode Versions:  
+Supported Xcode Versions:  
 6.1, 5.1.1, 5.1, 5.0.x 4.6.x
 
-Support OS X Versions:  
+Supported OS X Versions:  
 Mavericks (10.9) , Mountain Lion (10.8)
 
 
