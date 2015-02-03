@@ -151,9 +151,9 @@ Open Xcode, open the test project called CLangTest. You can find CLangTest in [c
 ##### RUNNING the CHECKERS in Xcode
 _____________________________
 
-Open Xcode and find "XSecurity" in the main menu, typically before the Window or Help item. If you can't find the XSecurity menu then the plug-in was not loaded/installed successfully. Under "XSecurity", you can find the last menu item, "Static Security Analyzer: Analyze". Select it to run the checkers". You would know if it work if there are no errors and some security issues are being displayed. 
+Open Xcode and find "XSecurity" in the main menu, typically it is located before the "Window" or "Help" menu item. If you can't find the XSecurity menu then the plug-in is not loaded/installed successfully. Under "XSecurity", you can find the last menu item, "Static Security Analyzer: Analyze". Select it to run the checkers". You would know if it work if there are no errors and some security issues are being displayed. 
 
-If you find errors similar to the following, just delete the specified pcm file and typicall it should work, we will be happy if you let us know if it doesn't work.
+If you find errors similar to the following, just delete the specified pcm file and typically it should work, we will be happy if you let us know if it doesn't work.
 
 
 > fatal error: file '/Users/<username>/Projects/XSecurity/checker/build/Release+Asserts/bin/../lib/clang/3.5/include/stdarg.h' has been modified since the precompiled header '/Users/<username>/Library/Developer/Xcode/DerivedData/ModuleCache/2RFZ02VUFSY3F/UIKit.pcm' was built
