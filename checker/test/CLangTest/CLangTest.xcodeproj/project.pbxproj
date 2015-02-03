@@ -410,16 +410,13 @@
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "CLangTest/CLangTest-Prefix.pch";
 				INFOPLIST_FILE = "CLangTest/CLangTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				WARNING_CFLAGS = (
-					"-Xanalyzer",
-					"-analyzer-checker=msec.iosappsec.iOSAppSecSQLInjectionChecker",
-				);
+				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -432,16 +429,13 @@
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "CLangTest/CLangTest-Prefix.pch";
 				INFOPLIST_FILE = "CLangTest/CLangTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				WARNING_CFLAGS = (
-					"-Xanalyzer",
-					"-analyzer-checker=msec.iosappsec.iOSAppSecSQLInjectionChecker",
-				);
+				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
