@@ -7,11 +7,16 @@ set(LLVM_LINK_COMPONENTS
   Support
   )
 
+# GenericTaintChecker.java  
+# MallocOverflowSecurityChecker.java
+# ReturnPointerRangeChecker.java
+
+
 add_clang_library(clangStaticAnalyzerCheckers
   AllocationDiagnostics.cpp
   AnalyzerStatsChecker.cpp
-  ArrayBoundChecker.cpp
-  ArrayBoundCheckerV2.cpp
+#  ArrayBoundChecker.cpp
+#  ArrayBoundCheckerV2.cpp
   BasicObjCFoundationChecks.cpp
   BoolAssignmentChecker.cpp
   BuiltinFunctionChecker.cpp
@@ -22,7 +27,7 @@ add_clang_library(clangStaticAnalyzerCheckers
   CastToStructChecker.cpp
   CheckObjCDealloc.cpp
   CheckObjCInstMethSignature.cpp
-  CheckSecuritySyntaxOnly.cpp
+#  CheckSecuritySyntaxOnly.cpp
   CheckSizeofPointer.cpp
   CheckerDocumentation.cpp
   ChrootChecker.cpp
@@ -35,11 +40,13 @@ add_clang_library(clangStaticAnalyzerCheckers
   DynamicTypePropagation.cpp
   ExprInspectionChecker.cpp
   FixedAddressChecker.cpp
-  GenericTaintChecker.cpp
+#  GenericTaintChecker.cpp
   iOSAppSecAbusingURLSchemes.cpp
+  iOSAppSecBufferOverflow.cpp
   iOSAppSecIgnoresValidationErrors.cpp
   iOSAppSecInsecureKeyChainStorage.cpp
   iOSAppSecInsecureNSUserDefaultsUsage.cpp
+  iOSAppSecInsecurePlistUsage.cpp
   iOSAppSecLeakingLogs.cpp
   iOSAppSecLeakingPasteboard.cpp
   iOSAppSecLeakingWebCaches.cpp
@@ -51,7 +58,7 @@ add_clang_library(clangStaticAnalyzerCheckers
   MacOSKeychainAPIChecker.cpp
   MacOSXAPIChecker.cpp
   MallocChecker.cpp
-  MallocOverflowSecurityChecker.cpp
+#  MallocOverflowSecurityChecker.cpp
   MallocSizeofChecker.cpp
   NSAutoreleasePoolChecker.cpp
   NSErrorChecker.cpp
@@ -68,7 +75,7 @@ add_clang_library(clangStaticAnalyzerCheckers
   PointerSubChecker.cpp
   PthreadLockChecker.cpp
   RetainCountChecker.cpp
-  ReturnPointerRangeChecker.cpp
+#  ReturnPointerRangeChecker.cpp
   ReturnUndefChecker.cpp
   SimpleStreamChecker.cpp
   StackAddrEscapeChecker.cpp

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB09364919DBF316007C33AE /* CBufferOverflow.m in Sources */ = {isa = PBXBuildFile; fileRef = CB09364819DBF316007C33AE /* CBufferOverflow.m */; };
 		CB12BFA218CADBBC005E6D4F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB12BFA118CADBBC005E6D4F /* libsqlite3.dylib */; };
 		CB1A959818A33236001ADCF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1A959718A33236001ADCF7 /* Foundation.framework */; };
 		CB1A959A18A33236001ADCF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1A959918A33236001ADCF7 /* CoreGraphics.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB09364719DBF316007C33AE /* CBufferOverflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBufferOverflow.h; sourceTree = "<group>"; };
+		CB09364819DBF316007C33AE /* CBufferOverflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBufferOverflow.m; sourceTree = "<group>"; };
 		CB12BFA118CADBBC005E6D4F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CB1A959418A33236001ADCF7 /* CLangTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLangTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1A959718A33236001ADCF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,19 +45,19 @@
 		CB1A959B18A33236001ADCF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CB1A959F18A33236001ADCF7 /* CLangTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLangTest-Info.plist"; sourceTree = "<group>"; };
 		CB1A95A118A33236001ADCF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CB1A95A318A33236001ADCF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CB1A95A318A33236001ADCF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB1A95A518A33236001ADCF7 /* CLangTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLangTest-Prefix.pch"; sourceTree = "<group>"; };
-		CB1A95A618A33236001ADCF7 /* CAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		CB1A95A718A33236001ADCF7 /* CAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CB1A95A618A33236001ADCF7 /* CAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAppDelegate.h; sourceTree = "<group>"; };
+		CB1A95A718A33236001ADCF7 /* CAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAppDelegate.m; sourceTree = "<group>"; };
 		CB1A95AA18A33236001ADCF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CB1A95AC18A33236001ADCF7 /* CViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		CB1A95AD18A33236001ADCF7 /* CViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CB1A95AC18A33236001ADCF7 /* CViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CViewController.h; sourceTree = "<group>"; };
+		CB1A95AD18A33236001ADCF7 /* CViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CViewController.m; sourceTree = "<group>"; };
 		CB1A95AF18A33236001ADCF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CB1A95B518A33236001ADCF7 /* CLangTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLangTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1A95B618A33236001ADCF7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CB1A95BE18A33237001ADCF7 /* CLangTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLangTestTests-Info.plist"; sourceTree = "<group>"; };
 		CB1A95C018A33237001ADCF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CB1A95C218A33237001ADCF7 /* CLangTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CLangTestTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CB1A95C218A33237001ADCF7 /* CLangTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLangTestTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 		CB1A959D18A33236001ADCF7 /* CLangTest */ = {
 			isa = PBXGroup;
 			children = (
+				CB09364719DBF316007C33AE /* CBufferOverflow.h */,
+				CB09364819DBF316007C33AE /* CBufferOverflow.m */,
 				CB1A95A618A33236001ADCF7 /* CAppDelegate.h */,
 				CB1A95A718A33236001ADCF7 /* CAppDelegate.m */,
 				CB1A95A918A33236001ADCF7 /* Main.storyboard */,
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB1A95A818A33236001ADCF7 /* CAppDelegate.m in Sources */,
+				CB09364919DBF316007C33AE /* CBufferOverflow.m in Sources */,
 				CB1A95A418A33236001ADCF7 /* main.m in Sources */,
 				CB1A95AE18A33236001ADCF7 /* CViewController.m in Sources */,
 			);
@@ -310,7 +316,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = NO;
+				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -350,7 +364,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = NO;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK = NO;
+				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -383,22 +405,18 @@
 		CB1A95C718A33237001ADCF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "CLangTest/CLangTest-Prefix.pch";
 				INFOPLIST_FILE = "CLangTest/CLangTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				WARNING_CFLAGS = (
-					"-Xanalyzer",
-					"-analyzer-checker=msec.iosappsec.iOSAppSecLeakingLogsChecker,msec.iosappsec.iOSAppSecLeakingLogsChecker",
-				);
+				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,22 +424,18 @@
 		CB1A95C818A33237001ADCF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "CLangTest/CLangTest-Prefix.pch";
 				INFOPLIST_FILE = "CLangTest/CLangTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				WARNING_CFLAGS = (
-					"-Xanalyzer",
-					"-analyzer-checker=msec.iosappsec.iOSAppSecLeakingLogsChecker,msec.iosappsec.iOSAppSecLeakingLogsChecker",
-				);
+				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -429,7 +443,6 @@
 		CB1A95CA18A33237001ADCF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CLangTest.app/CLangTest";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -452,7 +465,6 @@
 		CB1A95CB18A33237001ADCF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CLangTest.app/CLangTest";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

@@ -98,7 +98,7 @@ NSURLCredentialStorage Class
 #include "clang/StaticAnalyzer/Core/PathSensitive/CallEvent.h"
 #include "clang/StaticAnalyzer/Core/PathSensitive/CheckerContext.h"
 
-#define MSEC_DBG
+//#define MSEC_DBG
 #include "clang/StaticAnalyzer/Core/MSecCommon.h"
 
 using namespace clang ;
@@ -421,7 +421,7 @@ void iOSAppSecPermanentCredentialChecker::initIdentifierInfo(ASTContext &Ctx) co
 
 }
 
-// Through macro I guess this has to follow a certain naving convention
+// Through macro I guess this has to follow a certain naming convention
 void ento::registeriOSAppSecPermanentCredentialChecker(CheckerManager &mgr) 
 {
   mgr.registerChecker<iOSAppSecPermanentCredentialChecker>();
